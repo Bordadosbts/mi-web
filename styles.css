@@ -34,7 +34,7 @@
 
 body{
   margin:0;
-  background: url("fondo-madera.png") no-repeat center center fixed;
+  background: url("fondo-madera.png") no-repeat center center;
   background-size: cover;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   color:#000;
@@ -300,6 +300,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
