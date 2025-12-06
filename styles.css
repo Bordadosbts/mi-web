@@ -275,6 +275,7 @@ body{
 .site-footer{
   background: rgba(127,118,111,0.5);
   color: #fff;
+  padding: 1.5rem 0;   /* Antes usaba más altura, ahora es mucho más compacto */
 }
 
 /* ============================
@@ -335,6 +336,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
