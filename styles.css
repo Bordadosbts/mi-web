@@ -56,7 +56,7 @@ body{
   color:#000;
   font-size:0.9rem;
 }
-.container{
+.topbar .container{
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -83,9 +83,18 @@ body{
   z-index:50;
 }
 
+.header-banner-full{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:1rem 0;
+}
+
 .header-banner-full img{
-  width:50%;
-  justify-content:center center;
+  width:100%;
+  max-width:1100px;
+  max-height:220px;
   object-fit:contain;
   display:block;
 }
@@ -139,16 +148,16 @@ body{
 }
 
 .carousel{
-  display:grid;
-  grid-template-columns:1fr;
   position:relative;
 }
 
 .slide{
   display:none;
-  gap:1.5rem;
+  gap:2rem;
   align-items:center;
+  justify-content:space-between;
 }
+
 .slide.active{
   display:flex;
 }
@@ -298,5 +307,6 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
