@@ -101,7 +101,7 @@ body{
   position:sticky;
   top:0;
   z-index:50;
-}
+ }
 
 .header-banner-full{
   width:100%;
@@ -121,8 +121,8 @@ body{
 
 /* NAV */
 .header-nav{
-  background:none;
-  border-bottom:2px solid var(--accent);
+  background: rgba(127,118,111,0.86); /* usa --bg-wood-darker con opacidad */
+  border-bottom: 2px solid var(--accent);
 }
 .header-inner{
   display:flex;
@@ -146,7 +146,7 @@ body{
   gap:1.5rem;
 }
 .main-nav a{
-  color:#000;
+  color:#fff;
   text-decoration:none;
   font-weight:600;
   padding:0.45rem 0.8rem;
@@ -264,9 +264,8 @@ body{
    FOOTER
 ============================ */
 .site-footer{
-  background:none;
-  color:#000;
-  padding:2rem 0;
+  background: rgba(127,118,111,0.92);
+  color: #fff;
 }
 
 /* ============================
@@ -327,6 +326,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
