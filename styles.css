@@ -161,9 +161,12 @@ body{
 
 .slide{
   display:none;
-  gap:2rem;
+  flex-direction: column;   /* ← cambio clave */
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
+  text-align:center;        /* ← centrado de texto */
+  padding: 2rem 1rem;       /* opcional pero queda mejor */
+  gap:1.5rem;
 }
 
 .slide.active{
@@ -175,13 +178,10 @@ body{
   padding:1.5rem;
   border-radius:14px;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.slide img{
+  text-align:center;
   width:100%;
-  max-width:520px;
-  border-radius:16px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.5);
+  max-width:700px;
+  margin:auto;      /* ← asegura centrado */
 }
 
 .carousel-prev,
@@ -335,6 +335,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
