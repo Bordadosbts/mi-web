@@ -72,7 +72,7 @@ body{
    HEADER
 ============================ */
 .site-header{
-  background:transparent;
+  background:none;
   position:relative;
   z-index:40;
 }
@@ -85,7 +85,7 @@ body{
 
 .header-banner-full img{
   width:50%;
-  justify-content:center;
+  justify-content:center center;
   object-fit:contain;
   display:block;
 }
@@ -107,7 +107,7 @@ body{
   display:none;
   background:none;
   border:0;
-  color:#000;
+  color:#fff;
   font-size:1.4rem;
   cursor:pointer;
 }
@@ -173,7 +173,7 @@ body{
   top:50%;
   transform:translateY(-50%);
   background:none;
-  color:#000;
+  color:#fff;
   border:0;
   padding:.6rem 1rem;
   border-radius:6px;
@@ -298,4 +298,5 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
