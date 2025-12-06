@@ -108,7 +108,7 @@ body{
   display:none;
   background:none;
   border:0;
-  color:#fff;
+  color:#000;
   font-size:1.4rem;
   cursor:pointer;
 }
@@ -136,7 +136,7 @@ body{
 ============================ */
 .hero{
   padding:3rem 0;
-  background:transparent;
+  background:none;
 }
 
 .carousel{
@@ -173,7 +173,7 @@ body{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:#000;
+  background:none;
   color:#fff;
   border:0;
   padding:.6rem 1rem;
@@ -228,7 +228,7 @@ body{
 .newsletter{
   padding:2rem 0;
   text-align:center;
-  background:#000;
+  background:none;
   color:#fff;
 }
 
@@ -236,7 +236,7 @@ body{
    FOOTER
 ============================ */
 .site-footer{
-  background:transparent;
+  background:none;
   color:#fff;
   padding:2rem 0;
 }
@@ -299,6 +299,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
