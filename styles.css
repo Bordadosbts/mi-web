@@ -36,23 +36,11 @@
 ============================ */
 *{box-sizing:border-box}
 
-:root{
-  --primary: #000000;
-  --accent: #df3067;
-  --yellow: #f3c62a;
-
-  /* paleta madera (RRSS) */
-  --bg-wood: #e7e4e0;         /* base clara */
-  --bg-wood-dark: #bdb5ae;    /* tono oscuro moderado */
-  --bg-wood-darker: #7f766f;  /* tono oscuro para barras */
-  --maxw:1100px;
-}
-
 /* Fondo: imagen + overlay oscuro para integrar con la paleta */
 body{
   margin:0;
   background-image:
-    linear-gradient(rgba(189,181,174,0.36), rgba(127,118,111,0.36)),
+    linear-gradient(rgba(189,181,174,0.25), rgba(127,118,111,0.0.25)),
     url("fondo-madera.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -121,7 +109,7 @@ body{
 
 /* NAV */
 .header-nav{
-  background: rgba(127,118,111,0.86); /* usa --bg-wood-darker con opacidad */
+  background: rgba(127,118,111,0.5); /* usa --bg-wood-darker con opacidad */
   border-bottom: 2px solid var(--accent);
 }
 .header-inner{
@@ -183,7 +171,7 @@ body{
 }
 
 .slide-left{
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.5);
   padding:1.5rem;
   border-radius:14px;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
@@ -214,7 +202,7 @@ body{
 ============================ */
 .products{
   padding:3rem 0;
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.5);
 }
 
 .grid{
@@ -224,7 +212,7 @@ body{
 }
 
 .card{
-  background: rgba(255,255,255,0.88);  /* fondo suave sobre la madera */
+  background: rgba(255,255,255,0.5);  /* fondo suave sobre la madera */
   padding:1rem;
   border-radius:14px;
   transition:.3s;
@@ -258,7 +246,7 @@ body{
    CTA
 ============================ */
 .cta-box{
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.5);
   padding:2rem;
   border-radius:14px;
   text-align:center;
@@ -347,6 +335,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
