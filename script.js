@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* -------------------------
-      MENÚ MÓVIL
-  -------------------------- */
+  /* =========================
+     MENÚ MÓVIL
+  ========================= */
   const btn = document.getElementById('btnMenu');
   const nav = document.getElementById('mainNav');
 
   if (btn && nav) {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nav.classList.toggle('open'); // ✅ AHORA SÍ SE ABRE
     });
 
     // cerrar menú al clicar fuera
@@ -18,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* -------------------------
-      CAROUSEL DE SLIDES
-  -------------------------- */
+  /* =========================
+     CAROUSEL DE SLIDES
+  ========================= */
   const carousel = document.getElementById('carousel');
 
   if (carousel) {
@@ -32,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (idx === -1) idx = 0;
 
     const show = (i) => {
-      slides.forEach((s, n) => s.classList.toggle('active', n === i));
+      slides.forEach((s, n) => {
+        s.classList.toggle('active', n === i);
+      });
     };
 
     const go = (n) => {
@@ -40,27 +44,29 @@ document.addEventListener('DOMContentLoaded', () => {
       show(idx);
     };
 
-    prev && prev.addEventListener('click', () => go(idx - 1));
-    next && next.addEventListener('click', () => go(idx + 1));
+    if (prev) prev.addEventListener('click', () => go(idx - 1));
+    if (next) next.addEventListener('click', () => go(idx + 1));
 
     // auto rotación
     setInterval(() => go(idx + 1), 6000);
   }
 
-  /* -------------------------
-      AÑO AUTOMÁTICO
-  -------------------------- */
+  /* =========================
+     AÑO AUTOMÁTICO
+  ========================= */
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  /* -------------------------
-      NEWSLETTER (FAKE)
-  -------------------------- */
+  /* =========================
+     NEWSLETTER (SIMULADO)
+  ========================= */
   const form = document.getElementById('formNewsletter');
-  form && form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('¡Gracias! Te hemos agregado a la lista.');
-    form.reset();
-  });
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('¡Gracias! Te hemos agregado a la lista.');
+      form.reset();
+    });
+  }
 
 });
