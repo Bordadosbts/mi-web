@@ -270,17 +270,25 @@ body{
 
 @media(max-width:700px){
 
-  .menu-btn{display:block;}
+  .menu-btn{
+    display:block;
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:1.4rem;
+  }
 
   .main-nav{
     display:none;
     position:absolute;
-    top:140px;
+    top:64px;
     right:12px;
     background:#000;
     padding:1rem;
     border-radius:10px;
     flex-direction:column;
+    box-shadow:0 10px 30px rgba(0,0,0,0.7);
+    gap:.6rem;
   }
 
   .main-nav.open{
@@ -289,3 +297,4 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
