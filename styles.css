@@ -40,7 +40,7 @@
 body{
   margin:0;
   background-image:
-    linear-gradient(rgba(189,181,174,1), rgba(127,118,111,1)),
+    linear-gradient(rgba(189,181,174,0.25), rgba(127,118,111,0.25)),
     url("fondo-madera.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -273,7 +273,7 @@ body{
    FOOTER
 ============================ */
 .site-footer{
-  background: rgba(127,118,111,0.92);
+  background: rgba(127,118,111,0.25);
   color: #fff;
 }
 
@@ -335,6 +335,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
