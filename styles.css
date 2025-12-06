@@ -273,7 +273,7 @@ body{
    FOOTER
 ============================ */
 .site-footer{
-  background: rgba(127,118,111,0.25);
+  background: rgba(127,118,111,0.5);
   color: #fff;
 }
 
@@ -335,6 +335,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
