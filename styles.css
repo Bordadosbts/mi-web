@@ -63,7 +63,7 @@ body{
   padding:0.5rem 1rem;
 }
 .toplinks{
-  color:#000;
+  color:#fff;
   margin-left:0.75rem;
   text-decoration:none;
 }
@@ -84,7 +84,7 @@ body{
 }
 
 .header-banner-full img{
-  width:75%;
+  width:50%;
   justify-content:center;
   object-fit:contain;
   display:block;
@@ -92,7 +92,7 @@ body{
 
 /* NAV */
 .header-nav{
-  background:#000;
+  background:none;
   border-bottom:2px solid var(--accent);
 }
 .header-inner{
@@ -195,7 +195,7 @@ body{
 }
 
 .card{
-  background:#000;
+  background:none;
   padding:1rem;
   border-radius:12px;
   transition:.3s;
@@ -298,3 +298,4 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
