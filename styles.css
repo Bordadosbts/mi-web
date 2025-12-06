@@ -110,7 +110,7 @@ body{
 /* NAV */
 .header-nav{
   background: rgba(127,118,111,0.5); /* usa --bg-wood-darker con opacidad */
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--bg-wood-dark);
 }
 .header-inner{
   display:flex;
@@ -141,10 +141,10 @@ body{
   border-radius:8px;
 }
 .main-nav a:hover{
-  background:var(--accent);
+  background:var(--bg-wood-dark);
 }
 .main-nav a.cta{
-  background:var(--accent);
+  background:var(--bg-wood-dark);
 }
 
 /* ============================
@@ -335,6 +335,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
