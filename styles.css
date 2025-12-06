@@ -52,17 +52,17 @@ body{
    TOPBAR
 ============================ */
 .topbar{
-  background:transparent;
+  background:none;
   color:#000;
   font-size:0.9rem;
 }
-.topbar .container{
+.container{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:0.5rem 1rem;
 }
-.toplinks a{
+.toplinks{
   color:#000;
   margin-left:0.75rem;
   text-decoration:none;
@@ -86,8 +86,6 @@ body{
 .header-banner-full img{
   width:75%;
   justify-content:center;
-  max-width:1100px;
-  max-height:260px;
   object-fit:contain;
   display:block;
 }
@@ -119,7 +117,7 @@ body{
   gap:1.5rem;
 }
 .main-nav a{
-  color:#fff;
+  color:#000;
   text-decoration:none;
   font-weight:600;
   padding:0.45rem 0.8rem;
@@ -300,11 +298,3 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
-
-
-
-
-
-
-
-
