@@ -224,13 +224,34 @@ body{
 }
 
 .card{
-  background:none;
+  background: rgba(255,255,255,0.88);  /* fondo suave sobre la madera */
   padding:1rem;
-  border-radius:12px;
+  border-radius:14px;
   transition:.3s;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
 }
+
 .card:hover{
   transform:translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+.card img{
+  width:100%;
+  height:220px;       /* todas iguales */
+  object-fit:cover;  /* recorta sin deformar */
+  border-radius:10px;
+}
+.card h3{
+  margin:.4rem 0 0;
+  font-size:1.05rem;
+}
+
+.card .price{
+  font-weight:700;
+  color: var(--accent);
 }
 
 /* ============================
@@ -326,6 +347,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
