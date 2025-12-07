@@ -363,14 +363,14 @@ h1, h2, h3, h4, h5 {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  padding: 1rem 0;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
 }
 
 .site-footer {
   background: rgba(127,118,111,0.5);
   color: #fff;
-  padding: 1.5rem 0; /* menos altura vertical */
+  padding: 0.8rem 0; /* menos altura vertical */
 }
 
 .site-footer .footer-grid ul {
@@ -380,13 +380,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .site-footer .footer-grid li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 
 .site-footer .copyright {
   text-align: center;
   padding: 0.5rem 0;
   font-size: 0.85rem;
+}
+
+.site-footer h4,
+.site-footer h5 {
+  margin: 0 0 0.4rem 0; /* reduce su altura vertical */
 }
 
 /* ============================
@@ -523,4 +528,5 @@ h2::after {
   background: linear-gradient(to right, var(--accent), var(--yellow));
   border-radius: 999px;
 }
+
 
