@@ -263,17 +263,23 @@ h3 { font-size:1.2rem; }
    WHATSAPP
 ============================ */
 #whatsapp-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  width:60px; height:60px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:1.8rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  text-decoration: none !important; /* asegurar que no haya subrayado */
+  -webkit-tap-highlight-color: transparent; /* quita línea azul en móvil */
+  border: none;
+  z-index: 9999; /* sobre todo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* opcional: resalta */
 }
 
 /* ============================
@@ -316,4 +322,5 @@ h3 { font-size:1.2rem; }
     gap:0.6rem;
   }
 }
+
 
