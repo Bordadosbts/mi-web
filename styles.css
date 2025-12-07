@@ -192,7 +192,7 @@ h3 { font-size:1.2rem; }
 .hero-pro {
   position: relative;
   min-height: 78vh;
-  background: url("img/hero-1.jpg") center/cover no-repeat;
+  background: url("img/hero-1.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,5 +418,6 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
