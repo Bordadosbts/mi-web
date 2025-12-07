@@ -451,6 +451,10 @@ h1, h2, h3, h4, h5 {
   }
 
   .grid{grid-template-columns:1fr;}
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 /* ============================
@@ -528,5 +532,6 @@ h2::after {
   background: linear-gradient(to right, var(--accent), var(--yellow));
   border-radius: 999px;
 }
+
 
 
