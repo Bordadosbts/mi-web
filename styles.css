@@ -14,10 +14,15 @@
    VARIABLES
 ============================ */
 :root{
+  --font-main: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  --font-title: "ArialRounded", "Inter", sans-serif;
+  --font-script: "Script5", cursive;
+   
   --primary:#000000;
   --accent:#df3067;
   --yellow:#f3c62a;
   --blue:#45c1ea;
+   
   --bg:#eeede9;
   --bg-soft:#f4f3f0;
   --card:#ffffff;
@@ -40,13 +45,13 @@
 body{
   margin:0;
   background-image:
-    linear-gradient(rgba(189,181,174,0.25), rgba(127,118,111,0.25)),
+    linear-gradient(rgba(189,181,174,0.25),rgba(127,118,111,0.25)),
     url("fondo-madera.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* si quieres fijarlo */
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  font-family:var(--font-main);
   color:var(--primary);
 }
 
@@ -54,6 +59,11 @@ body{
   max-width:var(--maxw);
   margin:0 auto;
   padding:1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-title);
+  letter-spacing: -0.4px;
 }
 
 /* ============================
@@ -137,9 +147,11 @@ body{
   gap:1.5rem;
 }
 .main-nav a{
+  font-family: var(--font-title);
   color:#fff;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
+  letter-spacing:0.3px;
   padding:0.45rem 0.8rem;
   border-radius:8px;
 }
@@ -199,8 +211,8 @@ body{
 }
 
 .slide-left .eyebrow{
-  font-family:"Script5";
-  font-size:1.4rem;
+  font-family:var(--font-script);
+  font-size:1.5rem;
   color:var(--accent);
   margin-bottom:0.4rem;
 }
@@ -286,6 +298,11 @@ body{
 ============================ */
 .testimonials{
   padding:3rem 0;
+}
+
+.testimonials blockquote strong {
+  font-family: var(--font-script);
+  color: var(--accent);
 }
 
 /* ============================
@@ -388,21 +405,3 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
