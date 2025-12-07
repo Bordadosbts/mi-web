@@ -363,14 +363,14 @@ h1, h2, h3, h4, h5 {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
-  padding: 0.5rem 0;
+  gap: 0.4rem;
+  padding: 0.3rem 0;
 }
 
 .site-footer {
   background: rgba(127,118,111,0.5);
   color: #fff;
-  padding: 0.8rem 0; /* menos altura vertical */
+  padding: 0.5rem 0; /* menos altura vertical */
 }
 
 .site-footer .footer-grid ul {
@@ -378,8 +378,9 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0;
 }
-
+.site-footer p,
 .site-footer .footer-grid li {
+  font-size: 0.85rem;
   margin-bottom: 0.2rem;
 }
 
@@ -391,7 +392,8 @@ h1, h2, h3, h4, h5 {
 
 .site-footer h4,
 .site-footer h5 {
-  margin: 0 0 0.4rem 0; /* reduce su altura vertical */
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem; /* reduce su altura vertical */
 }
 
 /* ============================
@@ -425,7 +427,11 @@ h1, h2, h3, h4, h5 {
 
 @media(max-width:700px){
 
-  .menu-btn{
+ body {
+  background-attachment: scroll;
+}
+
+   .menu-btn{
     display:block;
     background:none;
     border:0;
@@ -550,6 +556,7 @@ h2::after {
   background: linear-gradient(to right, var(--accent), var(--yellow));
   border-radius: 999px;
 }
+
 
 
 
