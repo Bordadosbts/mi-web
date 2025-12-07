@@ -151,7 +151,7 @@ body{
    HERO
 ============================ */
 .hero{
-  padding:3rem 0;
+  padding:4rem 0;
   background:none;
 }
 
@@ -165,7 +165,7 @@ body{
   align-items:center;
   justify-content:center;
   text-align:center;        /* ← centrado de texto */
-  padding: 2rem 1rem;       /* opcional pero queda mejor */
+  padding: 2.5rem 1.5rem;       /* opcional pero queda mejor */
   gap:1.5rem;
 }
 
@@ -174,14 +174,33 @@ body{
 }
 
 .slide-left{
-  background:rgba(255,255,255,0.5);
-  padding:1.5rem;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  background:rgba(255,255,255,0.75),rgba(255,255,255,0.55);
+  padding:2rem 2.2rem;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
   text-align:center;
   width:100%;
-  max-width:700px;
+  max-width:760px;
   margin:auto;      /* ← asegura centrado */
+}
+
+.slide-left h1{
+  font-size:2.3rem;
+  font-weight:800;
+  margin-bottom:0.6rem;
+  color:#000;
+}
+
+.slide-left .eyebrow{
+  font-family:"Script5";
+  font-size:1.4rem;
+  color:var(--accent);
+  margin-bottom:0.4rem;
+}
+
+.slide-left .sub{
+  font-size:1.05rem;
+  color:#333;
 }
 
 .carousel-prev,
@@ -189,11 +208,11 @@ body{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:none;
+  background:rgba(0,0,0,0.45);
   color:#fff;
   border:0;
   padding:.6rem 1rem;
-  border-radius:6px;
+  border-radius:999px;
   cursor:pointer;
 }
 
@@ -359,6 +378,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
