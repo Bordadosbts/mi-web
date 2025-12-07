@@ -97,6 +97,7 @@ body{
   justify-content:center;
   align-items:center;
   padding:1rem 0;
+  margin-bottom: 0.8rem;
 }
 
 .header-banner-full img{
@@ -105,12 +106,14 @@ body{
   max-height:220px;
   object-fit:contain;
   display:block;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,0.25));
 }
 
 /* NAV */
 .header-nav{
-  background: rgba(127,118,111,0.5); /* usa --bg-wood-darker con opacidad */
+  background: rgba(127,118,111,0.7); /* usa --bg-wood-darker con opacidad */
   border-bottom: 2px solid var(--bg-wood-dark);
+  backdrop-filter: blur(6px);
 }
 .header-inner{
   display:flex;
@@ -176,6 +179,7 @@ body{
 .slide-left{
   background:rgba(255,255,255,0.75),rgba(255,255,255,0.55);
   padding:2rem 2.2rem;
+  border: 1px solid rgba(255,255,255,0.35);
   border-radius:18px;
   box-shadow:0 20px 50px rgba(0,0,0,0.25);
   text-align:center;
@@ -189,6 +193,7 @@ body{
   font-weight:800;
   margin-bottom:0.6rem;
   color:#000;
+  letter-spacing: -0.5px;
 }
 
 .slide-left .eyebrow{
@@ -231,14 +236,17 @@ body{
 }
 
 .card{
-  background: rgba(255,255,255,0.5);  /* fondo suave sobre la madera */
-  padding:1rem;
-  border-radius:14px;
-  transition:.3s;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  background: linear-gradient(
+    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.65));  /* fondo suave sobre la madera */
+  padding:1.2rem;
+  border-radius:16px;
+  transition:.35s;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
   display:flex;
   flex-direction:column;
   gap:.6rem;
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
 .card:hover{
@@ -378,6 +386,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
