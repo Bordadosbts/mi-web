@@ -232,14 +232,14 @@ h3 { font-size:1.2rem; }
 ============================ */
 .site-footer {
   background:rgba(127,118,111,0.5);
-  padding:0.3rem 0; /* antes 0.5rem */
+  padding:1rem 0; /* antes 0.5rem */
   color:#fff;
 }
 
 .footer-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:0.2rem; /* antes 0.4 */
+  gap:1rem; /* antes 0.4 */
   padding:0.2rem 0;
 }
 
@@ -298,7 +298,7 @@ h3 { font-size:1.2rem; }
   .menu-btn { display:block; }
 
   .main-nav {
-    display:flex;
+    display:none;
     position:absolute;
     top:48px;
     right:10px;
@@ -328,6 +328,3 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
-
-
-
