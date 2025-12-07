@@ -177,7 +177,9 @@ body{
 }
 
 .slide-left{
-  background:rgba(255,255,255,0.75),rgba(255,255,255,0.55);
+  background:linear-gradient(
+     rgba(255,255,255,0.75),
+     rgba(255,255,255,0.55));
   padding:2rem 2.2rem;
   border: 1px solid rgba(255,255,255,0.35);
   border-radius:18px;
@@ -386,6 +388,7 @@ body{
 
   .grid{grid-template-columns:1fr;}
 }
+
 
 
 
