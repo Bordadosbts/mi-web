@@ -451,9 +451,27 @@ h1, h2, h3, h4, h5 {
   }
 
   .grid{grid-template-columns:1fr;}
-  .footer-grid {
+   
+   .site-footer {
+    padding: 1rem 0;
+  }
+   
+   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
     text-align: center;
+  }
+
+  .site-footer h4,
+  .site-footer h5 {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .site-footer p,
+  .site-footer .footer-grid li {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
   }
 }
 
@@ -532,6 +550,7 @@ h2::after {
   background: linear-gradient(to right, var(--accent), var(--yellow));
   border-radius: 999px;
 }
+
 
 
 
