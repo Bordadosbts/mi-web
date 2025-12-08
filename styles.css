@@ -250,6 +250,37 @@ h3 { font-size:1.2rem; }
   flex-wrap: wrap;
 }
 
+/* ============================
+   BOTONES UNIFICADOS
+============================ */
+.btn,
+.main-nav a.cta {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--yellow));
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.btn:hover,
+.main-nav a.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+/* versión pequeña */
+.btn.small {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.9rem;
+}
+
 /* BOTONES */
 .btn {
   background: var(--accent);
@@ -423,6 +454,7 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
 
