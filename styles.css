@@ -165,7 +165,7 @@ h3 { font-size:1.2rem; }
   padding: 0; /* elimina padding vertical extra que agranda el hero */
   background: 
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("img/hero-1.jpg") center/cover no-repeat;
+    url("img/hero-1.png") center/cover no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
@@ -441,6 +441,7 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
 
