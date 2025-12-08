@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btn && nav) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      nav.classList.toggle('open'); // ✅ AHORA SÍ SE ABRE
+      nav.classList.toggle('open');
     });
 
-    // cerrar menú al clicar fuera
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
@@ -21,17 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     CAROUSEL DE SLIDES
+     CAROUSEL SIMPLE (SOLO SI EXISTEN SLIDES)
   ========================= */
-  const carousel = document.getElementById('carousel');
+  const slides = document.querySelectorAll('.slide');
 
-  if (carousel) {
-    const slides = Array.from(carousel.querySelectorAll('.slide'));
-    const prev = carousel.querySelector('.carousel-prev');
-    const next = carousel.querySelector('.carousel-next');
-
-    let idx = slides.findIndex(s => s.classList.contains('active'));
-    if (idx === -1) idx = 0;
+  if (slides.length > 1) {
+    let idx = 0;
 
     const show = (i) => {
       slides.forEach((s, n) => {
@@ -39,20 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
-    const go = (n) => {
-      idx = (n + slides.length) % slides.length;
+    setInterval(() => {
+      idx = (idx + 1) % slides.length;
       show(idx);
-    };
-
-    if (prev) prev.addEventListener('click', () => go(idx - 1));
-    if (next) next.addEventListener('click', () => go(idx + 1));
-
-    // auto rotación
-    setInterval(() => go(idx + 1), 6000);
+    }, 6000);
   }
 
   /* =========================
-     AÑO AUTOMÁTICO
+     AÑO AUTOMÁTICO FOOTER
   ========================= */
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
@@ -60,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* =========================
      NEWSLETTER (SIMULADO)
   ========================= */
-  const form = document.getElementById('formNewsletter');
+  const form = document.querySelector('.newsletter form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
