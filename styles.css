@@ -159,7 +159,7 @@ h3 { font-size:1.2rem; }
   min-height:460px;
   background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("img/hero-1.jpg") center/cover no-repeat;
+    url("img/hero-1.jpg") center no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -419,5 +419,6 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
