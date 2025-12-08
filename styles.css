@@ -192,8 +192,14 @@ h3 { font-size:1.2rem; }
 ============================ */
 .hero-pro {
   position: relative;
-  min-height: 78vh;
-  background: url("img/hero-1.png") center/cover no-repeat;
+  width: 100%;
+  min-height: 70vh;
+
+  background-image: url("img/hero-1.png");
+  background-size: cover;        /* 🔥 Evita desbordes */
+  background-position: center;   /* 🔥 Centrado perfecto */
+  background-repeat: no-repeat;  /* 🔥 No repite la imagen */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,6 +411,13 @@ h3 { font-size:1.2rem; }
     z-index: 9999;
   }
 
+  .hero-pro {
+    min-height: 55vh; /* Más compacto → la imagen no se estira */
+    background-size: contain;    /* 🔥 La imagen NO se recorta en móvil */
+    background-position: top;    /* Muestra mejor el área útil */
+    background-color: #000;      /* Relleno elegante si sobra espacio */
+  }
+   
   .grid { grid-template-columns:1fr; }
 
   .footer-grid {
@@ -419,6 +432,7 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
 
