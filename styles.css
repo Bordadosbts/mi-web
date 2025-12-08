@@ -174,7 +174,7 @@ h1, h2, h3, h4 {
   
   /* Fondo de emergencia - cambiar por tu imagen cuando esté lista */
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
-              url("img/hero-1.jpg") center/cover;
+              url("img/hero-1.png") center/cover;
   position: relative;
   z-index: 2; 
 }
@@ -599,4 +599,5 @@ h1, h2, h3, h4 {
     padding: 2rem 1rem;
   }
 }
+
 
