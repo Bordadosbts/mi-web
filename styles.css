@@ -31,70 +31,6 @@
 }
 
 /* ============================
-   ESTILOS BASE
-============================ */
-* { box-sizing: border-box; }
-
-body {
-  margin:0;
-  background-image:
-    linear-gradient(rgba(189,181,174,0.25),rgba(127,118,111,0.25)),
-    url("fondo-madera.png");
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  color:var(--primary);
-}
-
-.container {
-  max-width:var(--maxw);
-  margin:auto;
-  padding:1rem;
-}
-
-/* Tipografías coherentes */
-body, p, li, input, textarea, button { font-family:var(--font-main); font-size:15.5px; }
-
-h1, h2, h3, h4, h5 { font-family: var(--font-title); letter-spacing:-0.4px; }
-
-/* Títulos */
-h1 { font-size:2.6rem; font-weight:800; }
-h2 {
-  font-size:1.9rem;
-  font-weight:800;
-  margin-bottom:1.2rem;
-  padding-bottom:.3rem;
-  position:relative;
-}
-h2::after {
-  content:"";
-  position:absolute;
-  bottom:0; left:0;
-  width:70px; height:3px;
-  background:linear-gradient(to right, var(--accent), var(--yellow));
-  border-radius:999px;
-}
-h3 { font-size:1.2rem; }
-
-/* Frase manuscrita */
-.eyebrow,
-.testimonials blockquote strong {
-  font-family:var(--font-script);
-  font-size:1.5rem;
-  color:var(--accent);
-}
-
-/* ============================
-   TOPBAR
-============================ */
-.topbar .container {
-  display:flex;
-  justify-content:space-between;
-  padding:.4rem 1rem;
-}
-.toplinks { color:#fff; text-decoration:none; }
-
-/* ============================
    HEADER
 ============================ */
 .site-header { background:none; }
@@ -147,6 +83,74 @@ h3 { font-size:1.2rem; }
   background:none;
   border:0;
 }
+
+/* ============================
+   ESTILOS BASE
+============================ */
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  background-image:
+    linear-gradient(rgba(189,181,174,0.25),rgba(127,118,111,0.25)),
+    url("fondo-madera.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:var(--primary);
+}
+
+.container {
+  max-width:var(--maxw);
+  margin:auto;
+  padding:1rem;
+}
+
+/* Tipografías coherentes */
+body, p, li, input, textarea, button { 
+   font-family:var(--font-main); font-size:15.5px; }
+
+h1, h2, h3, h4, h5 { 
+   font-family: var(--font-title); letter-spacing:-0.4px; }
+
+/* Títulos */
+h1 { 
+   font-size:2.6rem; font-weight:800; 
+}
+h2 {
+  font-size:1.9rem;
+  font-weight:800;
+  margin-bottom:1.2rem;
+  padding-bottom:.3rem;
+  position:relative;
+}
+h2::after {
+  content:"";
+  position:absolute;
+  bottom:0; left:0;
+  width:70px; height:3px;
+  background:linear-gradient(to right, var(--accent), var(--yellow));
+  border-radius:999px;
+}
+h3 { font-size:1.2rem; }
+
+/* Frase manuscrita */
+.eyebrow,
+.testimonials blockquote strong {
+  font-family:var(--font-script);
+  font-size:1.5rem;
+  color:var(--accent);
+}
+
+/* ============================
+   TOPBAR
+============================ */
+.topbar .container {
+  display:flex;
+  justify-content:space-between;
+  padding:.4rem 1rem;
+}
+.toplinks { color:#fff; text-decoration:none; }
 
 /* ============================
    HERO
@@ -418,6 +422,7 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
 
