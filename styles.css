@@ -412,9 +412,9 @@ h3 { font-size:1.2rem; }
   }
 
   .hero-pro {
-    min-height: 55vh; /* Más compacto → la imagen no se estira */
+    min-height: 58vh; /* Más compacto → la imagen no se estira */
     background-size: contain;    /* 🔥 La imagen NO se recorta en móvil */
-    background-position: top;    /* Muestra mejor el área útil */
+    background-position: top center;    /* Muestra mejor el área útil */
     background-color: #000;      /* Relleno elegante si sobra espacio */
   }
    
@@ -432,6 +432,7 @@ h3 { font-size:1.2rem; }
     font-size: 1.5rem;
   }
 }
+
 
 
 
