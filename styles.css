@@ -40,13 +40,20 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif !important;
-  line-height: 1.7 !important;
+  font-family: var(--font-main);
+  line-height: 1.6;
   color: var(--primary);
   min-height: 100vh;
   
-  /* Fondo temporal - elimina cuando cargue fondo-madera.png */
-  background: linear-gradient(135deg, var(--bg-wood) 0%, var(--bg-wood-dark) 100%);
+  /* Fondo de madera con ajustes */
+  background: 
+    /* Overlay sutil para mejorar legibilidad */
+    linear-gradient(rgba(231, 228, 224, 0.9), rgba(231, 228, 224, 0.95)),
+    /* Tu imagen de fondo */
+    url("fondo-madera.png") center/cover fixed;
+  
+  /* Color de respaldo mientras carga */
+  background-color: var(--bg-wood);
 }
 
 h1, h2, h3, h4 {
@@ -60,6 +67,17 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   padding: 0 1.5rem;
   width: 100%;
+}
+
+/* Ajusta las secciones con contenido para que sean legibles */
+.products,
+.testimonials,
+.newsletter,
+.cta-inline {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* ============================
@@ -624,6 +642,7 @@ h1, h2, h3, h4 {
     background-color: #000; /* Color de fondo para los espacios vacíos */
   }
 }
+
 
 
 
