@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Bordando tus sueños — Inicio</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Fuente optimizada: preconnect + única carga -->
+  <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -23,9 +20,9 @@
     <div class="container">
       <p>Envío GRATIS en compras mayores a 100€</p>
       <nav class="toplinks">
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
       </nav>
     </div>
   </div>
@@ -33,15 +30,13 @@
   <!-- Header -->
   <header class="site-header">
 
-    <!-- Banner -->
     <div class="header-banner-full">
       <img src="banner-bordando.png" alt="Bordando tus sueños">
     </div>
 
-    <!-- Navegación -->
     <div class="header-nav">
       <div class="container header-inner">
-        <button id="btnMenu" class="menu-btn" aria-label="Abrir menú">☰</button>
+        <button id="btnMenu" class="menu-btn">☰</button>
 
         <nav id="mainNav" class="main-nav">
           <a href="#">Catálogo</a>
@@ -55,32 +50,33 @@
     </div>
   </header>
 
-  <!-- Hero / Carousel -->
-<section class="hero-pro">
-  <div class="hero-overlay"></div>
+  <!-- ✅ HERO LIMPIO Y CORRECTO -->
+  <section class="hero">
+    <div class="container">
+      <div class="carousel">
 
-  <div class="hero-content container">
-    <h1>🪡 Bordado profesional sin límites 🪡</h1>
+        <div class="slide active">
+          <div class="slide-left">
+            <h1>🪡 Bordado profesional sin límites 🪡</h1>
+            <p class="eyebrow">🧵 Tu creación, hilo a hilo 🧵</p>
+            <p>Bordado industrial de alta precisión para empresas, marcas y eventos.</p>
 
-    <p class="eyebrow">🧵 Tu creación, hilo a hilo 🧵</p>
+            <div class="hero-buttons">
+              <a href="#productos" class="btn">Ver productos</a>
+              <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
+            </div>
+          </div>
+        </div>
 
-    <p class="sub">
-      Bordado industrial de alta precisión para empresas, marcas y eventos.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#productos" class="btn">Ver productos</a>
-      <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Productos -->
   <section id="productos" class="container products">
     <h2>Nuestros productos</h2>
     <p class="lead">
-      Bordado profesional para particulares, empresas, marcas de ropa y eventos.
-      Personalizamos cada proyecto con precisión y estilo. Cada proyecto es único. Cada detalle importa.
+      Bordado profesional para empresas, marcas y eventos. Cada detalle importa.
     </p>
 
     <div class="cta-inline">
@@ -91,28 +87,28 @@
 
     <div class="grid">
       <article class="card">
-        <img src="img/gorra.jpg" alt="Gorra personalizada">
+        <img src="img/gorra.jpg" alt="">
         <h3>Gorra personalizada</h3>
         <p class="price">Desde 199€</p>
         <a class="btn small" href="#">Ver</a>
       </article>
 
       <article class="card">
-        <img src="img/beanie.jpg" alt="Beanie bordado">
+        <img src="img/beanie.jpg" alt="">
         <h3>Beanie bordado</h3>
         <p class="price">Desde 149€</p>
         <a class="btn small" href="#">Ver</a>
       </article>
 
       <article class="card">
-        <img src="img/parches.jpg" alt="Parches bordados">
+        <img src="img/parches.jpg" alt="">
         <h3>Parches</h3>
         <p class="price">Desde 29€</p>
         <a class="btn small" href="#">Ver</a>
       </article>
 
       <article class="card">
-        <img src="img/tshirt.jpg" alt="Camiseta personalizada">
+        <img src="img/tshirt.jpg" alt="">
         <h3>T-Shirt personalizada</h3>
         <p class="price">Desde 249€</p>
         <a class="btn small" href="#">Ver</a>
@@ -121,18 +117,19 @@
   </section>
 
   <!-- CTA -->
-  <section id="cotizar" class="container cta-box">
+  <section id="cotizar" class="container cta-inline">
     <h2>¿Listo para probar?</h2>
     <p>Escríbenos por WhatsApp y recibe atención personalizada.</p>
-    <a class="btn" href="https://wa.me/34644624043" target="_blank" rel="noopener">¡PRESUPUESTO AQUÍ!</a>
+    <a class="btn" href="https://wa.me/34644624043" target="_blank">¡PRESUPUESTO AQUÍ!</a>
   </section>
 
   <!-- Testimonios -->
   <section class="container testimonials">
-    <h2>✨Opiniones de clientes✨</h2>
-    <div class="test-grid">
+    <h2>✨ Opiniones de clientes ✨</h2>
+
+    <div class="grid">
       <blockquote>“Calidad espectacular, atención rápida y acabados perfectos.” — <strong>Miriam Confecciones</strong></blockquote>
-      <blockquote>“Nos digitalizaron y bordaron los logos en los uniformes y quedó impecable.” — <strong>Repuestos Hnos. Blazquez</strong></blockquote>
+      <blockquote>“Nos digitalizaron y bordaron los logos en los uniformes y quedó impecable.” — <strong>Repuestos Blázquez</strong></blockquote>
       <blockquote>“Perfecto para ropa personalizada y eventos.”</blockquote>
     </div>
   </section>
@@ -141,7 +138,7 @@
   <section class="container newsletter">
     <h3>Suscríbete</h3>
     <p>Recibe ofertas exclusivas y las últimas noticias.</p>
-    <form id="formNewsletter">
+    <form>
       <input type="email" placeholder="Correo electrónico" required>
       <button class="btn" type="submit">Suscribirme</button>
     </form>
@@ -150,15 +147,10 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
+
       <div>
         <h4>🧵Bordando Tus Sueños🧵</h4>
         <p>Tu creación, hilo a hilo.</p>
-        <ul>
-          <li>Bordado para empresas</li>
-          <li>Bordado para marcas</li>
-          <li>Bordado para eventos</li>
-          <li>Personalización textil</li>
-        </ul>
       </div>
 
       <div>
@@ -173,9 +165,7 @@
       <div>
         <h5>Contacto</h5>
         <p>Tel: +34 644 62 40 43</p>
-        <ul>
-          <li><a href="https://linktr.ee/bordados.bts" class="btn" target="_blank">Linktree</a></li>
-        </ul>
+        <a href="https://linktr.ee/bordados.bts" class="btn" target="_blank">Linktree</a>
       </div>
     </div>
 
@@ -184,11 +174,11 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <!-- WhatsApp -->
+  <a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank">💬</a>
 
-  <!-- WhatsApp flotante -->
-  <a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank" aria-label="WhatsApp">💬</a>
+  <!-- Script -->
+  <script src="script.js"></script>
 
 </body>
 </html>
