@@ -7,7 +7,7 @@
 /* ============================
    VARIABLES
 ============================ */
-:root {
+:root{
   --font-main: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   --font-title: "ArialRounded", "Inter", sans-serif;
   --font-script: "Script5", cursive;
@@ -31,284 +31,102 @@
 }
 
 /* ============================
-   ESTILOS BASE
+   TIPOGRAFÍA GLOBAL
 ============================ */
-* { box-sizing: border-box; }
+body, p, li, input, textarea, button {
+  font-family: var(--font-main);
+  font-size: 15.5px;
+}
 
-body {
+h1 { font-family: var(--font-title); font-size: 3rem; font-weight: 800; letter-spacing: -0.6px; }
+h2 { font-family: var(--font-title); font-size: 2.1rem; font-weight: 800; }
+h3 { font-family: var(--font-title); font-size: 1.25rem; font-weight: 700; }
+
+.eyebrow,
+.testimonials blockquote strong {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* ============================
+   RESET
+============================ */
+*{ box-sizing:border-box }
+
+body{
   margin:0;
   background-image:
     linear-gradient(rgba(189,181,174,0.25),rgba(127,118,111,0.25)),
     url("fondo-madera.png");
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   font-family:var(--font-main);
   color:var(--primary);
 }
 
-.container {
+.container{
   max-width:var(--maxw);
-  margin:auto;
+  margin:0 auto;
   padding:1rem;
-}
-
-/* Tipografías coherentes */
-body, p, li, input, textarea, button { font-family:var(--font-main); font-size:15.5px; }
-
-h1, h2, h3, h4, h5 { font-family: var(--font-title); letter-spacing:-0.4px; }
-
-/* Títulos */
-h1 { font-size:2.6rem; font-weight:800; }
-h2 {
-  font-size:1.9rem;
-  font-weight:800;
-  margin-bottom:1.2rem;
-  padding-bottom:.3rem;
-  position:relative;
-}
-h2::after {
-  content:"";
-  position:absolute;
-  bottom:0; left:0;
-  width:70px; height:3px;
-  background:linear-gradient(to right, var(--accent), var(--yellow));
-  border-radius:999px;
-}
-h3 { font-size:1.2rem; }
-
-/* Frase manuscrita */
-.eyebrow,
-.testimonials blockquote strong {
-  font-family:var(--font-script);
-  font-size:1.5rem;
-  color:var(--accent);
 }
 
 /* ============================
    TOPBAR
 ============================ */
-.topbar .container {
+.topbar .container{
   display:flex;
   justify-content:space-between;
-  padding:.4rem 1rem;
+  align-items:center;
+  padding:0.5rem 1rem;
 }
-.toplinks { color:#fff; text-decoration:none; }
 
 /* ============================
    HEADER
 ============================ */
-.site-header { background:none; }
-
-.header-banner-full {
-  display:flex;
-  justify-content:center;
-  padding:0.2rem 0;
-}
-.header-banner-full img {
-  width:100%;
-  max-width:1100px;
-  max-height:120px;
-  object-fit:contain;
-  filter:drop-shadow(0 6px 14px rgba(0,0,0,0.18));
-}
-
-/* NAV */
-.header-nav {
-  position:sticky;
-  top:0; z-index:50;
-  background:rgba(127,118,111,0.7);
-  backdrop-filter:blur(6px);
-  border-bottom:2px solid var(--bg-wood-dark);
-}
-.header-inner {
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  padding:0.3rem 0.6rem;
-}
-.main-nav {
-  display:flex;
-  gap:1.2rem;
-}
-.main-nav a {
-  color:#fff;
-  text-decoration:none;
-  padding:0.4rem 0.6rem;
-  border-radius:6px;
-  font-weight:700;
-}
-.main-nav a:hover { background:var(--bg-wood-dark); }
-.main-nav a.cta { background:var(--bg-wood-dark); }
-
-.menu-btn {
-  display:none;
-  font-size:1.6rem;
-  color:#fff;
+.site-header{
   background:none;
-  border:0;
+  position:relative;
+  z-index:40;
 }
 
-/* ============================
-   HERO
-============================ */
-.hero { padding:2.5rem 0; } /* COMPACTADO */
-
-.carousel { position:relative; }
-
-.slide {
-  display:none;
-  flex-direction:column;
-  text-align:center;
-  padding:2rem 1.4rem;
-  gap:1.2rem;
-}
-.slide.active { display:flex; }
-
-.slide-left {
-  background:rgba(255,255,255,0.7);
-  border:1px solid rgba(255,255,255,0.3);
-  border-radius:14px;
-  padding:1.6rem 1.8rem; /* compactado */
-  box-shadow:0 12px 32px rgba(0,0,0,0.22);
-  max-width:700px;
-  margin:auto;
+.header-nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background: rgba(127,118,111,0.7);
+  border-bottom: 2px solid var(--bg-wood-dark);
+  backdrop-filter: blur(6px);
 }
 
-/* ============================
-   PRODUCTS
-============================ */
-.products { padding:2rem 0; } /* antes 3rem */
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:1rem;
-}
-
-.card {
-  background:rgba(255,255,255,0.8);
-  border-radius:14px;
-  padding:1rem;
-  border:1px solid rgba(0,0,0,0.06);
-  box-shadow:0 6px 18px rgba(0,0,0,0.18);
-  transition:.3s;
-}
-.card:hover { transform:translateY(-4px); }
-
-.card img {
+.header-banner-full{
   width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:10px;
-}
-.card h3 { font-size:1rem; margin:.3rem 0; }
-.card .price { color:var(--accent); font-weight:700; }
-
-/* ============================
-   TESTIMONIALS
-============================ */
-.testimonials { padding:2rem 0; }
-
-/* ============================
-   NEWSLETTER
-============================ */
-.newsletter { padding:1.4rem 0; }
-
-/* ============================
-   CTA
-============================ */
-.cta-inline {
-  padding:1.2rem;
-  border-radius:16px;
-  margin:1.6rem 0;
-  background:linear-gradient(135deg, rgba(223,48,103,0.15), rgba(243,198,42,0.18));
-  border:1px solid rgba(223,48,103,0.35);
-}
-
-/* ============================
-   FOOTER
-============================ */
-.site-footer {
-  background:rgba(127,118,111,0.5);
-  padding:0.3rem 0; /* antes 0.5rem */
-  color:#fff;
-}
-
-.footer-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0.2rem; /* antes 0.4 */
-  padding:0.2rem 0;
-}
-
-.site-footer h4, .site-footer h5 {
-  font-size:0.85rem; /* reducido */
-  margin-bottom:0.15rem;
-}
-.site-footer p,
-.site-footer ul li {
-  font-size:0.8rem;
-  margin-bottom:0.12rem;
-}
-
-.copyright {
-  text-align:center;
-  padding:0.3rem 0;
-  font-size:0.8rem;
-}
-
-/* ============================
-   WHATSAPP
-============================ */
-#whatsapp-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  width:60px; height:60px;
-  border-radius:50%;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:1.8rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.3rem;
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
-@media (max-width:900px) {
-  .grid { grid-template-columns:repeat(2,1fr); }
+.header-banner-full img{
+  width:100%;
+  max-width:1100px;
+  max-height: 150px;
+  object-fit:contain;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.22));
 }
 
-@media (max-width:700px) {
-
-  body { background-attachment:scroll; }
-
-  .header-banner-full img { max-height:90px; }
-
-  .menu-btn { display:block; }
-
-  .main-nav {
-    display:none;
-    position:absolute;
-    top:48px;
-    right:10px;
-    background:#000;
-    padding:0.6rem 1rem;
-    border-radius:12px;
-    flex-direction:column;
-    box-shadow:0 8px 20px rgba(0,0,0,0.5);
-  }
-  .main-nav.open { display:flex; }
-
-  .grid { grid-template-columns:1fr; }
-
-  .footer-grid {
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:0.6rem;
-  }
-}
+.header-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 1rem;
+  padding:
