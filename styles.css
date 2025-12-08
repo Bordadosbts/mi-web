@@ -118,7 +118,7 @@ h1,h2,h3,h4,h5 {
 .hero {
   position: relative;
   width: 100%;
-  height: 72h;         /* ocupa la mayor parte del viewport, pero no lo explota */
+  height: 72vh;         /* ocupa la mayor parte del viewport, pero no lo explota */
   min-height: 460px;    /* nunca menos de esto */
   max-height: 820px; 
   display: flex;
@@ -127,7 +127,7 @@ h1,h2,h3,h4,h5 {
   padding: 0;            /* controlado por el contenido interior */
   color: #fff;
 
-  /* fondo: usa img/hero-1.jpg. Si tu archivo es hero-1.png cambia la extensión. */
+  /* fondo: usa img/hero-1.png. Si tu archivo es hero-1.png cambia la extensión. */
   background-image:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url("img/hero-1.png");
@@ -396,15 +396,14 @@ h1,h2,h3,h4,h5 {
   .slide-left {
     padding: 1.2rem 1.2rem;
   }
-
   .slide-left h1 {
     font-size: 1.4rem;
-  }
-} 
+  } 
   .grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; text-align:center; gap:0.6rem; }
   #whatsapp-btn { width:50px; height:50px; font-size:1.5rem; }
 }
+
 
 
 
