@@ -173,7 +173,7 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
               url("img/hero-1.png") center/cover no-repeat; /* ← AJUSTES CLAVE */
   color: white;
   position: relative;
@@ -191,28 +191,42 @@ h1, h2, h3, h4 {
   backdrop-filter: blur(5px);
 }
 
+.hero .slide-left {
+  background: rgba(0, 0, 0, 0.4); /* Reducir de 0.6 a 0.4 */
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px); /* Reducir blur */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
 .hero h1 {
   font-size: 2.8rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1rem !important;
   color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero .eyebrow {
   font-family: var(--font-script);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
   color: white;
-  opacity: 0.9;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  display: block; 
 }
 
 .hero p {
   font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95); /* Más blanco */
   max-width: 600px;
-  margin: 0 auto 2rem;
-  color: white;
-  opacity: 0.95;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
@@ -607,6 +621,7 @@ h1, h2, h3, h4 {
     background-color: #000; /* Color de fondo para los espacios vacíos */
   }
 }
+
 
 
 
