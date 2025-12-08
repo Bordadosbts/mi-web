@@ -166,18 +166,24 @@ h1, h2, h3, h4 {
    HERO - VERSIÓN CORREGIDA
 ============================ */
 .hero {
-  padding: 4rem 1.5rem;
+  position: relative;
+  width: 100%;
   min-height: 60vh;
-  max-height: 80vh; /* ← LIMITA la altura máxima */
+  max-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-              url("img/hero-1.png") center/cover no-repeat; /* ← AJUSTES CLAVE */
-  color: white;
-  position: relative;
-  overflow: hidden; /* ← Evita desbordamiento */
+  overflow: hidden;
+  
+  /* Degradado con tu color de marca */
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(223, 48, 103, 0.25) 0%,  /* var(--accent) */
+      rgba(69, 193, 234, 0.15) 100% /* var(--blue) */
+    ),
+    url("img/hero-1.png") center center / cover no-repeat;
 }
 
 .hero .container {
@@ -192,41 +198,38 @@ h1, h2, h3, h4 {
 }
 
 .hero .slide-left {
-  background: rgba(0, 0, 0, 0.4); /* Reducir de 0.6 a 0.4 */
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
   padding: 2.5rem;
   border-radius: 20px;
-  backdrop-filter: blur(5px); /* Reducir blur */
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid var(--accent);
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .hero h1 {
-  font-size: 2.8rem !important;
-  margin-bottom: 1rem !important;
-  color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary); /* Negro */
+  line-height: 1.2;
 }
 
 .hero .eyebrow {
   font-family: var(--font-script);
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  display: block; 
+  color: var(--accent); /* Rosa */
+  display: block;
 }
 
 .hero p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.95); /* Más blanco */
+  color: var(--muted); /* Gris oscuro */
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
@@ -621,6 +624,7 @@ h1, h2, h3, h4 {
     background-color: #000; /* Color de fondo para los espacios vacíos */
   }
 }
+
 
 
 
