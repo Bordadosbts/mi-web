@@ -166,16 +166,29 @@ h1, h2, h3, h4 {
    HERO - VERSIÓN CORREGIDA
 ============================ */
 .hero {
-  padding: 5rem 1rem !important;
-  min-height: 60vh !important;
-  display: flex !important;
-  align-items: center !important;
-  
-  /* Fondo de emergencia - cambiar por tu imagen cuando esté lista */
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
-              url("img/hero-1.png") center/cover;
+  padding: 4rem 1.5rem;
+  min-height: 60vh;
+  max-height: 80vh; /* ← LIMITA la altura máxima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
+              url("img/hero-1.png") center/cover no-repeat; /* ← AJUSTES CLAVE */
+  color: white;
   position: relative;
-  z-index: 2; 
+  overflow: hidden; /* ← Evita desbordamiento */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--maxw);
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejor legibilidad */
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
 }
 
 .hero h1 {
@@ -588,5 +601,11 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (min-aspect-ratio: 16/9) {
+  .hero {
+    background-size: contain; /* Ajusta la imagen para que quepa */
+    background-color: #000; /* Color de fondo para los espacios vacíos */
+  }
+}
 
 
