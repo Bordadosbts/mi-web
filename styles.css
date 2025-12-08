@@ -22,7 +22,6 @@
   --card:#ffffff;
   --muted:#5f5f5f;
 
-  /* paleta madera (RRSS) */
   --bg-wood: #e7e4e0;
   --bg-wood-dark: #bdb5ae;
   --bg-wood-darker: #7f766f;
@@ -31,21 +30,21 @@
 }
 
 /* ============================
-   ESTILOS BASE
+   RESET + BASE
 ============================ */
 * { box-sizing: border-box; }
 
 body {
   margin:0;
+  font-family:var(--font-main);
+  color:var(--primary);
   background-image:
     linear-gradient(rgba(189,181,174,0.25),rgba(127,118,111,0.25)),
     url("fondo-madera.png");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
-  background-attachment: fixed;
-  font-family:var(--font-main);
-  color:var(--primary);
+  background-attachment:fixed;
 }
 
 .container {
@@ -54,12 +53,10 @@ body {
   padding:1rem;
 }
 
-/* Tipografías coherentes */
-body, p, li, input, textarea, button { font-family:var(--font-main); font-size:15.5px; }
+body, p, li, input, textarea, button { font-size:15.5px; }
 
 h1, h2, h3, h4, h5 { font-family: var(--font-title); letter-spacing:-0.4px; }
 
-/* Títulos */
 h1 { font-size:2.6rem; font-weight:800; }
 h2 {
   font-size:1.9rem;
@@ -78,9 +75,7 @@ h2::after {
 }
 h3 { font-size:1.2rem; }
 
-/* Frase manuscrita */
-.eyebrow,
-.testimonials blockquote strong {
+.eyebrow {
   font-family:var(--font-script);
   font-size:1.5rem;
   color:var(--accent);
@@ -97,7 +92,7 @@ h3 { font-size:1.2rem; }
 .toplinks { color:#fff; text-decoration:none; }
 
 /* ============================
-   HEADER
+   HEADER + LOGO
 ============================ */
 .site-header { background:none; }
 
@@ -114,24 +109,30 @@ h3 { font-size:1.2rem; }
   filter:drop-shadow(0 6px 14px rgba(0,0,0,0.18));
 }
 
-/* NAV */
+/* ============================
+   NAV
+============================ */
 .header-nav {
   position:sticky;
-  top:0; z-index:50;
+  top:0;
+  z-index:50;
   background:rgba(127,118,111,0.7);
   backdrop-filter:blur(6px);
   border-bottom:2px solid var(--bg-wood-dark);
 }
+
 .header-inner {
   display:flex;
   justify-content:center;
   gap:1rem;
   padding:0.3rem 0.6rem;
 }
+
 .main-nav {
   display:flex;
   gap:1.2rem;
 }
+
 .main-nav a {
   color:#fff;
   text-decoration:none;
@@ -140,7 +141,6 @@ h3 { font-size:1.2rem; }
   font-weight:700;
 }
 .main-nav a:hover { background:var(--bg-wood-dark); }
-.main-nav a.cta { background:var(--bg-wood-dark); }
 
 .menu-btn {
   display:none;
@@ -151,35 +151,63 @@ h3 { font-size:1.2rem; }
 }
 
 /* ============================
-   HERO
+   HERO (BLOQUE REAL)
 ============================ */
-.hero { padding:2.5rem 0; } /* COMPACTADO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  min-height: 480px;
+  max-height: 480px;
+  overflow: hidden;
 
-.carousel { position:relative; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.slide {
-  display:none;
-  flex-direction:column;
-  text-align:center;
-  padding:2rem 1.4rem;
-  gap:1.2rem;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("img/hero-1.png") center center no-repeat;
+  background-size: cover;
 }
-.slide.active { display:flex; }
 
-.slide-left {
-  background:rgba(255,255,255,0.7);
-  border:1px solid rgba(255,255,255,0.3);
-  border-radius:14px;
-  padding:1.6rem 1.8rem; /* compactado */
-  box-shadow:0 12px 32px rgba(0,0,0,0.22);
-  max-width:700px;
-  margin:auto;
+.hero .container {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+/* ============================
+   BOTONES
+============================ */
+.btn,
+.main-nav a.cta {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--yellow));
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+  border: none;
+}
+
+.btn:hover,
+.main-nav a.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
 }
 
 /* ============================
    PRODUCTS
 ============================ */
-.products { padding:2rem 0; } /* antes 3rem */
+.products { padding:2rem 0; }
 
 .grid {
   display:grid;
@@ -203,18 +231,9 @@ h3 { font-size:1.2rem; }
   object-fit:cover;
   border-radius:10px;
 }
+
 .card h3 { font-size:1rem; margin:.3rem 0; }
 .card .price { color:var(--accent); font-weight:700; }
-
-/* ============================
-   TESTIMONIALS
-============================ */
-.testimonials { padding:2rem 0; }
-
-/* ============================
-   NEWSLETTER
-============================ */
-.newsletter { padding:1.4rem 0; }
 
 /* ============================
    CTA
@@ -232,26 +251,18 @@ h3 { font-size:1.2rem; }
 ============================ */
 .site-footer {
   background:rgba(127,118,111,0.5);
-  padding:1rem 0; /* antes 0.5rem */
+  padding:1rem 0;
   color:#fff;
 }
 
 .footer-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:1rem; /* antes 0.4 */
-  padding:0.2rem 0;
+  gap:1rem;
 }
 
-.site-footer h4, .site-footer h5 {
-  font-size:0.85rem; /* reducido */
-  margin-bottom:0.15rem;
-}
-.site-footer p,
-.site-footer ul li {
-  font-size:0.8rem;
-  margin-bottom:0.12rem;
-}
+.site-footer h4 { font-size:0.85rem; margin-bottom:0.15rem; }
+.site-footer p { font-size:0.8rem; }
 
 .copyright {
   text-align:center;
@@ -275,11 +286,9 @@ h3 { font-size:1.2rem; }
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
-  text-decoration: none !important; /* asegurar que no haya subrayado */
-  -webkit-tap-highlight-color: transparent; /* quita línea azul en móvil */
-  border: none;
-  z-index: 9999; /* sobre todo */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* opcional: resalta */
+  text-decoration: none !important;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* ============================
@@ -309,23 +318,19 @@ h3 { font-size:1.2rem; }
     box-shadow:0 8px 20px rgba(0,0,0,0.5);
     z-index: 1000;
   }
-  .main-nav.open { 
-    display:flex !important;
-    z-index: 9999;
-  }
+
+  .main-nav.open { display:flex; }
 
   .grid { grid-template-columns:1fr; }
 
   .footer-grid {
     grid-template-columns:1fr;
     text-align:center;
-    gap:0.6rem;
   }
 
-   #whatsapp-btn {
+  #whatsapp-btn {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
   }
 }
-
