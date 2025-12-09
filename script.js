@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =========================
-     MENÚ MÓVIL (para navegación sticky)
+     MENÚ MÓVIL
   ========================= */
   const btn = document.getElementById('btnMenu');
   const nav = document.getElementById('mainNav');
+  const mainNavigation = document.querySelector('.main-navigation');
 
   if (btn && nav) {
     btn.addEventListener('click', (e) => {
@@ -20,30 +21,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     SCROLL SUAVE PARA ENLACES INTERNOS
+     SCROLL SUAVE
   ========================= */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+      const href = this.getAttribute('href');
       
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      // Solo procesar enlaces internos que no sean solo "#"
+      if (href === '#' || href === '#0') return;
       
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        
         // Cerrar menú móvil si está abierto
         if (nav && nav.classList.contains('open')) {
           nav.classList.remove('open');
         }
         
-        // Scroll suave
+        // Calcular posición con offset para header sticky
+        const headerHeight = mainNavigation ? mainNavigation.offsetHeight + 36 : 100;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
         window.scrollTo({
-          top: targetElement.offsetTop - 100, // Ajuste para header sticky
+          top: targetPosition,
           behavior: 'smooth'
         });
       }
     });
   });
+
+  /* =========================
+     MOSTRAR/OCULTAR NAVEGACIÓN STICKY
+  ========================= */
+  if (mainNavigation) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Mostrar navegación después de pasar el hero
+      if (scrollTop > 400) {
+        mainNavigation.classList.add('visible');
+      } else {
+        mainNavigation.classList.remove('visible');
+      }
+    });
+  }
 
   /* =========================
      AÑO AUTOMÁTICO FOOTER
@@ -61,92 +83,38 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const emailInput = form.querySelector('input[type="email"]');
       if (emailInput && emailInput.value) {
-        // Aquí normalmente enviarías los datos a un servidor
-        // Por ahora solo mostramos un mensaje
-        alert('¡Gracias por suscribirte! Te hemos agregado a nuestra lista de novedades.');
+        // Simular envío exitoso
+        alert('¡Gracias por suscribirte! Te mantendremos informado de nuestras novedades.');
         form.reset();
-      } else {
-        alert('Por favor, introduce un email válido.');
       }
-    });
-  }
-
-  /* =========================
-     EFECTO SCROLL PARA NAVEGACIÓN STICKY
-  ========================= */
-  const mainNavigation = document.querySelector('.main-navigation');
-  
-  if (mainNavigation) {
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      // Mostrar/ocultar navegación sticky según scroll
-      if (scrollTop > 300) { // Después de pasar el hero
-        mainNavigation.style.opacity = '1';
-        mainNavigation.style.visibility = 'visible';
-        mainNavigation.style.transform = 'translateY(0)';
-      } else {
-        mainNavigation.style.opacity = '0';
-        mainNavigation.style.visibility = 'hidden';
-        mainNavigation.style.transform = 'translateY(-20px)';
-      }
-      
-      // Efecto de esconder al hacer scroll hacia abajo
-      if (scrollTop > lastScrollTop && scrollTop > 400) {
-        // Scroll hacia abajo - esconder
-        mainNavigation.style.transform = 'translateY(-100%)';
-      } else {
-        // Scroll hacia arriba - mostrar
-        mainNavigation.style.transform = 'translateY(0)';
-      }
-      
-      lastScrollTop = scrollTop;
     });
   }
 
   /* =========================
      ANIMACIÓN PARA CARDS AL SCROLL
   ========================= */
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, observerOptions);
-
-  // Observar todas las cards
-  document.querySelectorAll('.card').forEach(card => {
-    observer.observe(card);
-  });
-
-  /* =========================
-     CONTADOR DE PRODUCTOS (opcional, para engagement)
-  ========================= */
-  const updateProductCounts = () => {
-    const countElements = document.querySelectorAll('.product-count');
-    
-    if (countElements.length > 0) {
-      // Simular que tenemos X productos vendidos hoy
-      const todayCount = Math.floor(Math.random() * 15) + 5;
-      
-      countElements.forEach(element => {
-        element.textContent = todayCount;
+  const cards = document.querySelectorAll('.card');
+  
+  if (cards.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Añadir delay escalonado para cada card
+          setTimeout(() => {
+            entry.target.classList.add('animate-in');
+          }, index * 100);
+          
+          observer.unobserve(entry.target);
+        }
       });
-    }
-  };
-
-  // Actualizar cada 30 segundos (solo si hay elementos)
-  if (document.querySelector('.product-count')) {
-    updateProductCounts();
-    setInterval(updateProductCounts, 30000);
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    cards.forEach(card => {
+      observer.observe(card);
+    });
   }
 
 });
