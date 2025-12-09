@@ -46,15 +46,25 @@ body {
   color: var(--primary);
   min-height: 100vh;
   
-  /* FONDO QUE EMPIEZA DESDE EL TOP */
+  /* FONDO PERFECTO PARA VER LA MADERA */
   background: 
-    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.92)),
+    /* Overlay muy sutil */
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.05) 70%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    /* Tu imagen de fondo */
     url("fondo-madera.png") top center / cover fixed;
   
   background-color: var(--bg-wood);
   background-attachment: fixed;
-  background-position: top center;
   position: relative;
+  
+  /* Mejorar la legibilidad del texto */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 /* Añade un contenedor general con espacio */
@@ -243,8 +253,8 @@ h1, h2, h3, h4 {
   background: 
     radial-gradient(
       ellipse at center,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.05) 70%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 70%,
       transparent 100%
     ),
     url("img/hero-1.png") center center / cover no-repeat;
@@ -263,7 +273,7 @@ h1, h2, h3, h4 {
 
 /* Caja de contenido mejorada */
 .hero .slide-left {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 0.95);
   padding: 3rem;
   border-radius: 20px;
   border: 3px solid var(--accent);
@@ -393,9 +403,9 @@ h1, h2, h3, h4 {
 .testimonials,
 .newsletter,
 .cta-inline {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 
     0 15px 40px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.5) inset;
@@ -478,7 +488,8 @@ h1, h2, h3, h4 {
 }
 
 .card {
-  background: linear-gradient(145deg, #ffffff, #f8f8f8);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px); 
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 
@@ -653,7 +664,7 @@ h1, h2, h3, h4 {
    FOOTER
 ============================ */
 .site-footer {
-  background: rgba(127, 118, 111, 0.95);
+  background: rgba(127, 118, 111, 0.85);
   backdrop-filter: blur(20px);
   color: white;
   padding: 4rem 0 2rem;
@@ -980,3 +991,4 @@ h1, h2, h3, h4 {
     padding: 0 1rem;
   }
 }
+
