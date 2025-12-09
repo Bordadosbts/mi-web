@@ -123,7 +123,7 @@ h1, h2, h3, h4 {
    HEADER - TRANSLÚCIDO STICKY
 ============================ */
 .site-header {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: sticky;
@@ -151,7 +151,7 @@ h1, h2, h3, h4 {
 }
 
 .header-nav {
-  background: rgba(127, 118, 111, 0.5);
+  background: rgba(127, 118, 111, 0.95);
   backdrop-filter: blur(10px);
   padding: 0.7rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -664,7 +664,7 @@ h1, h2, h3, h4 {
    FOOTER
 ============================ */
 .site-footer {
-  background: rgba(127, 118, 111, 0.5);
+  background: rgba(127, 118, 111, 0.85);
   backdrop-filter: blur(20px);
   color: white;
   padding: 4rem 0 2rem;
@@ -845,20 +845,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-  body {
-    background: 
-      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6)),
-      url("fondo-madera.png") top center / cover fixed !important;
-  }
-  
-  .products,
-  .testimonials,
-  .newsletter,
-  .cta-inline {
-    background: rgba(255, 255, 255, 0.95) !important; /* Más opaco en móvil */
-  }
-}
-   .menu-btn {
+  .menu-btn {
     display: block;
   }
   
@@ -1004,5 +991,3 @@ h1, h2, h3, h4 {
     padding: 0 1rem;
   }
 }
-
-
