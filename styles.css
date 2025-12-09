@@ -140,10 +140,14 @@ h1, h2, h3, h4 {
    TOPBAR
 ============================ */
 .topbar {
-  background: var(--primary);
+  background: rgba(0, 0, 0, 0.9); /* Cambia a rgba con transparencia */
+  backdrop-filter: blur(10px);
   color: white;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   font-size: 0.9rem;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .topbar .container {
@@ -168,15 +172,19 @@ h1, h2, h3, h4 {
    HEADER
 ============================ */
 .site-header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95); /* Blanco translúcido */
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 99;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-banner-full {
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   display: flex;
   justify-content: center;
-  background: white;
+  background: transparent; /* Quita el fondo blanco */
 }
 
 .header-banner-full img {
@@ -186,8 +194,11 @@ h1, h2, h3, h4 {
 }
 
 .header-nav {
-  background: var(--bg-wood-darker);
-  padding: 0.5rem 0;
+  background: rgba(127, 118, 111, 0.95); /* Madera translúcida */
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
@@ -858,6 +869,7 @@ body {
     background-color: #000; /* Color de fondo para los espacios vacíos */
   }
 }
+
 
 
 
