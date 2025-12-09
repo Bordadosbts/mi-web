@@ -41,19 +41,27 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--primary);
   min-height: 100vh;
   
-  /* Fondo de madera con ajustes */
+  /* Fondo más sutil */
   background: 
-    /* Overlay sutil para mejorar legibilidad */
-    linear-gradient(rgba(231, 228, 224, 0.9), rgba(231, 228, 224, 0.95)),
-    /* Tu imagen de fondo */
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)),
     url("fondo-madera.png") center/cover fixed;
   
-  /* Color de respaldo mientras carga */
   background-color: var(--bg-wood);
+  background-blend-mode: soft-light;
+}
+
+/* Añade un contenedor general con espacio */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4 {
@@ -62,22 +70,70 @@ h1, h2, h3, h4 {
   letter-spacing: -0.5px !important;
 }
 
-.container {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  width: 100%;
-}
-
 /* Ajusta las secciones con contenido para que sean legibles */
 .products,
 .testimonials,
 .newsletter,
 .cta-inline {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 25px;
+  margin: 3rem auto;
+  padding: 4rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea decorativa superior */
+.products::before,
+.testimonials::before,
+.newsletter::before,
+.cta-inline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    var(--accent) 0%, 
+    var(--yellow) 50%, 
+    var(--blue) 100%);
+  border-radius: 25px 25px 0 0;
+}
+
+/* Títulos con mejor diseño */
+.products h2,
+.testimonials h2,
+.newsletter h3,
+.cta-inline h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.products h2::after,
+.testimonials h2::after,
+.newsletter h3::after,
+.cta-inline h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--accent), 
+    transparent);
+  border-radius: 2px;
 }
 
 /* ============================
@@ -186,68 +242,88 @@ h1, h2, h3, h4 {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 60vh;
-  max-height: 80vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  margin: 2rem auto;
   
-  /* Degradado con tu color de marca */
+  /* Fondo con overlay MUY suave */
   background: 
-    linear-gradient(
-      135deg,
-      rgba(223, 48, 103, 0.25) 0%,  /* var(--accent) */
-      rgba(69, 193, 234, 0.15) 100% /* var(--blue) */
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.05) 70%,
+      transparent 100%
     ),
     url("img/hero-1.png") center center / cover no-repeat;
+  
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
 .hero .container {
   position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: var(--maxw);
+  z-index: 3;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejor legibilidad */
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
 }
 
+/* Caja de contenido mejorada */
 .hero .slide-left {
-  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
-  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 3rem;
   border-radius: 20px;
-  border: 2px solid var(--accent);
-  max-width: 800px;
+  border: 3px solid var(--accent);
+  max-width: 850px;
   margin: 0 auto;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    0 5px 15px rgba(223, 48, 103, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto decorativo */
+.hero .slide-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: var(--primary); /* Negro */
+  color: var(--primary);
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero .eyebrow {
   font-family: var(--font-script);
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--accent); /* Rosa */
+  color: var(--accent);
   display: block;
+  font-weight: 400;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: var(--muted); /* Gris oscuro */
-  max-width: 600px;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  color: #444;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 400;
 }
 
 .hero-buttons {
@@ -324,22 +400,43 @@ h1, h2, h3, h4 {
 }
 
 .card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.08); 
+  background: linear-gradient(145deg, #ffffff, #f8f8f8);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 2px 0 rgba(223, 48, 103, 0.1) inset;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(223, 48, 103, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 1rem; 
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  border-color: var(--accent); 
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(223, 48, 103, 0.2) inset;
+  border-color: var(--accent);
 }
 
 .card img {
@@ -561,6 +658,125 @@ h1, h2, h3, h4 {
 }
 
 /* ============================
+   MEJORAS DE VISIBILIDAD
+============================ */
+
+/* Fondo más claro */
+body {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)),
+    url("fondo-madera.png") center/cover fixed !important;
+}
+
+/* Hero más visible */
+.hero {
+  background: 
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    ),
+    url("img/hero-1.png") center/cover no-repeat !important;
+  margin: 1.5rem auto !important;
+  border-radius: 25px !important;
+}
+
+.hero .slide-left {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 3px solid var(--accent) !important;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    0 10px 30px rgba(223, 48, 103, 0.15) !important;
+}
+
+.hero h1 {
+  color: #000000 !important;
+  font-size: 2.8rem !important;
+}
+
+.hero .eyebrow {
+  color: var(--accent) !important;
+  font-size: 1.8rem !important;
+}
+
+.hero p {
+  color: #333333 !important;
+}
+
+/* Secciones más destacadas */
+.products,
+.testimonials,
+.newsletter,
+.cta-inline {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border: 2px solid rgba(223, 48, 103, 0.15) !important;
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+  margin: 2.5rem auto !important;
+  padding: 3.5rem 2.5rem !important;
+}
+
+/* Títulos con línea decorativa */
+.products h2,
+.testimonials h2,
+.newsletter h3,
+.cta-inline h2 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 2.5rem !important;
+}
+
+.products h2::after,
+.testimonials h2::after,
+.newsletter h3::after,
+.cta-inline h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Cards mejoradas */
+.card {
+  background: white !important;
+  border: 2px solid rgba(223, 48, 103, 0.1) !important;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 2px 0 rgba(223, 48, 103, 0.05) inset !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-10px) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 2px rgba(223, 48, 103, 0.1) inset !important;
+}
+
+/* WhatsApp más visible */
+#whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #1da851) !important;
+  box-shadow: 
+    0 8px 25px rgba(37, 211, 102, 0.5),
+    0 0 0 2px rgba(255, 255, 255, 0.3) inset !important;
+}
+
+#whatsapp-btn:hover {
+  transform: scale(1.2) rotate(10deg) !important;
+  box-shadow: 
+    0 12px 35px rgba(37, 211, 102, 0.7),
+    0 0 0 3px rgba(255, 255, 255, 0.4) inset !important;
+}
+
+/* ============================
    RESPONSIVE
 ============================ */
 @media (max-width: 768px) {
@@ -642,6 +858,7 @@ h1, h2, h3, h4 {
     background-color: #000; /* Color de fondo para los espacios vacíos */
   }
 }
+
 
 
 
