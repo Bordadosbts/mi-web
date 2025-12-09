@@ -27,52 +27,57 @@
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="site-header">
-
-    <div class="header-banner-full">
+  <!-- Hero como Header Principal -->
+<header class="hero-header">
+  <div class="hero-container">
+    
+    <!-- Logo/Nombre -->
+    <div class="hero-logo">
       <img src="banner-bordando.png" alt="Bordando tus sueños">
     </div>
-
-    <div class="header-nav">
-      <div class="container header-inner">
-        <button id="btnMenu" class="menu-btn">☰</button>
-
-        <nav id="mainNav" class="main-nav">
-          <a href="#">Catálogo</a>
+    
+    <!-- Contenido Principal -->
+    <div class="hero-content">
+      <h1>🪡 Bordado profesional sin límites 🪡</h1>
+      <span class="hero-tagline">🧵 Tu creación, hilo a hilo 🧵</span>
+      <p>Bordado industrial de alta precisión para empresas, marcas y eventos. Cada detalle importa.</p>
+      
+      <!-- Navegación dentro del hero -->
+      <div class="hero-navigation">
+        <nav class="hero-nav">
+          <a href="#productos">Catálogo</a>
           <a href="#">Servicios</a>
           <a href="#">Tienda</a>
           <a href="#">Clientes</a>
           <a href="#">Contacto</a>
           <a class="cta" href="#cotizar">¡Pide presupuesto!</a>
         </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- ✅ HERO LIMPIO Y CORRECTO -->
-  <section class="hero">
-    <div class="container">
-      <div class="carousel">
-
-        <div class="slide active">
-          <div class="slide-left">
-            <h1>🪡 Bordado profesional sin límites 🪡</h1>
-            <p class="eyebrow">🧵 Tu creación, hilo a hilo 🧵</p>
-            <p>Bordado industrial de alta precisión para empresas, marcas y eventos.</p>
-
-            <div class="hero-buttons">
-              <a href="#productos" class="btn">Ver productos</a>
-              <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
-            </div>
-          </div>
+        
+        <!-- Botones de acción -->
+        <div class="hero-actions">
+          <a href="#productos" class="btn">Ver productos</a>
+          <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
         </div>
-
       </div>
     </div>
-  </section>
-
-  <!-- Productos -->
+  </div>
+</header>
+    <!-- Navegación Sticky (opcional, para scroll) -->
+<nav class="main-navigation">
+  <div class="container nav-container">
+    <button id="btnMenu" class="menu-btn">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <!-- Mismos enlaces que en el hero -->
+      <a href="#productos">Catálogo</a>
+      <a href="#">Servicios</a>
+      <a href="#">Tienda</a>
+      <a href="#">Clientes</a>
+      <a href="#">Contacto</a>
+      <a class="cta" href="#cotizar">¡Presupuesto!</a>
+    </nav>
+  </div>
+</nav>
+    <!-- Productos -->
   <section id="productos" class="container products">
     <h2>Nuestros productos</h2>
     <p class="lead">
@@ -182,3 +187,4 @@
 
 </body>
 </html>
+
