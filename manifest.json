@@ -1,0 +1,21 @@
+{
+  "name": "Bordando Tus Sueños",
+  "short_name": "BordadosBTS",
+  "description": "Bordado profesional industrial",
+  "start_url": "/mi-web/",
+  "display": "standalone",
+  "background_color": "#eeede9",
+  "theme_color": "#df3067",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
