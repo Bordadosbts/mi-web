@@ -151,7 +151,8 @@ a {
 
 .hero-header {
   position: relative;
-  min-height: 30vh;
+  /* CAMBIO 1: Aumentamos la altura mínima para escritorio */
+  min-height: 85vh; /* Era: min-height: 30vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +166,8 @@ a {
     url("img/hero-1.png") center center / cover no-repeat;
   
   color: white;
-  padding: 2rem 1rem;
+  /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
+  padding: 4rem 1rem 6rem; /* Era: padding: 2rem 1rem; */
   margin-top: 0;
 }
 
@@ -180,20 +182,15 @@ a {
 
 /* Logo/nombre en el hero */
 .hero-logo {
-  margin-bottom: 2.5rem;
-}
-
-.hero-logo img {
-  max-height: 130px;
-  width: auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  margin-bottom: 3rem; /* Era: 2.5rem; */
 }
 
 /* Contenido principal del hero */
 .hero-content {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
-  padding: 3.5rem;
+  /* CAMBIO 3: Más padding para destacar el contenido */
+  padding: 4.5rem; /* Era: 3.5rem; */
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   max-width: 900px;
@@ -201,17 +198,19 @@ a {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
+/*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 4rem; /* Era: 3.5rem; */
+  margin-bottom: 1.5rem; /* Era: 1rem; */
   color: white;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
 }
 
+/* Tagline más destacado */
 .hero-tagline {
   font-family: var(--font-script);
-  font-size: 2.2rem;
-  margin-bottom: 1.8rem;
+  font-size: 2.8rem; /* Era: 2.2rem; */
+  margin-bottom: 2.2rem; /* Era: 1.8rem; */
   color: var(--yellow);
   display: block;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
@@ -888,15 +887,15 @@ section {
   h2 { font-size: 2rem; }
   
   .hero-content {
-    padding: 3rem;
+    padding: 3.5rem;
   }
   
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.2rem; /* Ajuste para tablet */
   }
   
   .hero-tagline {
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Ajuste para tablet */
   }
 }
 
@@ -915,29 +914,29 @@ section {
   }
   
   .hero-header {
-    min-height: 80vh;
-    padding: 1.5rem 1rem;
-  }
+    min-height: 75vh; /* Era: 80vh - un poco menos en móvil */
+    padding: 3rem 1rem 4rem; /* Ajuste del padding para móvil */
+  
   
   .hero-logo img {
     max-height: 110px;
   }
   
   .hero-content {
-    padding: 2.5rem 2rem;
+    padding: 2.8rem 2rem;
     margin-bottom: 2rem;
   }
   
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   
   .hero-tagline {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
   .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 2.5rem;
   }
   
@@ -1060,7 +1059,7 @@ section {
   h4 { font-size: 1.3rem; }
   
   .hero-header {
-    min-height: 75vh;
+    min-height: 70vh;
   }
   
   .hero-logo img {
@@ -1068,19 +1067,19 @@ section {
   }
   
   .hero-content {
-    padding: 2rem 1.5rem;
+    padding: 2.2rem 1.5rem;
   }
   
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   
   .hero-tagline {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
   }
   
@@ -1108,5 +1107,6 @@ section {
     padding-top: 2rem;
   }
 }
+
 
 
