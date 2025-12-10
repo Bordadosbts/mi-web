@@ -151,7 +151,7 @@ a {
 
 .hero-header {
   position: relative;
-  min-height: 85vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1108,3 +1108,4 @@ section {
     padding-top: 2rem;
   }
 }
+
