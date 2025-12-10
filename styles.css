@@ -916,7 +916,7 @@ section {
   .hero-header {
     min-height: 75vh; /* Era: 80vh - un poco menos en móvil */
     padding: 3rem 1rem 4rem; /* Ajuste del padding para móvil */
-  
+  }
   
   .hero-logo img {
     max-height: 110px;
@@ -1107,6 +1107,7 @@ section {
     padding-top: 2rem;
   }
 }
+
 
 
 
