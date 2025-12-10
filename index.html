@@ -48,8 +48,10 @@
     <!-- Navegación Sticky (opcional, para scroll) -->
 <nav class="main-navigation">
   <div class="container nav-container">
-    <button id="btnMenu" class="menu-btn">☰</button>
-    <nav id="mainNav" class="main-nav">
+    <button id="btnMenu" class="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+  ☰
+</button>
+    <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
       <!-- Mismos enlaces que en el hero -->
       <a href="#productos">Catálogo</a>
       <a href="#">Servicios</a>
@@ -163,13 +165,17 @@
   </footer>
 
   <!-- WhatsApp -->
-  <a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank">💬</a>
+<a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank" 
+   aria-label="Contactar por WhatsApp">
+  💬
+</a>
 
   <!-- Script -->
   <script src="script.js"></script>
 
 </body>
 </html>
+
 
 
 
