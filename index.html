@@ -3,6 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Bordado industrial profesional para empresas y marcas. Gorras, parches, camisetas personalizadas con la más alta calidad.">
+  <meta property="og:title" content="Bordando Tus Sueños - Bordado Profesional">
+  <meta property="og:description" content="Tu creación, hilo a hilo. Bordado industrial de alta precisión.">
+  <meta property="og:image" content="https://bordadosbts.github.io/mi-web/img/hero-1.png">
+  <meta property="og:url" content="https://bordadosbts.github.io/mi-web/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#df3067">
+  <link rel="manifest" href="manifest.json">
   <title>Bordando tus sueños — Inicio</title>
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -11,8 +19,35 @@
   <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="fonts/script5.TTF" as="font" type="font/ttf" crossorigin>
+<!-- Crear manifest.json -->
+{
+  "name": "Bordando Tus Sueños",
+  "short_name": "BordadosBTS",
+  "description": "Bordado profesional industrial",
+  "start_url": "/mi-web/",
+  "display": "standalone",
+  "background_color": "#eeede9",
+  "theme_color": "#df3067",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
 </head>
 
+<script>
+  // Event tracking para CTA
+  document.querySelectorAll('.btn, .cta').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const label = this.textContent.trim() || this.getAttribute('href');
+      console.log('CTA clicked:', label); // Reemplazar con tu analytics
+    });
+  });
+</script>
+  
 <body>
 
   <!-- Topbar -->
@@ -172,9 +207,21 @@
 
   <!-- Script -->
   <script src="script.js"></script>
-
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bordando Tus Sueños",
+    "description": "Bordado profesional para empresas, marcas y eventos",
+    "url": "https://bordadosbts.github.io/mi-web/",
+    "telephone": "+34-644-62-40-43",
+    "priceRange": "€€"
+  }
+  </script>
 </body>
 </html>
+
 
 
 
