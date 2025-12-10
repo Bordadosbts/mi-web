@@ -162,7 +162,7 @@ a {
   
   /* Fondo del hero */
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url("img/hero-1.png") center center / cover no-repeat;
   
   color: white;
@@ -916,6 +916,7 @@ section {
   .hero-header {
     min-height: 75vh; /* Era: 80vh - un poco menos en móvil */
     padding: 3rem 1rem 4rem; /* Ajuste del padding para móvil */
+    margin-bottom: 0;
   }
   
   .hero-logo img {
@@ -1009,6 +1010,11 @@ section {
     border-radius: 20px;
   }
   
+   .products {
+    margin-top: 1rem !important;
+    position: relative;
+    z-index: 1;
+     
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1025,11 +1031,12 @@ section {
   }
   
   #whatsapp-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 1.8rem;
-    bottom: 2rem;
-    right: 2rem;
+    z-index: 10000 !important; /* Valor muy alto */
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
   }
   
   .footer-grid {
@@ -1071,11 +1078,13 @@ section {
   }
   
   .hero-content h1 {
-    font-size: 2.3rem;
+      font-size: 1.9rem; /* Más pequeño para móvil */
+      margin-bottom: 1rem;
   }
   
   .hero-tagline {
-    font-size: 1.6rem;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
   }
   
   .hero-content p {
@@ -1128,6 +1137,7 @@ section {
   }
 }
 }
+
 
 
 
