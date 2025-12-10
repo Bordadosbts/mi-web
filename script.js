@@ -55,17 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
      MOSTRAR/OCULTAR NAVEGACIÓN STICKY
   ========================= */
   if (mainNavigation) {
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let ticking = false;
+  
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 300) { // Reducido de 400
+          mainNavigation.classList.add('visible');
+        } else {
+          mainNavigation.classList.remove('visible');
+        }
+        
+        ticking = false;
+      });
       
-      // Mostrar navegación después de pasar el hero
-      if (scrollTop > 400) {
-        mainNavigation.classList.add('visible');
-      } else {
-        mainNavigation.classList.remove('visible');
-      }
-    });
-  }
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('scroll', handleScroll, { passive: true });
+}
 
   /* =========================
      AÑO AUTOMÁTICO FOOTER
@@ -118,3 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
