@@ -193,21 +193,22 @@ a {
 
 /* Contenido principal del hero */
 .hero-content {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  /* CAMBIO 3: Más padding para destacar el contenido */
-  padding: 1.8rem; /* Era: 3.5rem; */
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 800px;
-  margin: 0 auto 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* REDUCIR OPACIDAD Y TAMAÑO */
+  background: rgba(255, 255, 255, 0.08); /* Era 0.15 - Más transparente */
+  backdrop-filter: blur(8px); /* Era 20px - Mucho menos blur */
+  /* REDUCIR TAMAÑO SIGNIFICATIVAMENTE */
+  padding: 1.5rem 2rem; /* Era 1.8rem - Más horizontal, menos vertical */
+  /* BORDES MÁS SUTILES */
+  border-radius: 12px; /* Era 16px - Más pequeño */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Más sutil */
+  max-width: 700px; /* Era 800px - Más estrecho */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Más ligero */
 }
 
 /*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 2.5rem; /* Era: 3.5rem; */
-  margin-bottom: 0.8rem; /* Era: 1rem; */
+  font-size: 2.2rem; /* Era: 3.5rem; */
+  margin-bottom: 0.5rem; /* Era: 1rem; */
   line-height: 1.2;
   color: white;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
@@ -216,8 +217,8 @@ a {
 /* Tagline más destacado */
 .hero-tagline {
   font-family: var(--font-script);
-  font-size: 1.8rem; /* Era: 2.2rem; */
-  margin-bottom: 1rem; /* Era: 1.8rem; */
+  font-size: 1.5rem; /* Era: 2.2rem; */
+  margin-bottom: 0.8rem; /* Era: 1.8rem; */
   line-height: 1.1;
   color: var(--yellow);
   display: block;
@@ -225,19 +226,19 @@ a {
 }
 
 .hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Navegación dentro del hero */
 .hero-navigation {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -245,18 +246,18 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-bottom: 1.2rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-nav a {
   color: white;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .hero-nav a:hover {
@@ -280,15 +281,15 @@ a {
 /* Botones de acción del hero */
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .hero-actions .btn {
-  padding: 0.8rem 1.8rem;
-  font-size: 0.95rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
 
 /* ===========================================
    NAVEGACIÓN STICKY
@@ -1149,6 +1150,7 @@ section {
   }
 }
 }
+
 
 
 
