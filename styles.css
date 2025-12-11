@@ -188,7 +188,7 @@ a {
 }
 
 .hero-logo img {
-  max-height: 80px; /* Logo más pequeño */
+  max-height: 35px; /* Logo más pequeño */
 }
 
 /* Contenido principal del hero */
@@ -1149,6 +1149,7 @@ section {
   }
 }
 }
+
 
 
 
