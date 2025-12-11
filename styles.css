@@ -152,8 +152,8 @@ a {
 .hero-header {
   position: relative;
   /* CAMBIO 1: Aumentamos la altura mínima para escritorio */
-  min-height: 45vh; /* Era: min-height: 30vh; */
-  max-height: 500px; /* Límite máximo */ 
+  min-height: 30vh; /* Era: min-height: 30vh; */
+  max-height: 400px; /* Límite máximo */ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,7 +168,7 @@ a {
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
-  padding: 2rem 1rem 3rem; /* Era: 4rem 1rem 6rem */
+  padding: 1.5rem 1rem 2rem; /* Era: 4rem 1rem 6rem */
   /* Menos padding para que entre mejor en la nueva altura */
   margin-top: 0;
 }
@@ -184,26 +184,31 @@ a {
 
 /* Logo/nombre en el hero */
 .hero-logo {
-  margin-bottom: 1.5rem; /* Era: 2.5rem; */
+  margin-bottom: 1rem; /* Era: 2.5rem; */
+}
+
+.hero-logo img {
+  max-height: 80px; /* Logo más pequeño */
 }
 
 /* Contenido principal del hero */
 .hero-content {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
   /* CAMBIO 3: Más padding para destacar el contenido */
-  padding: 2.5rem; /* Era: 3.5rem; */
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  max-width: 850px;
-  margin: 0 auto 1.5rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  padding: 1.8rem; /* Era: 3.5rem; */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 3.2rem; /* Era: 3.5rem; */
-  margin-bottom: 1rem; /* Era: 1rem; */
+  font-size: 2.5rem; /* Era: 3.5rem; */
+  margin-bottom: 0.8rem; /* Era: 1rem; */
+  line-height: 1.2;
   color: white;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
 }
@@ -211,46 +216,47 @@ a {
 /* Tagline más destacado */
 .hero-tagline {
   font-family: var(--font-script);
-  font-size: 2.8rem; /* Era: 2.2rem; */
-  margin-bottom: 2.2rem; /* Era: 1.8rem; */
+  font-size: 1.8rem; /* Era: 2.2rem; */
+  margin-bottom: 1rem; /* Era: 1.8rem; */
+  line-height: 1.1;
   color: var(--yellow);
   display: block;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* Navegación dentro del hero */
 .hero-navigation {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
 }
 
 .hero-nav a {
   color: white;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .hero-nav a:hover {
@@ -274,11 +280,15 @@ a {
 /* Botones de acción del hero */
 .hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
+
+.hero-actions .btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
 
 /* ===========================================
    NAVEGACIÓN STICKY
@@ -1139,6 +1149,7 @@ section {
   }
 }
 }
+
 
 
 
