@@ -163,8 +163,8 @@ a {
   
   /* Fondo del hero */
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("img/hero-1.png") center center / cover no-repeat;
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("img/hero-1.png") center center / contain no-repeat;
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
@@ -1149,6 +1149,7 @@ section {
   }
 }
 }
+
 
 
 
