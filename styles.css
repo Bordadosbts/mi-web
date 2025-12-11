@@ -173,15 +173,6 @@ a {
   margin-top: 0;
 }
 
-.hero-container {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  position: relative;
-  z-index: 2;
-}
-
 /* Logo/nombre en el hero */
 .hero-logo {
   margin-bottom: 1rem; /* Era: 2.5rem; */
@@ -1149,6 +1140,7 @@ section {
   }
 }
 }
+
 
 
 
