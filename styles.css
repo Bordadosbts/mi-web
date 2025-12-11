@@ -152,8 +152,8 @@ a {
 .hero-header {
   position: relative;
   /* CAMBIO 1: Aumentamos la altura mínima para escritorio */
-  min-height: 65vh; /* Era: min-height: 30vh; */
-  max-height: 700px; /* Límite máximo */ 
+  min-height: 45vh; /* Era: min-height: 30vh; */
+  max-height: 500px; /* Límite máximo */ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,7 +168,7 @@ a {
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
-  padding: 3rem 1rem 4rem; /* Era: 4rem 1rem 6rem */
+  padding: 2rem 1rem 3rem; /* Era: 4rem 1rem 6rem */
   /* Menos padding para que entre mejor en la nueva altura */
   margin-top: 0;
 }
@@ -184,7 +184,7 @@ a {
 
 /* Logo/nombre en el hero */
 .hero-logo {
-  margin-bottom: 2rem; /* Era: 2.5rem; */
+  margin-bottom: 1.5rem; /* Era: 2.5rem; */
 }
 
 /* Contenido principal del hero */
@@ -192,18 +192,18 @@ a {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   /* CAMBIO 3: Más padding para destacar el contenido */
-  padding: 4.5rem; /* Era: 3.5rem; */
-  border-radius: 24px;
+  padding: 2.5rem; /* Era: 3.5rem; */
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  max-width: 900px;
-  margin: 0 auto 2rem;
+  max-width: 850px;
+  margin: 0 auto 1.5rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
 /*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 4rem; /* Era: 3.5rem; */
-  margin-bottom: 1.5rem; /* Era: 1rem; */
+  font-size: 3.2rem; /* Era: 3.5rem; */
+  margin-bottom: 1rem; /* Era: 1rem; */
   color: white;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
 }
@@ -219,8 +219,8 @@ a {
 }
 
 .hero-content p {
-  font-size: 1.4rem;
-  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 750px;
   margin-left: auto;
@@ -230,8 +230,8 @@ a {
 
 /* Navegación dentro del hero */
 .hero-navigation {
-  margin-top: 3rem;
-  padding-top: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -246,11 +246,11 @@ a {
 .hero-nav a {
   color: white;
   font-weight: 600;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .hero-nav a:hover {
@@ -277,7 +277,7 @@ a {
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 /* ===========================================
@@ -1139,6 +1139,7 @@ section {
   }
 }
 }
+
 
 
 
