@@ -168,7 +168,7 @@ a {
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
-  padding: 1.5rem 1rem 2rem; /* Era: 4rem 1rem 6rem */
+  padding: 2rem 1rem; /* Era: 4rem 1rem 6rem */
   /* Menos padding para que entre mejor en la nueva altura */
   margin-top: 0;
 }
@@ -180,11 +180,17 @@ a {
   padding: 0 1.5rem;
   position: relative;
   z-index: 2;
+
+  /* Esto ayuda al centrado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 
 /* Logo/nombre en el hero */
 .hero-logo {
-  margin-bottom: 1rem; /* Era: 2.5rem; */
+  margin-bottom: 0.5rem; /* Era: 2.5rem; */
 }
 
 .hero-logo img {
@@ -197,7 +203,7 @@ a {
   background: none; /* Sin fondo */
   backdrop-filter: none; /* Sin blur */
   /* REDUCIR TAMAÑO SIGNIFICATIVAMENTE */
-  padding: 1rem;
+  padding: 0.8rem;
   /* BORDES MÁS SUTILES */
   border-radius: 12px; /* Era 16px - Más pequeño */
   border: none; /* Sin borde */
@@ -218,7 +224,7 @@ a {
 .hero-tagline {
   font-family: var(--font-script);
   font-size: 1.5rem; /* Era: 2.2rem; */
-  margin-bottom: 0.8rem; /* Era: 1.8rem; */
+  margin-bottom: 0.5rem; /* Era: 1.8rem; */
   line-height: 1.1;
   color: var(--yellow);
   display: block;
@@ -227,7 +233,7 @@ a {
 
 .hero-content p {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 750px;
   margin-left: auto;
@@ -237,8 +243,8 @@ a {
 
 /* Navegación dentro del hero */
 .hero-navigation {
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -284,7 +290,7 @@ a {
   gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .hero-actions .btn {
@@ -1151,6 +1157,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
