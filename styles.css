@@ -163,7 +163,7 @@ a {
   
   /* Fondo del hero */
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
     url("img/hero-1.png") center center / contain no-repeat;
   
   color: white;
@@ -188,7 +188,7 @@ a {
 }
 
 .hero-logo img {
-  max-height: 35px; /* Logo más pequeño */
+  max-height: 40px; /* Logo más pequeño */
 }
 
 /* Contenido principal del hero */
@@ -202,7 +202,7 @@ a {
   border-radius: 12px; /* Era 16px - Más pequeño */
   border: none; /* Sin borde */
   max-width: 700px; /* Era 800px - Más estrecho */
- box-shadow: none; /* Sin sombra */
+  box-shadow: none; /* Sin sombra */
 }
 
 /*Aumentamos tamaño del título principal */
@@ -1151,7 +1151,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
-}
+
 
 
 
