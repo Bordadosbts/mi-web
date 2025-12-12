@@ -163,7 +163,7 @@ a {
   
   /* Fondo del hero */
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url("img/hero-1.png") center center / contain no-repeat;
   
   color: white;
@@ -290,6 +290,7 @@ a {
 .hero-actions .btn {
   padding: 0.6rem 1.5rem;
   font-size: 0.9rem;
+}
 
 /* ===========================================
    NAVEGACIÓN STICKY
@@ -1027,7 +1028,8 @@ section {
     margin-top: 1rem !important;
     position: relative;
     z-index: 1;
-     
+   }
+   
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1150,6 +1152,7 @@ section {
   }
 }
 }
+
 
 
 
