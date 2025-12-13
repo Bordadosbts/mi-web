@@ -129,9 +129,9 @@ a {
   );
   backdrop-filter: blur(12px);
   color: white;
-  padding: 1rem 0;
-  min-height: 48px; /* Altura mínima garantizada */ 
-  font-size: 0.95rem;
+  padding: 0.8rem 0;
+  min-height: 40px; /* Altura clara */ 
+  font-size: 0.9rem;
   position: sticky;
   top: 0;
   z-index: 1002;
@@ -373,7 +373,7 @@ a {
   backdrop-filter: blur(15px);
   padding: 0.8rem 0;
   position: fixed;
-  top: 48px; /* Altura del topbar */
+  top: 40px; /* Altura del topbar */
   left: 0;
   right: 0; 
   z-index: 1001;
@@ -1220,6 +1220,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
