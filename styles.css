@@ -371,13 +371,19 @@ a {
   background: rgba(127, 118, 111, 0.97);
   backdrop-filter: blur(15px);
   padding: 0.8rem 0;
-  position: sticky;
+  position: fixed;
   top: 0; /* Se pega arriba cuando el hero sale de vista */
+  left: 0;
+  right: 0; 
   z-index: 1001;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  transform: translateY(-100%); /* Oculto inicialmente */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-navigation.scrolled {
+  transform: translateY(0); /* Visible al hacer scroll */
 }
 
 .nav-container {
@@ -1213,6 +1219,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
