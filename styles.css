@@ -134,6 +134,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1002;
+  height: 36px; /* Altura fija */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -372,7 +373,7 @@ a {
   backdrop-filter: blur(15px);
   padding: 0.8rem 0;
   position: fixed;
-  top: 0; /* Se pega arriba cuando el hero sale de vista */
+  top: 36px; /* Se posiciona justo debajo del topbar */
   left: 0;
   right: 0; 
   z-index: 1001;
@@ -1219,6 +1220,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
