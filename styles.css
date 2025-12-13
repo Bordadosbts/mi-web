@@ -64,15 +64,13 @@ body {
   background: 
     /* Capa de transición desde el hero */
     linear-gradient(
-      to top,
-      rgba(127, 118, 111, 0.3) 0%,    /* Color oscuro similar */
-      rgba(127, 118, 111, 0.2) 25%,
-      rgba(127, 118, 111, 0.1) 50%,
-      transparent 100%
+      rgba(127, 118, 111, 0.3),    /* Color oscuro similar */
+      rgba(127, 118, 111, 0.1)
     ),
-    url("fondo-madera.png") top center / cover fixed;
+    url("fondo-madera.png") top center / cover no-repeat;
   
   background-color: var(--bg-wood);
+  background-attachment: local; /* Suave, no fixed */ 
 }
 
 /* ===========================================
@@ -1246,4 +1244,5 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
