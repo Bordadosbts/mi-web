@@ -186,7 +186,7 @@ a {
       rgba(127, 118, 111, 0.3) 100% /* Se funde con el body */
     ),
     /* Imagen muy oscurecida */
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
     url("img/hero-1.png") center center / contain no-repeat;
   
   color: white;
@@ -1222,6 +1222,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
