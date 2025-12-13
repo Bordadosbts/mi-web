@@ -130,8 +130,9 @@ a {
   backdrop-filter: blur(12px);
   color: white;
   padding: 0.8rem 0;
-  height: 40px !important;
-  overflow: hidden !important;
+  height: 40px;
+  display: flex;
+  align-items: center; /* ← CLAVE: Centrado vertical */ 
   font-size: 0.9rem;
   position: sticky;
   top: 0;
@@ -144,17 +145,35 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  width: 100%;
+  max-width: var(--maxw);
   height: 100%; /* ← AÑADIR esto */ 
 }
 
 .toplinks {
   display: flex;
   gap: 1.2rem;
+  align-items: center; /* Centrado vertical */
+  height: 100%; 
 }
 
 .toplinks a {
   color: white;
   opacity: 0.9;
+  display: flex;
+  align-items: center; /* Centrado vertical del texto */
+  height: 100%;
+  line-height: 1;
+  padding: 0 0.2rem; 
+}
+
+.topbar p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Centrado vertical dentro de su espacio */
+  height: 100%;
+  line-height: 1;
 }
 
 .toplinks a:hover {
@@ -1227,3 +1246,4 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
