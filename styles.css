@@ -62,11 +62,13 @@ body {
   
   /* FONDO DE MADERA */
   background: 
-    /* Capa superior que conecta con el hero */
+    /* Capa de transición desde el hero */
     linear-gradient(
       to top,
-      rgba(127, 118, 111, 0.4) 0%,
-      transparent 50px
+      rgba(70, 65, 60, 0.6) 0%,    /* Color oscuro similar */
+      rgba(127, 118, 111, 0.4) 30px,
+      rgba(127, 118, 111, 0.2) 60px,
+      transparent 100px
     ),
     /* Fondo de madera */
     linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)),
@@ -122,20 +124,19 @@ a {
 .topbar {
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.85) 80%,
-    rgba(0, 0, 0, 0.7) 95%,
-    transparent 100%
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.92) 70%,
+    rgba(0, 0, 0, 0.85) 90%,
+    rgba(0, 0, 0, 0.7) 100%
   );
-   
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   color: white;
   padding: 0.6rem 0;
   font-size: 0.9rem;
   position: sticky;
   top: 0;
   z-index: 1002;
-  border-bottom: none; /* Eliminar línea dura */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .topbar .container {
@@ -164,8 +165,7 @@ a {
    =========================================== */
 
 .hero-header {
-  position: relative;
-  /* CAMBIO 1: Aumentamos la altura mínima para escritorio */
+  /* Aumentamos la altura mínima para escritorio */
   min-height: 30vh; /* Era: min-height: 30vh; */
   max-height: 400px; /* Límite máximo */ 
   display: flex;
@@ -176,22 +176,27 @@ a {
   overflow: hidden;
   
   /* Fondo del hero */
+  /* CAPA PRINCIPAL: MUCHO MÁS OSCURA */
   background: 
-    /* Capa superior oscura */
+    /* Degradado oscuro intenso */
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.6) 30%,
-      rgba(127, 118, 111, 0.4) 85%,
-      rgba(127, 118, 111, 0.2) 95%,
-      transparent 100%
+      rgba(0, 0, 0, 0.95) 0%,      /* Muy oscuro arriba */
+      rgba(0, 0, 0, 0.9) 50%,    /* Mantiene oscuridad */
+      rgba(0, 0, 0, 0.8) 80%,     /* Comienza a aclarar */
+      rgba(40, 35, 30, 0.7) 95%,  /* Color similar a la madera */
+      rgba(70, 65, 60, 0.5) 100% /* Se funde con el body */
     ),
+    /* Imagen muy oscurecida */
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
     url("img/hero-1.png") center center / contain no-repeat;
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
   padding: 2rem 1rem; /* Era: 4rem 1rem 6rem */
   /* Menos padding para que entre mejor en la nueva altura */
+  /* Oscurecimiento extra con pseudo-elemento */
+  position: relative;
   margin-top: 0;
 }
 
@@ -206,6 +211,22 @@ a {
     to bottom,
     transparent 0%,
     rgba(127, 118, 111, 0.3) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -259,8 +280,8 @@ a {
   font-size: 3.5rem; /* Era: 3.5rem; */
   margin-bottom: 0.8rem; /* Era: 1rem; */
   line-height: 1.1;
-  color: white;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+  color: #ffffff; /* Blanco puro */
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 1);
   white-space: nowrap; /* Fuerza a una sola línea */ 
 }
 
@@ -270,9 +291,9 @@ a {
   font-size: 2.6rem; /* Era: 2.2rem; */
   margin-bottom: 0.8rem; /* Era: 1.8rem; */
   line-height: 1;
-  color: #f8d94a;
+  color: #f8e048; /* Amarillo más brillante */
   display: block;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
@@ -1203,6 +1224,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
