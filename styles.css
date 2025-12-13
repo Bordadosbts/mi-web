@@ -559,7 +559,18 @@ section {
   padding: 5rem 0;
 }
 
-.products,
+.products {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  margin: 6rem auto 4rem;
+  padding: 4rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
 .testimonials,
 .newsletter,
 .cta-inline {
@@ -574,7 +585,16 @@ section {
   overflow: hidden;
 }
 
-.products::before,
+.products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
+}
+
 .testimonials::before,
 .newsletter::before,
 .cta-inline::before {
@@ -713,6 +733,64 @@ section {
 /* ===========================================
    CTA
    =========================================== */
+
+.cta-intermedio {
+  text-align: center;
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.12), 
+    rgba(243, 198, 42, 0.12)
+  );
+  border: 2px solid rgba(223, 48, 103, 0.2);
+  border-radius: 20px;
+  margin: 4rem auto;
+  padding: 3rem;
+  max-width: 900px;
+}
+
+.cta-intermedio h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.cta-intermedio p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* CTA PRINCIPAL - Más destacado */
+.cta-principal {
+  text-align: center;
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.15), 
+    rgba(243, 198, 42, 0.15)
+  );
+  border: 2px solid rgba(223, 48, 103, 0.25);
+  border-radius: 24px;
+  margin: 5rem auto;
+  padding: 4rem 3rem;
+}
+
+.cta-principal h2 {
+  margin-bottom: 1.5rem;
+}
+
+.cta-principal p {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: var(--muted);
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.cta-principal .btn-grande {
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
 
 .cta-inline {
   text-align: center;
@@ -1266,6 +1344,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
