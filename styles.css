@@ -213,7 +213,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 60%; /* Ocupa el 60% del espacio disponible */ 
+  min-height: 70%; /* Ocupa el 60% del espacio disponible */ 
 }
 
 /*Aumentamos tamaño del título principal */
@@ -1164,6 +1164,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
