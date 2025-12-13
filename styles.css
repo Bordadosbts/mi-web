@@ -405,9 +405,9 @@ main::before {
 }
 
 .main-navigation {
-  background: rgba(127, 118, 111, 0.97);
-  backdrop-filter: blur(15px);
-  padding: 0.8rem 0;
+  background: rgba(127, 118, 111, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 0;
   position: fixed;
   top: 40px; /* Altura del topbar */
   left: 0;
@@ -428,7 +428,7 @@ main::before {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 50px;
+  min-height: 40px;
 }
 
 .menu-btn {
@@ -459,7 +459,7 @@ main::before {
 .main-nav a {
   color: white;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
 }
@@ -1261,6 +1261,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
