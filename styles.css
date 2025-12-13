@@ -63,7 +63,7 @@ body {
   /* FONDO DE MADERA */
   background: 
    url("fondo-madera.png") top center / cover no-repeat fixed; 
-   background-color: --bg-wood;
+   background-color: var(--bg-wood);
 }
 
 /* ===========================================
@@ -196,7 +196,7 @@ a {
       rgba(0, 0, 0, 0.6) 25%,    /* Mantiene oscuridad */
       rgba(0, 0, 0, 0.4) 50%,     /* Comienza a aclarar */
       rgba(40, 35, 30, 0.3) 75%,  /* Color similar a la madera */
-      rgba(127, 118, 111, 0.1) 90% /* Se funde con el body */
+      rgba(127, 118, 111, 0.1) 90%, /* Se funde con el body */
       transparent 100%                  /* Totalmente transparente al fondo */
     ),
     /* Imagen muy oscurecida */
@@ -1261,6 +1261,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
