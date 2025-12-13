@@ -54,19 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
   /* =========================
      MOSTRAR/OCULTAR NAVEGACIÓN STICKY
   ========================= */
-  if (mainNavigation) {
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      // Mostrar navegación después de pasar el hero
-      if (scrollTop > 400) {
-        mainNavigation.classList.add('visible');
-      } else {
-        mainNavigation.classList.remove('visible');
-      }
-    });
-  }
+  /* VERSIÓN MEJORADA - Umbral dinámico */
+if (mainNavigation) {
+  const heroSection = document.querySelector('.hero-header');
+  
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const heroHeight = heroSection ? heroSection.offsetHeight : 400;
+    
+    // Mostrar navegación cuando se sale del hero (70% del hero)
+    if (scrollTop > heroHeight * 0.7) {
+      mainNavigation.classList.add('scrolled');
+    } else {
+      mainNavigation.classList.remove('scrolled');
+    }
+  });
 
+  // Inicializar
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const heroHeight = heroSection ? heroSection.offsetHeight : 400;
+  if (scrollTop > heroHeight * 0.7) {
+    mainNavigation.classList.add('scrolled');
+  }
+}
+  
   /* =========================
      AÑO AUTOMÁTICO FOOTER
   ========================= */
@@ -118,3 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
