@@ -40,13 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Calcular posición con offset para header sticky
-        const headerHeight = mainNavigation ? mainNavigation.offsetHeight + 36 : 100;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        const topbarHeight = document.querySelector('.topbar').offsetHeight;
+      const navHeight = mainNavigation && mainNavigation.classList.contains('scrolled') 
+        ? mainNavigation.offsetHeight 
+        : 0;
+      
+      const totalOffset = topbarHeight + navHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - totalOffset;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
       }
     });
   });
@@ -129,4 +134,5 @@ if (mainNavigation) {
   }
 
 });
+
 
