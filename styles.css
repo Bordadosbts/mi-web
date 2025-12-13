@@ -65,7 +65,7 @@ body {
     /* Capa de transición desde el hero */
     linear-gradient(
       to top,
-      rgba(127, 118, 111, 0.3) 0%    /* Color oscuro similar */
+      rgba(127, 118, 111, 0.3) 0%,    /* Color oscuro similar */
       rgba(127, 118, 111, 0.2) 25%,
       rgba(127, 118, 111, 0.1) 50%,
       transparent 100%
@@ -1222,6 +1222,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
