@@ -181,11 +181,11 @@ a {
     /* Degradado oscuro intenso */
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.95) 0%,      /* Muy oscuro arriba */
-      rgba(0, 0, 0, 0.9) 50%,    /* Mantiene oscuridad */
-      rgba(0, 0, 0, 0.8) 80%,     /* Comienza a aclarar */
-      rgba(40, 35, 30, 0.7) 95%,  /* Color similar a la madera */
-      rgba(70, 65, 60, 0.5) 100% /* Se funde con el body */
+      rgba(0, 0, 0, 0.9) 0%,      /* Muy oscuro arriba */
+      rgba(0, 0, 0, 0.85) 30%,    /* Mantiene oscuridad */
+      rgba(0, 0, 0, 0.7) 70%,     /* Comienza a aclarar */
+      rgba(40, 35, 30, 0.5) 90%,  /* Color similar a la madera */
+      rgba(127, 118, 111, 0.3) 100% /* Se funde con el body */
     ),
     /* Imagen muy oscurecida */
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
@@ -281,7 +281,7 @@ a {
   margin-bottom: 0.8rem; /* Era: 1rem; */
   line-height: 1.1;
   color: #ffffff; /* Blanco puro */
-  text-shadow: 0 4px 25px rgba(0, 0, 0, 1);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
   white-space: nowrap; /* Fuerza a una sola línea */ 
 }
 
@@ -1224,6 +1224,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
