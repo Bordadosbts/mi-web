@@ -63,7 +63,7 @@ body {
   /* FONDO DE MADERA */
   background: 
    url("fondo-madera.png") top center / cover no-repeat fixed; 
-   background-color: transparent;
+   background-color: --bg-wood;
 }
 
 /* ===========================================
@@ -1261,6 +1261,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
