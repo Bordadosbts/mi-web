@@ -70,8 +70,6 @@ body {
       rgba(127, 118, 111, 0.2) 60px,
       transparent 100px
     ),
-    /* Fondo de madera */
-    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)),
     url("fondo-madera.png") top center / cover fixed;
   
   background-color: var(--bg-wood);
@@ -1224,6 +1222,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
