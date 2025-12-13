@@ -67,10 +67,7 @@ body {
       rgba(127, 118, 111, 0.3),    /* Color oscuro similar */
       rgba(127, 118, 111, 0.1)
     ),
-    url("fondo-madera.png") top center / cover no-repeat;
-  
-  background-color: var(--bg-wood);
-  background-attachment: local; /* Suave, no fixed */ 
+    url("fondo-madera.png") top center / cover no-repeat fixed; 
 }
 
 /* ===========================================
@@ -1244,5 +1241,6 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
