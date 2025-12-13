@@ -207,13 +207,13 @@ a {
   /* BORDES MÁS SUTILES */
   border-radius: 12px; /* Era 16px - Más pequeño */
   border: none; /* Sin borde */
-  max-width: 750px; /* Era 800px - Más estrecho */
+  max-width: 850px; /* Era 800px - Más estrecho */
   box-shadow: none; /* Sin sombra */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70%; /* Ocupa el 60% del espacio disponible */ 
+  min-height: 70%; /* Ocupa el 70% del espacio disponible */ 
 }
 
 /*Aumentamos tamaño del título principal */
@@ -223,6 +223,7 @@ a {
   line-height: 1.1;
   color: white;
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+  white-space: nowrap; /* Fuerza a una sola línea */ 
 }
 
 /* Tagline más destacado */
@@ -1164,6 +1165,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
