@@ -207,7 +207,7 @@ a {
   /* BORDES MÁS SUTILES */
   border-radius: 12px; /* Era 16px - Más pequeño */
   border: none; /* Sin borde */
-  max-width: 700px; /* Era 800px - Más estrecho */
+  max-width: 750px; /* Era 800px - Más estrecho */
   box-shadow: none; /* Sin sombra */
   display: flex;
   flex-direction: column;
@@ -218,27 +218,28 @@ a {
 
 /*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 3rem; /* Era: 3.5rem; */
+  font-size: 3.5rem; /* Era: 3.5rem; */
   margin-bottom: 0.8rem; /* Era: 1rem; */
   line-height: 1.1;
   color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
 }
 
 /* Tagline más destacado */
 .hero-tagline {
   font-family: var(--font-script);
-  font-size: 2.2rem; /* Era: 2.2rem; */
+  font-size: 2.6rem; /* Era: 2.2rem; */
   margin-bottom: 0.8rem; /* Era: 1.8rem; */
   line-height: 1;
-  color: var(--yellow);
+  color: #f8d94a;
   display: block;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500; /* Un poco más grueso */ 
+  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 750px;
   margin-left: auto;
@@ -264,11 +265,11 @@ a {
 .hero-nav a {
   color: white;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .hero-nav a:hover {
@@ -299,8 +300,9 @@ a {
 }
 
 .hero-actions .btn {
-  padding: 0.7rem 1.7rem;
-  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 800; 
 }
 
 /* ===========================================
@@ -1162,6 +1164,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
