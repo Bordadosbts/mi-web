@@ -566,8 +566,8 @@ section {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border-radius: 24px;
-  margin: 3rem auto;
-  padding: 4rem 3rem;
+  margin: 4rem auto;
+  padding: 5rem 3rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -593,9 +593,9 @@ section {
 
 .products h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .products h2::after {
@@ -604,7 +604,7 @@ section {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 100px;
   height: 4px;
   background: var(--accent);
   border-radius: 2px;
@@ -612,34 +612,33 @@ section {
 
 .products .lead {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 4rem;
+  max-width: 750px;
+  margin: 0 auto 5rem;
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
+  padding: 0 1rem; /* Pequeño padding lateral para mejor lectura */ 
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .card {
   background: white;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 .card.animate-in {
@@ -689,19 +688,16 @@ section {
 }
 
 .card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.4rem;
+  margin: 1.2rem 0 0.8rem;
+  font-size: 1.5rem;
   color: var(--primary);
 }
 
 .card .price {
   color: var(--accent);
   font-weight: 800;
-  font-size: 1.5rem;
-  margin: 0.5rem 0 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  font-size: 1.6rem;
+  margin: 0.8rem 0 1.2rem;
 }
 
 .card .price::before {
@@ -725,17 +721,20 @@ section {
     rgba(243, 198, 42, 0.12)
   );
   border: 2px solid rgba(223, 48, 103, 0.2);
+  margin: 4rem auto; /* Igual que products */
+  padding: 5rem 3rem; /* Igual que products */
 }
 
 .cta-inline h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .cta-inline p {
-  max-width: 700px;
-  margin: 0 auto 3rem;
+  max-width: 750px;
+  margin: 0 auto 4rem;
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Igual que products */
+  line-height: 1.8;
 }
 
 /* ===========================================
@@ -1267,6 +1266,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
