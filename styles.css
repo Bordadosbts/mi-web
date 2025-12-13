@@ -572,8 +572,7 @@ section {
 }
 
 .testimonials,
-.newsletter,
-.cta-inline {
+.newsletter {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border-radius: 24px;
@@ -596,8 +595,7 @@ section {
 }
 
 .testimonials::before,
-.newsletter::before,
-.cta-inline::before {
+.newsletter::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1346,6 +1344,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
