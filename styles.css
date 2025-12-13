@@ -66,9 +66,9 @@ body {
     linear-gradient(
       to top,
       rgba(70, 65, 60, 0.6) 0%,    /* Color oscuro similar */
-      rgba(127, 118, 111, 0.4) 30px,
-      rgba(127, 118, 111, 0.2) 60px,
-      transparent 100px
+      rgba(127, 118, 111, 0.4) 30%,
+      rgba(127, 118, 111, 0.2) 60%,
+      transparent 100%
     ),
     url("fondo-madera.png") top center / cover fixed;
   
@@ -1222,6 +1222,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
