@@ -373,7 +373,7 @@ a {
   backdrop-filter: blur(15px);
   padding: 0.8rem 0;
   position: fixed;
-  top: 48px; /* Altura del topbar */
+  top: 50px; /* Altura del topbar */
   left: 0;
   right: 0; 
   z-index: 1001;
@@ -1220,6 +1220,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
