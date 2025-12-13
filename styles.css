@@ -62,12 +62,8 @@ body {
   
   /* FONDO DE MADERA */
   background: 
-    /* Capa de transición desde el hero */
-    linear-gradient(
-      rgba(127, 118, 111, 0.3),    /* Color oscuro similar */
-      rgba(127, 118, 111, 0.1)
-    ),
-    url("fondo-madera.png") top center / cover no-repeat fixed; 
+   url("fondo-madera.png") top center / cover no-repeat fixed; 
+   background-color: var(--bg-wood);
 }
 
 /* ===========================================
@@ -196,11 +192,12 @@ a {
     /* Degradado oscuro intenso */
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.7) 0%,      /* Muy oscuro arriba */
+      rgba(0, 0, 0, 0.8) 0%,      /* Muy oscuro arriba */
       rgba(0, 0, 0, 0.6) 25%,    /* Mantiene oscuridad */
-      rgba(0, 0, 0, 0.5) 50%,     /* Comienza a aclarar */
-      rgba(40, 35, 30, 0.5) 75%,  /* Color similar a la madera */
-      rgba(127, 118, 111, 0.3) 100% /* Se funde con el body */
+      rgba(0, 0, 0, 0.4) 50%,     /* Comienza a aclarar */
+      rgba(40, 35, 30, 0.3) 75%,  /* Color similar a la madera */
+      rgba(127, 118, 111, 0.1) 100% /* Se funde con el body */
+      transparent 100%                  /* Totalmente transparente al fondo */
     ),
     /* Imagen muy oscurecida */
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
@@ -221,11 +218,13 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 150px;
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(127, 118, 111, 0.3) 100%
+    rgba(127, 118, 111, 0.2) 30%,
+    rgba(127, 118, 111, 0.1) 60%,
+    transparent 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -383,6 +382,27 @@ a {
 /* ===========================================
    NAVEGACIÓN STICKY
    =========================================== */
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(127, 118, 111, 0.3) 0%,
+    rgba(127, 118, 111, 0.1) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
 
 .main-navigation {
   background: rgba(127, 118, 111, 0.97);
@@ -1241,6 +1261,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
