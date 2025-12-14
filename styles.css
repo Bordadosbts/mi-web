@@ -605,9 +605,10 @@ main::before {
   text-align: center;
   max-width: 650px;
   margin: 0 auto 2rem;
-  color: var(--muted);
-  font-size: 1.2rem;
-  line-height: 1.5;
+  color: #3a3a3a;
+  font-size: 1.5rem; /* ← Aumentado (era: 1.2rem) */
+  line-height: 1.6; /* ← Mejor interlineado (era: 1.5) */
+  font-weight: 500; /* ← Un poco más grueso para mejor lectura */
 }
 
 /* Grid de productos */
@@ -675,7 +676,7 @@ main::before {
 /* Título de la tarjeta */
 .card h3 {
   margin: 0.8rem 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* ← Aumentado (era: 1.5rem) */
   color: var(--primary);
 }
 
@@ -1218,7 +1219,11 @@ main::before {
   .newsletter p {
     font-size: 1.1rem;
   }
-  
+
+  .products .lead {
+  font-size: 1.15rem; /* Tamaño proporcional para móvil */
+  font-weight: normal; /* Peso normal en móvil */
+  } 
   .testimonials .grid {
     grid-template-columns: 1fr;
   }
@@ -1252,4 +1257,5 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
