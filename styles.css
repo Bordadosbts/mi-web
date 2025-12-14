@@ -660,7 +660,10 @@ section {
 }
 
 .card {
-  background: white;
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.1), 
+    rgba(243, 198, 42, 0.1)
+  );
   border-radius: 18px; /* Reducir (era 20px) */
   padding: 1.8rem; /* Reducir (era 2.5rem) */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -753,8 +756,8 @@ section {
     rgba(223, 48, 103, 0.1), 
     rgba(243, 198, 42, 0.1)
   );
-  border: 2px solid rgba(223, 48, 103, 0.15);
-  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
   margin: 3rem auto; /* Reducido de 5rem */
   padding: 3rem 2rem; /* Reducido de 4rem 3rem */
   max-width: 900px;
@@ -1331,4 +1334,5 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
