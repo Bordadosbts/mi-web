@@ -606,8 +606,8 @@ main::before {
 /* Contenedor interno con fondo y bordes */
 .products .container {
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.2),
-    rgba(243, 198, 42, 0.2)
+    rgba(223, 48, 103, 0.1),
+    rgba(243, 198, 42, 0.1)
   );
   border-radius: 18px;
   margin: 1.5rem auto; /* Margen uniforme: 1.5rem arriba/abajo, auto laterales */
@@ -757,8 +757,8 @@ main::before {
 
 .cta-principal {
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.2), 
-    rgba(243, 198, 42, 0.2)
+    rgba(223, 48, 103, 0.1), 
+    rgba(243, 198, 42, 0.1)
   );
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
@@ -1337,6 +1337,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
