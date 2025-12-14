@@ -604,8 +604,8 @@ section {
 .products .container {
   /* FONDO SIMILAR AL CTA PRINCIPAL */
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1),  /* Más transparente que antes */
-    rgba(243, 198, 42, 0.1)
+    rgba(223, 48, 103, 0.3),  /* Más transparente que antes */
+    rgba(243, 198, 42, 0.3)
   );
   border-radius: 18px; /* Coincide con cta-principal */
   margin: 1rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
@@ -614,6 +614,7 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
   position: relative;
   overflow: hidden;
+  text-align: center; /* Centrado como el CTA */ 
   max-width: calc(100% - 3rem); /* Reduce ancho en desktop */
   margin-left: 1.5rem;
   margin-right: 1.5rem; 
@@ -643,7 +644,7 @@ section {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px; /* Reducir (era 100px) */
+  width: 120px; /* Reducir (era 100px) */
   height: 3px;
   background: var(--accent);
   border-radius: 2px;
@@ -761,8 +762,8 @@ section {
 .cta-principal {
   text-align: center;
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1), 
-    rgba(243, 198, 42, 0.1)
+    rgba(223, 48, 103, 0.3), 
+    rgba(243, 198, 42, 0.3)
   );
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
@@ -1342,6 +1343,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
