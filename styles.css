@@ -78,11 +78,11 @@ h1, h2, h3, h4, h5 {
   line-height: 1.2;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.1rem; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1rem; }
 
 p {
   margin-top: 0;
@@ -658,7 +658,7 @@ main::before {
   max-width: 650px;
   margin: 0 auto 2rem;
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -727,7 +727,7 @@ main::before {
 /* Título de la tarjeta */
 .card h3 {
   margin: 0.8rem 0 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--primary);
 }
 
@@ -735,7 +735,7 @@ main::before {
 .card .price {
   color: var(--accent);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin: 0.5rem 0 1rem;
 }
 .card .price::before {
@@ -1337,6 +1337,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
