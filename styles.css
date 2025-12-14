@@ -614,7 +614,6 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
   position: relative;
   overflow: hidden;
-  text-align: center; /* Centrado como el CTA */ 
   max-width: calc(100% - 3rem); /* Reduce ancho en desktop */
   margin-left: 1.5rem;
   margin-right: 1.5rem; 
@@ -1343,6 +1342,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
