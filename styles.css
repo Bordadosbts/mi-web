@@ -1030,11 +1030,7 @@ main::before {
   .hero-content {
     padding: 3.5rem;
   }
-  
-  .hero-content h1 {
-    font-size: 3.2rem; /* Ajuste para tablet */
-  }
-  
+     
   .hero-tagline {
     font-size: 2.2rem; /* Ajuste para tablet */
   }
@@ -1064,11 +1060,7 @@ main::before {
     padding: 3rem 1rem 4rem; /* Ajuste del padding para móvil */
     margin-bottom: 0;
   }
-  
-  .hero-logo img {
-    max-height: 110px;
-  }
-  
+      
   .hero-content {
     padding: 2.8rem 2rem;
     margin-bottom: 2rem;
@@ -1086,20 +1078,7 @@ main::before {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
   }
-  
-  .hero-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
-  .hero-nav a {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-    padding: 0.8rem;
-  }
-  
+     
   .hero-actions {
     flex-direction: column;
     align-items: center;
@@ -1210,11 +1189,7 @@ main::before {
   .hero-header {
     min-height: 70vh;
   }
-  
-  .hero-logo img {
-    max-height: 90px;
-  }
-  
+      
   .hero-content {
     padding: 2.2rem 1.5rem;
   }
@@ -1239,7 +1214,6 @@ main::before {
     font-size: 1rem;
   }
   
-  .products .lead,
   .cta-principal p,
   .newsletter p {
     font-size: 1.1rem;
@@ -1278,20 +1252,4 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
