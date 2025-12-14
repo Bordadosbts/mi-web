@@ -598,28 +598,32 @@ section {
 }
 
 /* ===========================================
-   PRODUCTOS - AJUSTE FINAL
+   PRODUCTOS
    =========================================== */
 
-.products .container {
-  /* FONDO SIMILAR AL CTA PRINCIPAL */
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.2),  /* Más transparente que antes */
-    rgba(243, 198, 42, 0.2)
-  );
-  border-radius: 18px; /* Coincide con cta-principal */
-  margin: 0 auto; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
-  padding: 3rem 2rem; /* Más compacto que antes */
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
-  position: relative;
-  overflow: hidden;
-  max-width: calc(100% - 3rem); /* Reduce ancho en desktop */
-  margin-left: 1.5rem;
-  margin-right: 1.5rem; 
+/* Contenedor principal de la sección */
+.products {
+  /* Se eliminan márgenes y paddings redundantes. 
+     El espaciado se controla desde el contenedor interno (.products .container) */
 }
 
-/* Línea decorativa superior - igual que en cta-principal */
+/* Contenedor interno con fondo y bordes */
+.products .container {
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.2),
+    rgba(243, 198, 42, 0.2)
+  );
+  border-radius: 18px;
+  margin: 1.5rem auto; /* Margen uniforme: 1.5rem arriba/abajo, auto laterales */
+  padding: 3rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 3rem); /* Ancho controlado para márgenes laterales */
+}
+
+/* Línea decorativa superior del contenedor */
 .products .container::before {
   content: '';
   position: absolute;
@@ -630,72 +634,72 @@ section {
   background: linear-gradient(90deg, var(--accent), var(--yellow));
   opacity: 0.8;
 }
+
+/* Estilos del título de la sección */
 .products h2 {
   text-align: center;
-  margin-bottom: 1rem; /* Reducir (era 2rem) */
+  margin-bottom: 1rem;
   position: relative;
-  padding-bottom: 0.8rem; /* Reducir (era 1.5rem) */
+  padding-bottom: 0.8rem;
 }
 
+/* Subrayado del título */
 .products h2::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px; /* Reducir (era 100px) */
+  width: 120px; /* Longitud del subrayado */
   height: 3px;
   background: var(--accent);
   border-radius: 2px;
 }
 
+/* Texto introductorio */
 .products .lead {
   text-align: center;
-  max-width: 650px; /* Reducir (era 750px) */
-  margin: 0 auto 2rem; /* Reducir (era 5rem) */
+  max-width: 650px;
+  margin: 0 auto 2rem;
   color: var(--muted);
-  font-size: 1.1rem; /* Reducir (era 1.3rem) */
+  font-size: 1.1rem;
   line-height: 1.5;
-  padding: 0 1rem;
 }
 
-/* GRID MÁS COMPACTO */
+/* Grid de productos */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Reducir (era 320px) */
-  gap: 1.5rem; /* Reducir (era 3rem) */
-  margin-top: 1rem; /* Reducir (era 2rem) */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
+/* Tarjetas de productos individuales */
 .card {
   background: linear-gradient(135deg, 
     rgba(223, 48, 103, 0.05), 
     rgba(243, 198, 42, 0.05)
   );
-  border-radius: 18px; /* Reducir (era 20px) */
-  padding: 1.8rem; /* Reducir (era 2.5rem) */
+  border-radius: 18px;
+  padding: 1.8rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* Reducir (era 1.8rem) */
+  gap: 1.2rem;
   position: relative;
   overflow: hidden;
-  text-align: center; 
 }
 
-.card.animate-in {
-  animation: fadeInUp 0.6s ease forwards;
+/* Efecto hover en la tarjeta */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Línea superior en tarjeta al hacer hover */
 .card::before {
   content: '';
   position: absolute;
@@ -707,22 +711,16 @@ section {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 .card:hover::before {
   opacity: 1;
 }
 
-.card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent);
-}
-
+/* Imagen dentro de la tarjeta */
 .card img {
   width: 100%;
-  height: 200px; /* Reducir (era 220px) */
+  height: 200px;
   object-fit: cover;
-  border-radius: 12px; /* Reducir (era 15px) */
+  border-radius: 12px;
   background: linear-gradient(45deg, #f8f8f8, #eaeaea);
   transition: transform 0.5s ease;
 }
@@ -730,28 +728,30 @@ section {
   transform: scale(1.05);
 }
 
+/* Título de la tarjeta */
 .card h3 {
-  margin: 0.8rem 0 0.5rem; /* Reducir (era 1.2rem 0 0.8rem) */
-  font-size: 1.3rem; /* Reducir (era 1.5rem) */
+  margin: 0.8rem 0 0.5rem;
+  font-size: 1.3rem;
   color: var(--primary);
 }
 
+/* Precio en la tarjeta */
 .card .price {
   color: var(--accent);
   font-weight: 800;
-  font-size: 1.4rem; /* Reducir (era 1.6rem) */
-  margin: 0.5rem 0 1rem; /* Reducir (era 0.8rem 0 1.2rem) */
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1rem;
 }
-
 .card .price::before {
   content: '💶';
   font-size: 1.3rem;
 }
 
+/* Botón dentro de la tarjeta */
 .card .btn {
   margin-top: auto;
   align-self: flex-start;
-  padding: 0.8rem 1.8rem; /* Botón más pequeño */
+  padding: 0.8rem 1.8rem;
   font-size: 0.95rem;
 }
 
@@ -1341,6 +1341,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
