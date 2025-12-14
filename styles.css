@@ -261,15 +261,6 @@ a {
   align-items: center; 
 }
 
-/* Logo/nombre en el hero */
-.hero-logo {
-  margin-bottom: 0.5rem; /* Era: 2.5rem; */
-}
-
-.hero-logo img {
-  max-height: 40px; /* Logo más pequeño */
-}
-
 /* Contenido principal del hero */
 .hero-content {
   /* REDUCIR OPACIDAD Y TAMAÑO */
@@ -611,7 +602,10 @@ section {
    =========================================== */
 
 .products {
-  background: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.1), 
+    rgba(243, 198, 42, 0.1)
+  );
   backdrop-filter: blur(12px);
   border-radius: 24px;
   margin: 6rem auto 4rem;
@@ -1334,5 +1328,6 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
