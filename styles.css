@@ -778,6 +778,29 @@ section {
   overflow: hidden;
 }
 
+.cta-principal .subtitulo {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-principal .descripcion {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cta-acciones {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* Línea decorativa superior */
 .cta-principal::before {
   content: '';
@@ -789,18 +812,15 @@ section {
   background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
 }
 
-/* Estilo específico para el botón grande */
-.cta-principal .btn-grande {
-  padding: 1.2rem 3rem;
-  font-size: 1.2rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), #c2185b) !important;
-  box-shadow: 0 6px 25px rgba(223, 48, 103, 0.5) !important;
+.cta-principal .btn.ghost {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
 }
 
-.cta-principal .btn-grande:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 10px 30px rgba(223, 48, 103, 0.6) !important;
+.cta-principal .btn.ghost:hover {
+  background: var(--accent);
+  color: white;
 }
 
 /* ===========================================
@@ -1334,6 +1354,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
