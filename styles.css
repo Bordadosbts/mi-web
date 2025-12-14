@@ -513,6 +513,19 @@ main::before {
   overflow: hidden;
 }
 
+.btn-grande {
+  padding: 1.2rem 3rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, var(--accent), #c2185b) !important;
+  box-shadow: 0 6px 25px rgba(223, 48, 103, 0.5) !important;
+}
+
+.btn-grande:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 30px rgba(223, 48, 103, 0.6) !important;
+}
+
 .btn::before {
   content: '';
   position: absolute;
@@ -728,36 +741,6 @@ section {
   align-self: flex-start;
   padding: 0.8rem 1.8rem; /* Botón más pequeño */
   font-size: 0.95rem;
-}
-
-/* ===========================================
-   CTA INTERMEDIO - MEJORADO
-   =========================================== */
-
-.cta-intermedio {
-  text-align: center;
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.12), 
-    rgba(243, 198, 42, 0.12)
-  );
-  border: 2px solid rgba(223, 48, 103, 0.2);
-  border-radius: 20px;
-  margin: 4rem auto;
-  padding: 3rem;
-  max-width: 900px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Línea decorativa superior */
-.cta-intermedio::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow));
 }
 
 /* ===========================================
@@ -1219,7 +1202,6 @@ section {
   .products,
   .testimonials,
   .newsletter,
-  .cta-intermedio,
   .cta-principal {
     padding: 3rem 2rem;
     margin: 2rem 1rem;
@@ -1315,7 +1297,6 @@ section {
   }
   
   .products .lead,
-  .cta-intermedio p,
   .cta-principal p,
   .newsletter p {
     font-size: 1.1rem;
@@ -1354,20 +1335,4 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
