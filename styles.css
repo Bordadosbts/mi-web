@@ -609,7 +609,7 @@ section {
   );
   backdrop-filter: blur(8px); /* Más sutil que antes */
   border-radius: 18px; /* Coincide con cta-principal */
-  margin: 3rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
+  margin: 1rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
   padding: 3rem 2rem; /* Más compacto que antes */
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
@@ -1340,3 +1340,4 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
