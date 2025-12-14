@@ -530,7 +530,6 @@ main::before {
   overflow: hidden;
 }
 
-.testimonials::before,
 .newsletter::before {
   content: '';
   position: absolute;
@@ -794,28 +793,80 @@ main::before {
 }
 
 /* ===========================================
-   TESTIMONIOS
+   TESTIMONIOS - IGUALADO A PRODUCTOS
    =========================================== */
 
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 4rem;
+.testimonials {
+  /* FONDO IDÉNTICO a productos */
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.1),
+    rgba(243, 198, 42, 0.1)
+  );
+  border-radius: 18px; /* ← MISMO radio que productos */
+  margin: 3rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
+  padding: 3rem 2rem; /* ← MISMO padding que productos (era: 5rem 3rem) */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ← MISMA sombra que productos */
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 3rem); /* ← MISMO ancho controlado que productos */
 }
 
+/* Línea decorativa superior - IDÉNTICA a productos */
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px; /* ← MISMA altura que productos */
+  background: linear-gradient(90deg, var(--accent), var(--yellow)); /* ← MISMO gradiente que productos */
+  opacity: 0.8;
+}
+
+/* Título - MISMO SUBRAYADO que productos */
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 1rem; /* ← REDUCIDO (era: 4rem) */
+  position: relative;
+  padding-bottom: 0.8rem; /* ← PARA el subrayado */
+}
+
+/* Subrayado del título - IDÉNTICO a productos */
+.testimonials h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* ← MISMO ancho que productos */
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Grid de testimonios */
 .testimonials .grid {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
+/* Tarjetas de testimonios individuales */
 .testimonials blockquote {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9); /* ← Fondo semitransparente en lugar de blanco sólido */
+  padding: 2rem; /* ← REDUCIDO (era: 2.5rem) */
+  border-radius: 18px; /* ← MISMO radio que tarjetas de productos */
   border-left: 5px solid var(--accent);
   font-style: italic;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   position: relative;
   font-size: 1.1rem;
   line-height: 1.7;
+  transition: all 0.3s ease; /* ← Añadido efecto hover */
+}
+
+.testimonials blockquote:hover {
+  transform: translateY(-5px); /* ← Efecto hover similar a productos */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .testimonials blockquote::before {
@@ -1273,14 +1324,22 @@ main::before {
   font-size: 1.15rem; /* Tamaño proporcional para móvil */
   font-weight: normal; /* Peso normal en móvil */
   } 
-  .testimonials .grid {
-    grid-template-columns: 1fr;
+
+  .testimonials {
+    max-width: 100%; /* ← Como productos en móvil */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem 1.5rem; /* ← Padding reducido para móvil */
   }
   
   .testimonials blockquote {
-    padding: 2rem;
+    padding: 1.5rem; /* ← Más compacto en móvil */
   }
-  
+   
+  .testimonials .grid {
+    grid-template-columns: 1fr;
+  }
+      
   .copyright {
     font-size: 0.9rem;
     padding-top: 2rem;
@@ -1306,6 +1365,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
