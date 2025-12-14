@@ -730,18 +730,37 @@ main::before {
   opacity: 0.8;
 }
 
+/* Título - MISMO TAMAÑO y SUBRAYADO que productos */
 .cta-principal h2 {
-  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  text-align: center;
+  margin-bottom: 1rem;
   color: var(--primary);
-  font-size: 2rem; /* Para que coincida con "Nuestros productos" */
+  font-size: 2.5rem; /* ← IGUAL que productos (era: 2rem) */
+  position: relative;
+  padding-bottom: 0.8rem; /* ← Para el subrayado */
+}
+
+/* Subrayado del título - IGUAL que productos */
+.cta-principal h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* ← MISMO ancho que productos */
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .cta-principal .descripcion {
   max-width: 700px;
   margin: 0 auto 2rem; /* Reducido de 3rem */
-  color: var(--muted);
+  color: #3a3a3a;
   font-size: 1.2rem;
-  line-height: 1.5; /* Más compacto que 1.6 */
+  line-height: 1.6; /* ← MISMO interlineado que productos (era: 1.5) */
+  font-weight: 500; /* ← MISMO peso que productos */
+  text-align: center; /* ← Asegurar centrado como productos */
 }
 
 .cta-principal .btn-grande {
@@ -1217,9 +1236,18 @@ main::before {
   
   .cta-principal p,
   .newsletter p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
+  .cta-principal h2 {
+    font-size: 1.8rem; /* ← IGUAL que productos en móvil */
+  }
+
+  .cta-principal .descripcion {
+    font-size: 1.15rem; /* ← Tamaño proporcional para móvil */
+    font-weight: normal; /* ← Peso normal en móvil */
+  }
+   
   .products .lead {
   font-size: 1.15rem; /* Tamaño proporcional para móvil */
   font-weight: normal; /* Peso normal en móvil */
@@ -1257,5 +1285,6 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
