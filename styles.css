@@ -271,7 +271,7 @@ a {
   /* BORDES MÁS SUTILES */
   border-radius: 12px; /* Era 16px - Más pequeño */
   border: none; /* Sin borde */
-  max-width: 850px; /* Era 800px - Más estrecho */
+  max-width: 850px; /* Era 900px - Más estrecho */
   box-shadow: none; /* Sin sombra */
   display: flex;
   flex-direction: column;
@@ -282,7 +282,7 @@ a {
 
 /*Aumentamos tamaño del título principal */
 .hero-content h1 {
-  font-size: 3.5rem; /* Era: 3.5rem; */
+  font-size: 3.5rem;
   margin-bottom: 0.8rem; /* Era: 1rem; */
   line-height: 1.1;
   color: #ffffff; /* Blanco puro */
@@ -305,11 +305,12 @@ a {
   font-size: 1.5rem;
   font-weight: 500; /* Un poco más grueso */ 
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #ffffff; /* Blanco puro */
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
+  white-space: nowrap; /* Fuerza a una sola línea */  
 }
 
 /* Botones de acción del hero */
@@ -1277,6 +1278,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
