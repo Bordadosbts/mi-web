@@ -312,49 +312,6 @@ a {
   line-height: 1.5;
 }
 
-/* Navegación dentro del hero */
-.hero-navigation {
-  margin-top: 0.8rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.hero-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-nav a {
-  color: white;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 1rem;
-}
-
-.hero-nav a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero-nav a.cta {
-  background: linear-gradient(135deg, var(--accent), #c2185b);
-  border: none;
-  box-shadow: 0 5px 20px rgba(223, 48, 103, 0.5);
-}
-
-.hero-nav a.cta:hover {
-  background: linear-gradient(135deg, #c2185b, var(--accent));
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(223, 48, 103, 0.6);
-}
-
 /* Botones de acción del hero */
 .hero-actions {
   display: flex;
@@ -1068,10 +1025,7 @@ main::before {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
   }
-  
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2rem; }
-  
+   
   .hero-content {
     padding: 3.5rem;
   }
@@ -1186,10 +1140,6 @@ main::before {
     text-align: center;
     padding: 1rem;
     font-size: 1.1rem;
-  }
-  
-  section {
-    padding: 4rem 0;
   }
   
   .testimonials,
@@ -1327,6 +1277,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
