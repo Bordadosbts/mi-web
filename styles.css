@@ -601,13 +601,12 @@ section {
    PRODUCTOS - AJUSTE FINAL
    =========================================== */
 
-.products {
+.products .container {
   /* FONDO SIMILAR AL CTA PRINCIPAL */
   background: linear-gradient(135deg, 
     rgba(223, 48, 103, 0.1),  /* Más transparente que antes */
     rgba(243, 198, 42, 0.1)
   );
-  backdrop-filter: blur(8px); /* Más sutil que antes */
   border-radius: 18px; /* Coincide con cta-principal */
   margin: 1rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
   padding: 3rem 2rem; /* Más compacto que antes */
@@ -621,7 +620,7 @@ section {
 }
 
 /* Línea decorativa superior - igual que en cta-principal */
-.products::before {
+.products .container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1343,6 +1342,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
