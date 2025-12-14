@@ -1199,7 +1199,8 @@ section {
   .products,
   .testimonials,
   .newsletter,
-  .cta-inline {
+  .cta-intermedio,
+  .cta-principal {
     padding: 3rem 2rem;
     margin: 2rem 1rem;
     border-radius: 20px;
@@ -1294,7 +1295,8 @@ section {
   }
   
   .products .lead,
-  .cta-inline p,
+  .cta-intermedio p,
+  .cta-principal p,
   .newsletter p {
     font-size: 1.1rem;
   }
@@ -1332,6 +1334,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
