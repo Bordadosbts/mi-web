@@ -572,16 +572,6 @@ main::before {
   overflow: hidden;
 }
 
-.products::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
-}
-
 .testimonials::before,
 .newsletter::before {
   content: '';
@@ -1337,6 +1327,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
