@@ -604,8 +604,8 @@ section {
 .products .container {
   /* FONDO SIMILAR AL CTA PRINCIPAL */
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.3),  /* Más transparente que antes */
-    rgba(243, 198, 42, 0.3)
+    rgba(223, 48, 103, 0.2),  /* Más transparente que antes */
+    rgba(243, 198, 42, 0.2)
   );
   border-radius: 18px; /* Coincide con cta-principal */
   margin: 1rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
@@ -669,8 +669,8 @@ section {
 
 .card {
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1), 
-    rgba(243, 198, 42, 0.1)
+    rgba(223, 48, 103, 0.05), 
+    rgba(243, 198, 42, 0.05)
   );
   border-radius: 18px; /* Reducir (era 20px) */
   padding: 1.8rem; /* Reducir (era 2.5rem) */
@@ -759,10 +759,9 @@ section {
    =========================================== */
 
 .cta-principal {
-  text-align: center;
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.3), 
-    rgba(243, 198, 42, 0.3)
+    rgba(223, 48, 103, 0.2), 
+    rgba(243, 198, 42, 0.2)
   );
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
@@ -1342,6 +1341,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
