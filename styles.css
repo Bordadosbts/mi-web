@@ -750,60 +750,56 @@ section {
 .cta-principal {
   text-align: center;
   background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.15), 
-    rgba(243, 198, 42, 0.15)
+    rgba(223, 48, 103, 0.1), 
+    rgba(243, 198, 42, 0.1)
   );
-  border: 2px solid rgba(223, 48, 103, 0.25);
-  border-radius: 24px;
-  margin: 5rem auto;
-  padding: 4rem 3rem;
+  border: 2px solid rgba(223, 48, 103, 0.15);
+  border-radius: 20px;
+  margin: 3rem auto; /* Reducido de 5rem */
+  padding: 3rem 2rem; /* Reducido de 4rem 3rem */
+  max-width: 900px;
   position: relative;
   overflow: hidden;
 }
 
-.cta-principal .subtitulo {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.cta-principal .descripcion {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: var(--muted);
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.cta-acciones {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* Línea decorativa superior */
+/* Línea decorativa superior - más sutil */
 .cta-principal::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
+  height: 4px; /* Reducido de 5px */
+  background: linear-gradient(90deg, var(--accent), var(--yellow));
+  opacity: 0.8;
 }
 
-.cta-principal .btn.ghost {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: transparent;
+.cta-principal h2 {
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  color: var(--primary);
+  font-size: 2rem; /* Para que coincida con "Nuestros productos" */
 }
 
-.cta-principal .btn.ghost:hover {
-  background: var(--accent);
-  color: white;
+.cta-principal .descripcion {
+  max-width: 700px;
+  margin: 0 auto 2rem; /* Reducido de 3rem */
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.5; /* Más compacto que 1.6 */
+}
+
+.cta-principal .btn-grande {
+  padding: 1rem 2.5rem; /* Más compacto */
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), #c2185b);
+  box-shadow: 0 5px 20px rgba(223, 48, 103, 0.4);
+  border: none;
+}
+
+.cta-principal .btn-grande:hover {
+  transform: translateY(-3px); /* Menos movimiento */
+  box-shadow: 0 8px 25px rgba(223, 48, 103, 0.5);
 }
 
 /* ===========================================
@@ -1203,7 +1199,7 @@ section {
   .testimonials,
   .newsletter,
   .cta-principal {
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem;
     margin: 2rem 1rem;
     border-radius: 20px;
   }
@@ -1335,4 +1331,5 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
