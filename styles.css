@@ -608,7 +608,7 @@ section {
     rgba(243, 198, 42, 0.2)
   );
   border-radius: 18px; /* Coincide con cta-principal */
-  margin: 1rem auto 2rem; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
+  margin: 0 auto; /* REDUCIDO SIGNIFICATIVAMENTE el margen superior */
   padding: 3rem 2rem; /* Más compacto que antes */
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
@@ -682,6 +682,7 @@ section {
   gap: 1.2rem; /* Reducir (era 1.8rem) */
   position: relative;
   overflow: hidden;
+  text-align: center; 
 }
 
 .card.animate-in {
@@ -1341,6 +1342,7 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
