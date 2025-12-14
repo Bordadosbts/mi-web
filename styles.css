@@ -763,6 +763,22 @@ main::before {
   text-align: center; /* ← Asegurar centrado como productos */
 }
 
+.cta-principal .subtitulo {
+  text-align: center;
+  font-size: 1.35rem; /* ← MISMO tamaño que .descripcion */
+  color: #3a3a3a; /* ← MISMO color que .descripcion */
+  font-weight: 500; /* ← MISMO peso que .descripcion */
+  margin: 0 auto 1.5rem; /* ← Margen superior 0, inferior 1.5rem */
+  max-width: 700px; /* ← MISMO ancho máximo que .descripcion */
+  line-height: 1.6; /* ← MISMO interlineado que .descripcion */
+}
+
+/* Contenedor del botón - CENTRADO */
+.cta-acciones {
+  text-align: center; /* ← CENTRA el botón */
+  margin-top: 2rem; /* ← Espacio superior */
+}
+
 .cta-principal .btn-grande {
   padding: 1rem 2.5rem; /* Más compacto */
   font-size: 1.1rem;
@@ -1243,6 +1259,11 @@ main::before {
     font-size: 1.8rem; /* ← IGUAL que productos en móvil */
   }
 
+  .cta-principal .subtitulo {
+    font-size: 1.15rem; /* ← Tamaño proporcional para móvil */
+    font-weight: normal; /* ← Peso normal en móvil */
+  }
+   
   .cta-principal .descripcion {
     font-size: 1.15rem; /* ← Tamaño proporcional para móvil */
     font-weight: normal; /* ← Peso normal en móvil */
@@ -1285,6 +1306,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
