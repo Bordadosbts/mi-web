@@ -615,6 +615,9 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Más sutil */
   position: relative;
   overflow: hidden;
+  max-width: calc(100% - 3rem); /* Reduce ancho en desktop */
+  margin-left: 1.5rem;
+  margin-right: 1.5rem; 
 }
 
 /* Línea decorativa superior - igual que en cta-principal */
@@ -1214,9 +1217,9 @@ section {
   }
   
    .products {
-    margin-top: 1rem !important;
-    position: relative;
-    z-index: 1;
+    max-width: 100%; /* En móvil ocupa casi todo */
+    margin-left: 1rem;
+    margin-right: 1rem;
    }
    
   .grid {
@@ -1340,5 +1343,6 @@ section {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
