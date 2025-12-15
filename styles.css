@@ -1082,10 +1082,21 @@ main::before {
 /* Copyright */
 .copyright {
   text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  opacity: 0.8;
+  padding-top: 0.75rem;
   font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.copyright::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Lo coloca en la parte superior del .copyright */
+  left: 50%; /* Lo centra horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para un centrado perfecto */
+  width: 80px; /* LARGO DEL BORDE. Ajústalo a tu gusto (ej: 60px, 100px) */
+  height: 1px; /* GROSOR DEL BORDE. Mantenlo fino. */
+  background: rgba(255, 255, 255, 0.15); /* Color del borde */
 }
 
 /* ===========================================
@@ -1429,6 +1440,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
