@@ -803,7 +803,7 @@ main::before {
     rgba(243, 198, 42, 0.1)
   );
   border-radius: 18px; /* ← MISMO radio que productos */
-  margin: 3rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
+  margin: 1.5rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
   padding: 3rem 2rem; /* ← MISMO padding que productos (era: 5rem 3rem) */
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ← MISMA sombra que productos */
@@ -847,37 +847,59 @@ main::before {
 
 /* Grid de testimonios */
 .testimonials .grid {
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Tarjetas de testimonios individuales */
 .testimonials blockquote {
-  background: rgba(255, 255, 255, 0.9); /* ← Fondo semitransparente en lugar de blanco sólido */
-  padding: 2rem; /* ← REDUCIDO (era: 2.5rem) */
-  border-radius: 18px; /* ← MISMO radio que tarjetas de productos */
-  border-left: 5px solid var(--accent);
-  font-style: italic;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.05), 
+    rgba(243, 198, 42, 0.05)
+  );
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   position: relative;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  transition: all 0.3s ease; /* ← Añadido efecto hover */
+  overflow: hidden;
 }
 
 .testimonials blockquote:hover {
-  transform: translateY(-5px); /* ← Efecto hover similar a productos */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.testimonials blockquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow));
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 18px 18px 0 0;
 }
 
 .testimonials blockquote::before {
-  content: '"';
+  content: '';
   position: absolute;
-  top: -15px;
-  left: 20px;
-  font-size: 4rem;
-  color: var(--accent);
-  opacity: 0.2;
-  font-family: Georgia, serif;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow));
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .testimonials strong {
@@ -1365,6 +1387,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
