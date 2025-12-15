@@ -1005,14 +1005,11 @@ main::before {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
   color: white;
-  padding: 2.5rem 0 1.5rem;
-  margin-top: 4rem;
-  position: relative;
-  overflow: hidden;
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
   
   /* MISMA línea decorativa superior que main-navigation (pero arriba) */
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: none /* Borde inferior como la nav */
   
   /* Se ELIMINA el ::before con gradiente de colores vivos */
 }
@@ -1020,115 +1017,60 @@ main::before {
 /* Contenedor principal del logo y eslogan */
 .footer-brand {
   text-align: center; /* Centra todo el contenido */
-  margin-bottom: 2rem; /* Espacio antes del grid de 2 columnas */
-  width: 100%; /* Ocupa todo el ancho */
+  margin-bottom: 1.5rem; /* Espacio antes del grid de 2 columnas */
 }
 
 /* Título principal del footer - MÁS PEQUEÑO */
 .footer-brand .section-title {
-  font-size: 1.5rem; /* REDUCIDO: Era aprox. 1.8-2rem */
-  margin-bottom: 0.5rem; /* REDUCIDO */
+  font-size: 1.3rem; /* REDUCIDO: Era aprox. 1.8-2rem */
+  margin-bottom: 0.25rem; /* REDUCIDO */
+  padding-bottom: 0;     /* Sin espacio para línea aquí */ 
 }
 
 /* Estilo para el eslogan debajo del título */
 .footer-tagline {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
   font-style: italic;
-  font-weight: 300;
 }
 
 /* Contenido del footer */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 3rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Títulos de las columnas - MÁS PEQUEÑOS */
 .footer-grid .section-title {
-  font-size: 1.2rem; /* REDUCIDO: Tamaño apropiado para footer */
-  margin-bottom: 1rem; /* REDUCIDO */
-  text-align: center;
+  font-size: 1.1rem; /* REDUCIDO: Tamaño apropiado para footer */
+  margin-bottom: 0.75rem; /* REDUCIDO */
+  padding-bottom: 0.4rem; /* Poco espacio para la línea */
 }
 
 /* Subrayado de títulos - MÁS CORTO */
 .footer-grid .section-title::after {
-  width: 80px; /* REDUCIDO: Era 120px */
+  width: 50px; /* REDUCIDO: Era 120px */
   height: 2px; /* REDUCIDO: Era 3px */
 }
 
-/* Esta regla aplica a TODOS los h2 dentro del footer */
-.site-footer h2 {
-  text-align: center; /* Centrado como en otras secciones */
-  margin-bottom: 1.5rem; /* Espaciado consistente */
-  position: relative;
-  padding-bottom: 0.8rem; /* Espacio para el subrayado */
-  color: white; /* Color específico para el footer */
-  width: 100%; /* Asegura que ocupe todo el ancho de su columna */
-}
-
-/* Subrayado IDÉNTICO al de .products h2, .testimonials h2, etc. */
-.site-footer h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px; /* MISMO ancho */
-  height: 3px; /* MISMA altura */
-  background: var(--accent); /* MISMO color (rosa) */
-  border-radius: 2px; /* MISMO radio */
-}
-
-/* Opcional: Ajustar el tamaño de fuente si es necesario */
-.site-footer h2 {
-  font-size: 1rem; /* Puedes ajustar este valor (2rem, 1.6rem...) */
-}
-
-.site-footer p {
-  opacity: 0.9;
-  margin-bottom: 0.8rem;
-  line-height: 1.5;
-  font-size: 0.9rem;
-}
-
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+/* Contenido general (párrafos, listas) */
+.site-footer p,
 .site-footer li {
-  margin-bottom: 0.5rem;
-}
-
-/* Enlaces del footer - MISMO estilo que .toplinks */
-.site-footer a {
-  color: white;
-  opacity: 0.85;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.site-footer a:hover {
-  opacity: 1;
-  color: var(--yellow); /* Amarillo para hover, igual que enlaces superiores */
-  transform: translateX(5px);
+  font-size: 0.85rem;    /* Texto más pequeño */
+  line-height: 1.4;
+  margin-bottom: 0.4rem; /* Espaciado muy ajustado */
 }
 
 /* Botón del footer - AHORA con estilo de .btn normal */
 .site-footer .btn {
   background: linear-gradient(135deg, var(--accent), var(--yellow)); /* Gradiente estándar */
   color: white;
-  padding: 0.7rem 1.5rem; /* REDUCIDO: Era más grande */
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem; /* REDUCIDO: Era más grande */
+  font-size: 0.8rem;
   margin-top: 0.5rem;
   box-shadow: 0 4px 15px rgba(223, 48, 103, 0.3);
-  border: none;
 }
 
 .site-footer .btn:hover {
@@ -1140,10 +1082,10 @@ main::before {
 /* Copyright */
 .copyright {
   text-align: center;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   opacity: 0.8;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 /* ===========================================
@@ -1487,6 +1429,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
