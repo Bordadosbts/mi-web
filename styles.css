@@ -1044,11 +1044,6 @@ main::before {
   z-index: 2;
 }
 
-/* Asegurar que los títulos dentro del grid también estén centrados */
-.footer-grid .section-title {
-  text-align: center;
-}
-
 /* Esta regla aplica a TODOS los h2 dentro del footer */
 .site-footer h2 {
   text-align: center; /* Centrado como en otras secciones */
@@ -1074,7 +1069,7 @@ main::before {
 
 /* Opcional: Ajustar el tamaño de fuente si es necesario */
 .site-footer h2 {
-  font-size: 1.8rem; /* Puedes ajustar este valor (2rem, 1.6rem...) */
+  font-size: 1rem; /* Puedes ajustar este valor (2rem, 1.6rem...) */
 }
 
 .site-footer p {
@@ -1464,6 +1459,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
