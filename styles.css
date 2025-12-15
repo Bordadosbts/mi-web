@@ -517,7 +517,6 @@ main::before {
    SECCIONES GENERALES
    =========================================== */
 
-.testimonials,
 .newsletter {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
@@ -827,7 +826,7 @@ main::before {
 /* Título - MISMO SUBRAYADO que productos */
 .testimonials h2 {
   text-align: center;
-  margin-bottom: 3rem; /* ← REDUCIDO (era: 4rem) */
+  margin-bottom: 1rem; /* ← REDUCIDO (era: 4rem) */
   position: relative;
   padding-bottom: 0.8rem; /* ← PARA el subrayado */
   margin-top: 0.5rem; /* ← Añadir margen superior si es necesario */ 
@@ -1393,6 +1392,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
