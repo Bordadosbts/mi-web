@@ -1018,14 +1018,35 @@ main::before {
   /* Se ELIMINA el ::before con gradiente de colores vivos */
 }
 
+/* Contenedor principal del logo y eslogan */
+.footer-brand {
+  text-align: center; /* Centra todo el contenido */
+  margin-bottom: 3rem; /* Espacio antes del grid de 2 columnas */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Estilo para el eslogan debajo del título */
+.footer-tagline {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
 /* Contenido del footer */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
   margin-bottom: 3rem;
   position: relative;
   z-index: 2;
+}
+
+/* Asegurar que los títulos dentro del grid también estén centrados */
+.footer-grid .section-title {
+  text-align: center;
 }
 
 /* Esta regla aplica a TODOS los h2 dentro del footer */
@@ -1443,6 +1464,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
