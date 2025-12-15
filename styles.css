@@ -998,6 +998,16 @@ main::before {
 /* ===========================================
    FOOTER - CONCORDANCIA CON MAIN-NAVIGATION
    =========================================== */
+.footer-corner-logo {
+  position: absolute;  /* Lo saca del flujo normal y permite posicionarlo */
+  top: 10px;          /* Distancia desde el borde SUPERIOR del footer */
+  left: 15px;         /* Distancia desde el borde IZQUIERDO del footer */
+  height: 30px;       /* CONTROL PRINCIPAL: Altura del logo. ¡Ajústala! */
+  width: auto;        /* Mantiene la proporción del logo */
+  z-index: 2;         /* Se asegura de que esté por encima del fondo */
+  opacity: 0.9;       /* Ligera transparencia para integración visual */
+  pointer-events: none; /* Opcional: Evita que sea clickable/interfiera */
+}
 
 .site-footer {
   /* MISMO FONDO que main-navigation: translúcido con blur */
@@ -1306,7 +1316,12 @@ main::before {
     height: 55px;
     font-size: 1.6rem;
   }
-  
+
+  .footer-corner-logo {
+    height: 24px;     /* Tamaño reducido para móvil */
+    left: 10px;
+  }
+   
   .site-footer {
     padding: 2rem 0 1rem;
     margin-top: 3rem;
@@ -1442,6 +1457,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
