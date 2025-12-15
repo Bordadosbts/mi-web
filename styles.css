@@ -514,32 +514,6 @@ main::before {
 }
 
 /* ===========================================
-   SECCIONES GENERALES
-   =========================================== */
-
-.newsletter {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border-radius: 24px;
-  margin: 4rem auto;
-  padding: 5rem 3rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.newsletter::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
-}
-
-/* ===========================================
    PRODUCTOS
    =========================================== */
 
@@ -917,24 +891,76 @@ main::before {
 }
 
 /* ===========================================
-   NEWSLETTER
+   NEWSLETTER - IGUALADO A PRODUCTOS Y TESTIMONIOS
    =========================================== */
 
 .newsletter {
+  /* FONDO IDÉNTICO a productos y testimonios */
+  background: linear-gradient(135deg, 
+    rgba(223, 48, 103, 0.1),
+    rgba(243, 198, 42, 0.1)
+  );
+  border-radius: 18px; /* ← MISMO radio */
+  margin: 3rem auto; /* ← MISMO margen exterior */
+  padding: 3rem 2rem; /* ← MISMO padding interior */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 3rem); /* ← MISMO ancho controlado */
+}
+
+/* Línea decorativa superior - IDÉNTICA a productos y testimonios */
+.newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px; /* ← MISMA altura */
+  background: linear-gradient(90deg, var(--accent), var(--yellow)); /* ← MISMO gradiente */
+  opacity: 0.8;
+}
+
+/* Contenido centrado */
+.newsletter .container {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
+/* Título con subrayado - similar a productos */
 .newsletter h3 {
-  margin-bottom: 1.5rem;
+  font-size: 2rem; /* Tamaño acorde a h3 */
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+  color: var(--primary);
 }
 
+.newsletter h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Un poco más corto que h2 */
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Texto descriptivo */
 .newsletter p {
   max-width: 600px;
-  margin: 0 auto 3rem;
-  color: var(--muted);
-  font-size: 1.2rem;
+  margin: 0 auto 2rem; /* Menos margen inferior */
+  color: #3a3a3a; /* ← MISMO color que .lead en productos */
+  font-size: 1.2rem; /* Tamaño similar al .lead */
+  line-height: 1.6;
+  font-weight: 500; /* MISMO peso que .lead */
 }
 
+/* Formulario */
 .newsletter form {
   display: flex;
   gap: 1.2rem;
@@ -948,7 +974,7 @@ main::before {
   flex: 1;
   min-width: 300px;
   padding: 1rem 1.8rem;
-  border: 2px solid #ddd;
+  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   font-size: 1.05rem;
   font-family: inherit;
@@ -963,6 +989,11 @@ main::before {
   background: white;
 }
 
+/* Botón del formulario */
+.newsletter .btn {
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+}
 /* ===========================================
    FOOTER
    =========================================== */
@@ -1237,7 +1268,6 @@ main::before {
   }
   
   .testimonials,
-  .newsletter,
   .cta-principal {
     padding: 2.5rem 1.5rem;
     margin: 2rem 1rem;
@@ -1255,6 +1285,13 @@ main::before {
     gap: 2rem;
   }
   
+  .newsletter {
+    padding: 2.5rem 1.5rem;
+    margin: 2rem 1rem;
+    border-radius: 20px;
+    max-width: 100%; /* En móvil ocupa casi todo */
+  }
+   
   .newsletter form {
     flex-direction: column;
     align-items: stretch;
@@ -1392,6 +1429,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
