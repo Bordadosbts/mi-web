@@ -1086,6 +1086,7 @@ main::before {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.6);
   position: relative; /* Necesario para posicionar el pseudo-elemento */
+  margin-top: 0.5rem; /* Espacio extra antes del borde, si se necesita */
 }
 
 .copyright::before {
@@ -1094,9 +1095,10 @@ main::before {
   top: 0; /* Lo coloca en la parte superior del .copyright */
   left: 50%; /* Lo centra horizontalmente */
   transform: translateX(-50%); /* Ajuste fino para un centrado perfecto */
-  width: 80px; /* LARGO DEL BORDE. Ajústalo a tu gusto (ej: 60px, 100px) */
+  width: 60px; /* LARGO DEL BORDE. Ajústalo a tu gusto (ej: 60px, 100px) */
   height: 1px; /* GROSOR DEL BORDE. Mantenlo fino. */
   background: rgba(255, 255, 255, 0.15); /* Color del borde */
+  z-index: 1; /* Se asegura de estar por encima del fondo del footer */
 }
 
 /* ===========================================
@@ -1440,6 +1442,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
