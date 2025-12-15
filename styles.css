@@ -1002,7 +1002,7 @@ main::before {
   position: absolute;  /* Lo saca del flujo normal y permite posicionarlo */
   top: 10px;          /* Distancia desde el borde SUPERIOR del footer */
   left: 15px;         /* Distancia desde el borde IZQUIERDO del footer */
-  height: 30px;       /* CONTROL PRINCIPAL: Altura del logo. ¡Ajústala! */
+  height: 50px;       /* CONTROL PRINCIPAL: Altura del logo. ¡Ajústala! */
   width: auto;        /* Mantiene la proporción del logo */
   z-index: 2;         /* Se asegura de que esté por encima del fondo */
   opacity: 0.9;       /* Ligera transparencia para integración visual */
@@ -1457,6 +1457,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
