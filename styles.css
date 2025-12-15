@@ -1004,16 +1004,15 @@ main::before {
   background: rgba(127, 118, 111, 0.92); /* Ligeramente más opaco para mejor contraste */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
-  
   color: white;
-  padding: 4rem 0 2rem;
-  margin-top: 6rem;
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 4rem;
   position: relative;
   overflow: hidden;
   
   /* MISMA línea decorativa superior que main-navigation (pero arriba) */
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12); /* Borde inferior como la nav */
+  border-bottom: none /* Borde inferior como la nav */
   
   /* Se ELIMINA el ::before con gradiente de colores vivos */
 }
@@ -1021,27 +1020,43 @@ main::before {
 /* Contenedor principal del logo y eslogan */
 .footer-brand {
   text-align: center; /* Centra todo el contenido */
-  margin-bottom: 3rem; /* Espacio antes del grid de 2 columnas */
+  margin-bottom: 2rem; /* Espacio antes del grid de 2 columnas */
   width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Título principal del footer - MÁS PEQUEÑO */
+.footer-brand .section-title {
+  font-size: 1.5rem; /* REDUCIDO: Era aprox. 1.8-2rem */
+  margin-bottom: 0.5rem; /* REDUCIDO */
 }
 
 /* Estilo para el eslogan debajo del título */
 .footer-tagline {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
   font-style: italic;
-  margin-top: 0.5rem;
   font-weight: 300;
 }
 
 /* Contenido del footer */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 3rem;
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+/* Títulos de las columnas - MÁS PEQUEÑOS */
+.footer-grid .section-title {
+  font-size: 1.2rem; /* REDUCIDO: Tamaño apropiado para footer */
+  margin-bottom: 1rem; /* REDUCIDO */
+  text-align: center;
+}
+
+/* Subrayado de títulos - MÁS CORTO */
+.footer-grid .section-title::after {
+  width: 80px; /* REDUCIDO: Era 120px */
+  height: 2px; /* REDUCIDO: Era 3px */
 }
 
 /* Esta regla aplica a TODOS los h2 dentro del footer */
@@ -1074,9 +1089,9 @@ main::before {
 
 .site-footer p {
   opacity: 0.9;
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .site-footer ul {
@@ -1086,7 +1101,7 @@ main::before {
 }
 
 .site-footer li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Enlaces del footer - MISMO estilo que .toplinks */
@@ -1109,7 +1124,9 @@ main::before {
 .site-footer .btn {
   background: linear-gradient(135deg, var(--accent), var(--yellow)); /* Gradiente estándar */
   color: white;
-  margin-top: 1rem;
+  padding: 0.7rem 1.5rem; /* REDUCIDO: Era más grande */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
   box-shadow: 0 4px 15px rgba(223, 48, 103, 0.3);
   border: none;
 }
@@ -1123,12 +1140,10 @@ main::before {
 /* Copyright */
 .copyright {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   opacity: 0.8;
-  font-size: 0.95rem;
-  position: relative;
-  z-index: 2;
+  font-size: 0.8rem;
 }
 
 /* ===========================================
@@ -1337,19 +1352,32 @@ main::before {
     font-size: 1.6rem;
   }
   
+  .site-footer {
+    padding: 2rem 0 1rem;
+    margin-top: 3rem;
+  }
+  
+  .footer-brand {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-brand .section-title {
+    font-size: 1.3rem;
+  }
+  
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   
-  .site-footer h2 {
-    font-size: 1.6rem; /* Un tamaño ligeramente menor en móvil */
-    text-align: center; /* Asegurar centrado */
+  .footer-grid .section-title {
+    font-size: 1.1rem;
   }
   
-  .site-footer h2::after {
-    left: 50%; /* Asegurar que la línea se mantenga centrada */
+  .copyright {
+    padding-top: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1459,6 +1487,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
