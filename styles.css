@@ -803,7 +803,7 @@ main::before {
     rgba(243, 198, 42, 0.1)
   );
   border-radius: 18px; /* ← MISMO radio que productos */
-  margin: 1.5rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
+  margin: 3rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
   padding: 3rem 2rem; /* ← MISMO padding que productos (era: 5rem 3rem) */
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ← MISMA sombra que productos */
@@ -827,9 +827,10 @@ main::before {
 /* Título - MISMO SUBRAYADO que productos */
 .testimonials h2 {
   text-align: center;
-  margin-bottom: 1rem; /* ← REDUCIDO (era: 4rem) */
+  margin-bottom: 3rem; /* ← REDUCIDO (era: 4rem) */
   position: relative;
   padding-bottom: 0.8rem; /* ← PARA el subrayado */
+  margin-top: 0.5rem; /* ← Añadir margen superior si es necesario */ 
 }
 
 /* Subrayado del título - IDÉNTICO a productos */
@@ -847,10 +848,7 @@ main::before {
 
 /* Grid de testimonios */
 .testimonials .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 /* Tarjetas de testimonios individuales */
@@ -890,18 +888,24 @@ main::before {
   border-radius: 18px 18px 0 0;
 }
 
-.testimonials blockquote::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow));
-  opacity: 0;
-  transition: opacity 0.3s;
+.testimonials blockquote:hover::after {
+  opacity: 1;
 }
 
+/* Comillas decorativas */
+.testimonials blockquote::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 3.5rem;
+  color: var(--accent);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* Nombre del cliente */
 .testimonials strong {
   display: block;
   margin-top: 1.5rem;
@@ -909,6 +913,8 @@ main::before {
   text-align: right;
   color: var(--primary);
   font-weight: 700;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* ===========================================
@@ -1387,6 +1393,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
