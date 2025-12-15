@@ -1028,32 +1028,32 @@ main::before {
   z-index: 2;
 }
 
-/* Títulos del footer - REVISA: el color ahora resalta sobre fondo claro */
-.site-footer h4 {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  color: white; /* Se mantiene blanco */
+/* Esta regla aplica a TODOS los h2 dentro del footer */
+.site-footer h2 {
+  text-align: center; /* Centrado como en otras secciones */
+  margin-bottom: 1.5rem; /* Espaciado consistente */
   position: relative;
-  display: inline-block;
+  padding-bottom: 0.8rem; /* Espacio para el subrayado */
+  color: white; /* Color específico para el footer */
+  width: 100%; /* Asegura que ocupe todo el ancho de su columna */
 }
 
-/* Subrayado de títulos - Color de acento para contraste */
-.site-footer h4::after {
+/* Subrayado IDÉNTICO al de .products h2, .testimonials h2, etc. */
+.site-footer h2::after {
   content: '';
   position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--accent); /* Usa el color rosa/accent para destacar */
-  border-radius: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* MISMO ancho */
+  height: 3px; /* MISMA altura */
+  background: var(--accent); /* MISMO color (rosa) */
+  border-radius: 2px; /* MISMO radio */
 }
 
-.site-footer h5 {
-  font-size: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: white;
-  opacity: 0.95;
+/* Opcional: Ajustar el tamaño de fuente si es necesario */
+.site-footer h2 {
+  font-size: 1.8rem; /* Puedes ajustar este valor (2rem, 1.6rem...) */
 }
 
 .site-footer p {
@@ -1327,9 +1327,13 @@ main::before {
     text-align: center;
   }
   
-  .site-footer h4::after {
-    left: 50%;
-    transform: translateX(-50%);
+  .site-footer h2 {
+    font-size: 1.6rem; /* Un tamaño ligeramente menor en móvil */
+    text-align: center; /* Asegurar centrado */
+  }
+  
+  .site-footer h2::after {
+    left: 50%; /* Asegurar que la línea se mantenga centrada */
   }
 }
 
@@ -1439,6 +1443,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
