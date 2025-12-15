@@ -994,29 +994,31 @@ main::before {
   padding: 1rem 2.5rem;
   font-weight: 700;
 }
+
 /* ===========================================
-   FOOTER
+   FOOTER - CONCORDANCIA CON MAIN-NAVIGATION
    =========================================== */
 
 .site-footer {
-  background: var(--bg-wood-darker);
+  /* MISMO FONDO que main-navigation: translúcido con blur */
+  background: rgba(127, 118, 111, 0.92); /* Ligeramente más opaco para mejor contraste */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+  
   color: white;
   padding: 4rem 0 2rem;
   margin-top: 6rem;
   position: relative;
   overflow: hidden;
+  
+  /* MISMA línea decorativa superior que main-navigation (pero arriba) */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); /* Borde inferior como la nav */
+  
+  /* Se ELIMINA el ::before con gradiente de colores vivos */
 }
 
-.site-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow), var(--blue));
-}
-
+/* Contenido del footer */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1026,14 +1028,16 @@ main::before {
   z-index: 2;
 }
 
+/* Títulos del footer - REVISA: el color ahora resalta sobre fondo claro */
 .site-footer h4 {
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: white; /* Se mantiene blanco */
   position: relative;
   display: inline-block;
 }
 
+/* Subrayado de títulos - Color de acento para contraste */
 .site-footer h4::after {
   content: '';
   position: absolute;
@@ -1041,7 +1045,7 @@ main::before {
   left: 0;
   width: 60px;
   height: 3px;
-  background: var(--accent);
+  background: var(--accent); /* Usa el color rosa/accent para destacar */
   border-radius: 3px;
 }
 
@@ -1069,32 +1073,38 @@ main::before {
   margin-bottom: 0.8rem;
 }
 
+/* Enlaces del footer - MISMO estilo que .toplinks */
 .site-footer a {
   color: white;
-  opacity: 0.9;
+  opacity: 0.85;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .site-footer a:hover {
   opacity: 1;
-  color: var(--yellow);
+  color: var(--yellow); /* Amarillo para hover, igual que enlaces superiores */
   transform: translateX(5px);
 }
 
+/* Botón del footer - AHORA con estilo de .btn normal */
 .site-footer .btn {
-  background: white;
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--accent), var(--yellow)); /* Gradiente estándar */
+  color: white;
   margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(223, 48, 103, 0.3);
+  border: none;
 }
 
 .site-footer .btn:hover {
-  background: var(--accent);
-  color: white;
+  background: linear-gradient(135deg, var(--yellow), var(--accent)); /* Invertido al hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(223, 48, 103, 0.4);
 }
 
+/* Copyright */
 .copyright {
   text-align: center;
   padding-top: 3rem;
@@ -1429,6 +1439,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
