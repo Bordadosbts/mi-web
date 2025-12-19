@@ -201,7 +201,7 @@ a {
     ),
     /* Imagen muy oscurecida */
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-    url("img/hero-1.png") center center / contain no-repeat;
+    url("img/hero-1.webp") center center / contain no-repeat;
   
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
@@ -1502,6 +1502,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
