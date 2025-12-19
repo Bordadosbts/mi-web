@@ -174,6 +174,26 @@ a {
 /* ===========================================
    HERO COMO HEADER PRINCIPAL
    =========================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa de overlay con blur */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* oscuridad suave */
+  backdrop-filter: blur(4px);      /* desenfoque elegante */
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté encima */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 
 .hero-header {
   /* Aumentamos la altura mínima para escritorio */
@@ -1272,8 +1292,43 @@ main::before {
   }
    
   .hero {
-    padding: 30px 0;
+    height: 100dvh; /* clave: ocupa solo el alto visible del dispositivo */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
     background-position: top; 
+  }
+   
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.2rem); /* evita que el título se salga */
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 420px; /* para que el texto no se haga demasiado ancho */
+    margin: 0 auto;
+  }
+   
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .hero-buttons a {
+    font-size: 1rem; /* botones legibles pero no exagerados */
+    padding: 0.9rem 1.2rem;
   }
    
   .hero-header {
@@ -1615,6 +1670,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
