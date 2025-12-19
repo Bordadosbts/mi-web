@@ -287,7 +287,6 @@ a {
   line-height: 1.1;
   color: #ffffff; /* Blanco puro */
   text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
-  white-space: nowrap; /* Fuerza a una sola línea */ 
 }
 
 /* Tagline más destacado */
@@ -1288,6 +1287,12 @@ main::before {
   
   .menu-btn {
     display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* Por encima del menú */ 
   }
   
   .main-nav {
@@ -1301,7 +1306,7 @@ main::before {
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 5rem 2rem;
-    z-index: 1000;
+    z-index: 1099;
     justify-content: flex-start;
     gap: 1.5rem;
     overflow-y: auto;
@@ -1315,9 +1320,15 @@ main::before {
     width: 100%;
     text-align: center;
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none; 
   }
-  
+  /* Separadores opcionales */
+  .main-nav a:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
   .testimonials,
   .cta-principal {
     padding: 2.5rem 1.5rem;
@@ -1502,6 +1513,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
