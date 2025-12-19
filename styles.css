@@ -1167,7 +1167,11 @@ main::before {
    =========================================== */
 
 @media (max-width: 1200px) {
-  .container {
+   .hero-content h1,
+  .hero-content p {
+    white-space: nowrap;
+  }
+   .container {
     padding: 0 2rem;
   }
 }
@@ -1181,7 +1185,12 @@ main::before {
   .hero-content {
     padding: 3.5rem;
   }
-     
+
+  .hero-content h1,
+  .hero-content p {
+    white-space: nowrap;
+  }
+   
   .hero-tagline {
     font-size: 2.2rem; /* Ajuste para tablet */
   }
@@ -1457,6 +1466,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
