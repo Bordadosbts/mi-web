@@ -1182,10 +1182,21 @@ main::before {
   }
 }
 
+@media (max-width: 1023px) {
+  .hero {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
+  }
+
+  .hero {
+    height: 100vh;
   }
    
   .hero-content {
@@ -1203,6 +1214,10 @@ main::before {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    padding: 40px 0;
+  }
+   
   .hero-content h1 {
     font-size: 36px;
   }
@@ -1228,6 +1243,11 @@ main::before {
 
   .toplinks a {
     font-size: 0.85rem;
+  }
+   
+  .hero {
+    padding: 30px 0;
+    background-position: top; 
   }
    
   .hero-header {
@@ -1482,6 +1502,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
