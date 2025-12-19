@@ -1224,6 +1224,16 @@ main::before {
   .hero-content p {
     font-size: 17px;
   }
+
+  .grid {
+    grid-template-columns: 1fr; /* Una columna por fila */
+    gap: 2rem;
+  }
+
+  .products {
+    margin: 2rem 1rem; /* Reducir márgenes laterales */
+    max-width: 100%;
+  } 
 }
 
 @media (max-width: 768px) {
@@ -1354,6 +1364,17 @@ main::before {
     gap: 2rem;
   }
   
+  .testimonials .grid {
+    grid-template-columns: 1fr; /* Una columna por fila */
+    gap: 2rem;
+  }
+
+  .testimonials {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+    max-width: 100%;
+  }
+   
   .newsletter {
     padding: 2.5rem 1.5rem;
     margin: 2rem 1rem;
@@ -1520,6 +1541,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
