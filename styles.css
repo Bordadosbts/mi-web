@@ -310,7 +310,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  white-space: nowrap; /* Fuerza a una sola línea */  
+  white-space: normal;
 }
 
 /* Botones de acción del hero */
@@ -1457,6 +1457,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
