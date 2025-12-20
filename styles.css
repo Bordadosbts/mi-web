@@ -299,8 +299,8 @@ a {
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
     transparent 100% 
   );
   z-index: 1;
@@ -1738,4 +1738,5 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
