@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- Fuente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
@@ -19,7 +19,7 @@
   <div class="topbar">
     <div class="container">
       <p>Envío GRATIS en compras mayores a 100€</p>
-      <nav class="toplinks">
+      <nav class="toplinks" aria-label="Redes sociales">
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
         <a href="#">TikTok</a>
@@ -27,30 +27,24 @@
     </div>
   </div>
 
-  <!-- Hero como Header Principal -->
 <header class="hero-header">
   <div class="hero-container">
-          
-  <!-- Contenido Principal -->
     <div class="hero-content">
       <h1>🪡 Bordado profesional sin límites 🪡</h1>
       <span class="hero-tagline">🧵 Tu creación, hilo a hilo 🧵</span>
       <p>Bordado industrial de alta precisión para empresas, marcas y eventos.</p>
-      
-   <!-- Botones de acción -->
-        <div class="hero-actions">
-          <a href="#productos" class="btn">Ver productos</a>
-          <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
-        </div>
+      <div class="hero-actions">
+        <a href="#productos" class="btn">Ver productos</a>
+        <a href="#cotizar" class="btn ghost">Pedir presupuesto</a>
       </div>
     </div>
- </header>
-    <!-- Navegación Sticky (opcional, para scroll) -->
-<nav class="main-navigation">
+  </div>
+</header>
+  
+<nav class="main-navigation" aria-label="Navegación principal">
   <div class="container nav-container">
-    <button class="menu-btn" id="btnMenu">☰</button>
-    <nav class="main-nav" id="mainNav">
-      <!-- Mismos enlaces que en el hero -->
+    <button class="menu-btn" id="btnMenu" aria-label="Abrir menú">☰</button>
+    <div class="main-nav" id="mainNav">
       <a href="#productos">Catálogo</a>
       <a href="#">Servicios</a>
       <a href="#">Tienda</a>
@@ -60,6 +54,7 @@
     </nav>
   </div>
 </nav>
+  
     <!-- Productos -->
   <section id="productos" class="products">
     <div class="container">
@@ -70,28 +65,28 @@
 
       <div class="grid">
         <article class="card">
-          <img src="img/gorra.jpg" alt="Gorra personalizada con bordado profesional">
+          <img src="img/gorra.jpg" alt="Gorra personalizada con bordado profesional" loading="lazy">
           <h3>Gorra personalizada</h3>
           <p class="price">Desde 199€</p>
           <a class="btn small" href="#" aria-label="Ver detalles de Gorra personalizada">Ver</a>
         </article>
 
         <article class="card">
-          <img src="img/beanie.jpg" alt="Beanie bordado personalizado">
+          <img src="img/beanie.jpg" alt="Beanie bordado personalizado" loading="lazy">
           <h3>Beanie bordado</h3>
           <p class="price">Desde 149€</p>
           <a class="btn small" href="#" aria-label="Ver detalles de Beanie bordado">Ver</a>
         </article>
 
         <article class="card">
-          <img src="img/parches.jpg" alt="Parches bordados personalizados">
+          <img src="img/parches.jpg" alt="Parches bordados personalizados" loading="lazy">
           <h3>Parches</h3>
           <p class="price">Desde 29€</p>
           <a class="btn small" href="#" aria-label="Ver detalles de Parches">Ver</a>
         </article>
 
         <article class="card">
-          <img src="img/tshirt.jpg" alt="T-Shirt con bordado personalizado">
+          <img src="img/tshirt.jpg" alt="T-Shirt con bordado personalizado" loading="lazy">
           <h3>T-Shirt personalizada</h3>
           <p class="price">Desde 249€</p>
           <a class="btn small" href="#" aria-label="Ver detalles de T-Shirt personalizada">Ver</a>
@@ -132,7 +127,7 @@
     <h3>Suscríbete</h3>
     <p>Recibe ofertas exclusivas y las últimas noticias.</p>
     <form>
-      <input type="email" placeholder="Correo electrónico" required>
+      <input type="email" placeholder="Correo electrónico" aria-label="Correo electrónico" required>
       <button class="btn" type="submit">Suscribirme</button>
     </form>
   </section>
@@ -140,7 +135,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <!-- LOGO SUPERIOR IZQUIERDA (NUEVO) -->
-  <img src="banner-bordando.png" alt="Logo" class="footer-corner-logo">
+  <img src="banner-bordando.png" alt="Logo Bordando tus sueños" class="footer-corner-logo">
   <!-- FIN DEL LOGO -->
   <div class="container">
     
@@ -182,13 +177,14 @@
 </footer>
 
   <!-- WhatsApp -->
-  <a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank">💬</a>
+  <a id="whatsapp-btn" href="https://wa.me/34644624043" target="_blank" aria-label="Abrir chat de WhatsApp">💬</a>
 
   <!-- Script -->
   <script src="script.js"></script>
 
 </body>
 </html>
+
 
 
 
