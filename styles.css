@@ -252,9 +252,9 @@ a {
     /* Degradado oscuro intenso */
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8) 0%,      /* Muy oscuro arriba */
-      rgba(0, 0, 0, 0.6) 25%,    /* Mantiene oscuridad */
-      rgba(0, 0, 0, 0.4) 50%,     /* Comienza a aclarar */
+      rgba(0, 0, 0, 0.4) 0%,      /* Muy oscuro arriba */
+      rgba(0, 0, 0, 0.2) 25%,    /* Mantiene oscuridad */
+      rgba(0, 0, 0, 0.1) 50%,     /* Comienza a aclarar */
       rgba(40, 35, 30, 0.3) 75%,  /* Color similar a la madera */
       rgba(127, 118, 111, 0.1) 90%, /* Se funde con el body */
       transparent 100%                  /* Totalmente transparente al fondo */
@@ -283,7 +283,7 @@ a {
     to bottom,
     transparent 0%,
     rgba(127, 118, 111, 0.2) 30%,
-    rgba(127, 118, 111, 0.1) 60%,
+    rgba(127, 118, 111, 0.1) 50%,
     transparent 100%
   );
   z-index: 1;
@@ -1738,5 +1738,6 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
