@@ -23,6 +23,8 @@
   --accent: #df3067;
   --yellow: #f3c62a;
   --blue: #45c1ea;
+  --gradient-accent-yellow: linear-gradient(135deg, var(--accent), var(--yellow));
+  --section-bg-gradient: linear-gradient(135deg, rgba(223,48,103,0.1), rgba(243,198,42,0.1)); 
   
   /* Fondos y superficies */
   --bg: #eeede9;
@@ -98,6 +100,44 @@ a {
 /* ===========================================
    LAYOUT Y CONTENEDORES
    =========================================== */
+
+.section-style {
+  background: var(--section-bg-gradient);
+  border-radius: 18px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-style::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0;
+  height: 4px;
+  background: var(--gradient-accent-yellow);
+  opacity:0.8;
+}
+
+.card-style {
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border:1px solid rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction:column;
+  gap:1.2rem;
+  position:relative;
+  overflow:hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+}
+.card-style:hover {
+  transform: translateY(-12px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  border-color: var(--accent);
+}
 
 .container {
   max-width: var(--maxw);
@@ -369,7 +409,7 @@ main::before {
     transparent 100%
   );
   pointer-events: none;
-  z-index: -1;
+  z-inde x: -1;
 }
 
 .main-navigation {
@@ -384,7 +424,7 @@ main::before {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%); /* Oculto inicialmente */
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.35s ease-out;
 }
 
 .main-navigation.scrolled {
@@ -1670,6 +1710,7 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
+
 
 
 
