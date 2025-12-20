@@ -245,6 +245,24 @@ a {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  
+  /* Fondo del hero */
+  /* CAPA PRINCIPAL: MUCHO MÁS OSCURA */
+  background: 
+    /* Degradado oscuro intenso */
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,      /* Muy oscuro arriba */
+      rgba(0, 0, 0, 0.2) 25%,    /* Mantiene oscuridad */
+      rgba(0, 0, 0, 0.1) 50%,     /* Comienza a aclarar */
+      rgba(40, 35, 30, 0.3) 75%,  /* Color similar a la madera */
+      rgba(127, 118, 111, 0.1) 90%, /* Se funde con el body */
+      transparent 100%                  /* Totalmente transparente al fondo */
+    ),
+    /* Imagen muy oscurecida */
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url("img/hero-1.webp") center center / contain no-repeat;
+  
   color: white;
   /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
   padding: 2rem 1rem; /* Era: 4rem 1rem 6rem */
@@ -1720,7 +1738,5 @@ main::before {
     padding: 1.8rem 1.2rem;
   }
 }
-
-
 
 
