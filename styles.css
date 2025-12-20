@@ -163,7 +163,7 @@ a {
   padding: 0.8rem 0;
   height: 40px;
   display: flex;
-  align-items: center; /* ← CLAVE: Centrado vertical */ 
+  align-items: center; 
   font-size: 0.9rem;
   position: sticky;
   top: 0;
@@ -178,13 +178,13 @@ a {
   padding: 0 1rem;
   width: 100%;
   max-width: var(--maxw);
-  height: 100%; /* ← AÑADIR esto */ 
+  height: 100%; 
 }
 
 .toplinks {
   display: flex;
   gap: 1.2rem;
-  align-items: center; /* Centrado vertical */
+  align-items: center; 
   height: 100%; 
 }
 
@@ -192,7 +192,7 @@ a {
   color: white;
   opacity: 0.9;
   display: flex;
-  align-items: center; /* Centrado vertical del texto */
+  align-items: center; 
   height: 100%;
   line-height: 1;
   padding: 0 0.2rem; 
@@ -202,7 +202,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center; /* Centrado vertical dentro de su espacio */
+  align-items: center;
   height: 100%;
   line-height: 1;
 }
@@ -214,31 +214,29 @@ a {
 /* ===========================================
    HERO COMO HEADER PRINCIPAL
    =========================================== */
+
 .hero {
   position: relative;
   overflow: hidden;
 }
 
-/* Capa de overlay con blur */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* oscuridad suave */
-  backdrop-filter: blur(4px);      /* desenfoque elegante */
+  background: rgba(0, 0, 0, 0.25); 
+  backdrop-filter: blur(4px);     
   z-index: 0;
 }
 
-/* Asegura que el contenido esté encima */
 .hero > * {
   position: relative;
   z-index: 1;
 }
 
 .hero-header {
-  /* Aumentamos la altura mínima para escritorio */
-  min-height: 30vh; /* Era: min-height: 30vh; */
-  max-height: 400px; /* Límite máximo */ 
+  min-height: 30vh; 
+  max-height: 400px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,28 +244,21 @@ a {
   text-align: center;
   overflow: hidden;
   
-  /* Fondo del hero */
-  /* CAPA PRINCIPAL: MUCHO MÁS OSCURA */
   background: 
-    /* Degradado oscuro intenso */
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8) 0%,      /* Muy oscuro arriba */
-      rgba(0, 0, 0, 0.6) 25%,    /* Mantiene oscuridad */
-      rgba(0, 0, 0, 0.4) 50%,     /* Comienza a aclarar */
-      rgba(40, 35, 30, 0.3) 75%,  /* Color similar a la madera */
-      rgba(127, 118, 111, 0.1) 90%, /* Se funde con el body */
-      transparent 100%                  /* Totalmente transparente al fondo */
+      rgba(0, 0, 0, 0.8) 0%,     
+      rgba(0, 0, 0, 0.6) 25%,    
+      rgba(0, 0, 0, 0.4) 50%,     
+      rgba(40, 35, 30, 0.3) 75%,  
+      rgba(127, 118, 111, 0.1) 90%, 
+      transparent 100%                  
     ),
-    /* Imagen muy oscurecida */
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
     url("img/hero-1.webp") center center / contain no-repeat;
   
   color: white;
-  /* CAMBIO 2: Ajustamos el padding para mejor espaciado */
-  padding: 2rem 1rem; /* Era: 4rem 1rem 6rem */
-  /* Menos padding para que entre mejor en la nueva altura */
-  /* Oscurecimiento extra con pseudo-elemento */
+  padding: 2rem 1rem;
   position: relative;
   margin-top: 0;
 }
@@ -314,57 +305,50 @@ a {
   position: relative;
   z-index: 2;
 
-  /* Esto ayuda al centrado */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
 }
 
-/* Contenido principal del hero */
 .hero-content {
-  /* REDUCIR OPACIDAD Y TAMAÑO */
-  background: none; /* Sin fondo */
-  backdrop-filter: none; /* Sin blur */
-  /* REDUCIR TAMAÑO SIGNIFICATIVAMENTE */
+  background: none;
+  backdrop-filter: none;
   padding: 0.8rem;
-  /* BORDES MÁS SUTILES */
-  border-radius: 12px; /* Era 16px - Más pequeño */
-  border: none; /* Sin borde */
-  max-width: 850px; /* Era 900px - Más estrecho */
-  box-shadow: none; /* Sin sombra */
+  border-radius: 12px;
+  border: none;
+  max-width: 850px;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70%; /* Ocupa el 70% del espacio disponible */ 
+  min-height: 70%;
 }
 
-/*Aumentamos tamaño del título principal */
 .hero-content h1 {
   font-size: 3.5rem;
-  margin-bottom: 0.8rem; /* Era: 1rem; */
+  margin-bottom: 0.8rem;
   line-height: 1.1;
-  color: #ffffff; /* Blanco puro */
+  color: #ffffff;
   text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
 }
 
-/* Tagline más destacado */
 .hero-tagline {
   font-family: var(--font-script);
-  font-size: 2.6rem; /* Era: 2.2rem; */
-  margin-bottom: 0.8rem; /* Era: 1.8rem; */
+  font-size: 2.6rem;
+  margin-bottom: 0.8rem;
   line-height: 1;
-  color: #f8e048; /* Amarillo más brillante */
+  color: #f8e048;
   display: block;
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  font-weight: 500; /* Un poco más grueso */ 
+  font-weight: 500;
   margin-bottom: 1.5rem;
-  color: #ffffff; /* Blanco puro */
+  color: #ffffff;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -372,7 +356,6 @@ a {
   white-space: normal;
 }
 
-/* Botones de acción del hero */
 .hero-actions {
   display: flex;
   gap: 0.8rem;
@@ -409,7 +392,7 @@ main::before {
     transparent 100%
   );
   pointer-events: none;
-  z-inde x: -1;
+  z-index: -1;
 }
 
 .main-navigation {
@@ -417,18 +400,18 @@ main::before {
   backdrop-filter: blur(12px);
   padding: 0.4rem 0;
   position: fixed;
-  top: 40px; /* Altura del topbar */
+  top: 40px; 
   left: 0;
   right: 0; 
   z-index: 1001;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  transform: translateY(-100%); /* Oculto inicialmente */
+  transform: translateY(-100%); 
   transition: transform 0.35s ease-out;
 }
 
 .main-navigation.scrolled {
-  transform: translateY(0); /* Visible al hacer scroll */
+  transform: translateY(0); 
 }
 
 .nav-container {
@@ -470,7 +453,7 @@ main::before {
   padding: 0.7rem 1.3rem;
   border-radius: 8px;
   font-size: 1rem;
-  letter-spacing: 0.3px; /* Pequeño espaciado para mejor legibilidad */
+  letter-spacing: 0.3px;
   transition: all 0.25s ease; 
 }
 
@@ -484,8 +467,8 @@ main::before {
   background: linear-gradient(135deg, var(--accent), #c2185b);
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
-  font-size: 1.05rem; /* Texto más grande */
-  font-weight: 800; /* Más negrita */
+  font-size: 1.05rem;
+  font-weight: 800;
   box-shadow: 0 4px 15px rgba(223, 48, 103, 0.4);
   letter-spacing: 0.5px;
 }
@@ -576,29 +559,21 @@ main::before {
    PRODUCTOS
    =========================================== */
 
-/* Contenedor principal de la sección */
-.products {
-  /* Se eliminan márgenes y paddings redundantes. 
-     El espaciado se controla desde el contenedor interno (.products .container) */
-}
-
-/* Contenedor interno con fondo y bordes */
 .products .container {
   background: linear-gradient(135deg, 
     rgba(223, 48, 103, 0.1),
     rgba(243, 198, 42, 0.1)
   );
   border-radius: 18px;
-  margin: 1.5rem auto; /* Margen uniforme: 1.5rem arriba/abajo, auto laterales */
+  margin: 1.5rem auto;
   padding: 3rem 2rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
-  max-width: calc(100% - 3rem); /* Ancho controlado para márgenes laterales */
+  max-width: calc(100% - 3rem);
 }
 
-/* Línea decorativa superior del contenedor */
 .products .container::before {
   content: '';
   position: absolute;
@@ -610,7 +585,6 @@ main::before {
   opacity: 0.8;
 }
 
-/* Estilos del título de la sección */
 .products h2 {
   text-align: center;
   margin-bottom: 1rem;
@@ -618,1154 +592,153 @@ main::before {
   padding-bottom: 0.8rem;
 }
 
-/* Subrayado del título */
 .products h2::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  width: 120px; /* Longitud del subrayado */
+  width: 60px;
   height: 3px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--yellow));
+  transform: translateX(-50%);
   border-radius: 2px;
 }
 
-/* Texto introductorio */
-.products .lead {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 2rem;
-  color: #3a3a3a;
-  font-size: 1.5rem; /* ← Aumentado (era: 1.2rem) */
-  line-height: 1.6; /* ← Mejor interlineado (era: 1.5) */
-  font-weight: 500; /* ← Un poco más grueso para mejor lectura */
-}
-
-/* Grid de productos */
-.grid {
+/* GRID DE PRODUCTOS */
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* Tarjetas de productos individuales */
-.card {
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.05), 
-    rgba(243, 198, 42, 0.05)
-  );
-  border-radius: 18px;
-  padding: 1.8rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Efecto hover en la tarjeta */
-.card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent);
-}
-
-/* Línea superior en tarjeta al hacer hover */
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow));
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.card:hover::before {
-  opacity: 1;
-}
-
-/* Imagen dentro de la tarjeta */
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: linear-gradient(45deg, #f8f8f8, #eaeaea);
-  transition: transform 0.5s ease;
-}
-.card:hover img {
-  transform: scale(1.05);
-}
-
-/* Título de la tarjeta */
-.card h3 {
-  margin: 0.8rem 0 0.5rem;
-  font-size: 1.6rem; /* ← Aumentado (era: 1.5rem) */
-  color: var(--primary);
-}
-
-/* Precio en la tarjeta */
-.card .price {
-  color: var(--accent);
-  font-weight: 800;
-  font-size: 1.7rem;
-  margin: 0.5rem 0 1rem;
-}
-.card .price::before {
-  content: '💶';
-  font-size: 1.3rem;
-}
-
-/* Botón dentro de la tarjeta */
-.card .btn {
-  margin-top: auto;
-  align-self: flex-start;
-  padding: 0.8rem 1.8rem;
-  font-size: 0.95rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
 }
 
 /* ===========================================
-   CTA PRINCIPAL - MEJORADO
+   TESTIMONIOS
    =========================================== */
 
-.cta-principal {
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1), 
-    rgba(243, 198, 42, 0.1)
-  );
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 18px;
-  margin: 3rem auto; /* Reducido de 5rem */
-  padding: 3rem 2rem; /* Reducido de 4rem 3rem */
-  max-width: 900px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Línea decorativa superior - más sutil */
-.cta-principal::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px; /* Reducido de 5px */
-  background: linear-gradient(90deg, var(--accent), var(--yellow));
-  opacity: 0.8;
-}
-
-/* Título - MISMO TAMAÑO y SUBRAYADO que productos */
-.cta-principal h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-size: 2.5rem; /* ← IGUAL que productos (era: 2rem) */
-  position: relative;
-  padding-bottom: 0.8rem; /* ← Para el subrayado */
-}
-
-/* Subrayado del título - IGUAL que productos */
-.cta-principal h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px; /* ← MISMO ancho que productos */
-  height: 3px;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-.cta-principal .descripcion {
-  max-width: 700px;
-  margin: 0 auto 2rem; /* Reducido de 3rem */
-  color: #3a3a3a;
-  font-size: 1.2rem;
-  line-height: 1.6; /* ← MISMO interlineado que productos (era: 1.5) */
-  font-weight: 500; /* ← MISMO peso que productos */
-  text-align: center; /* ← Asegurar centrado como productos */
-}
-
-.cta-principal .subtitulo {
-  text-align: center;
-  font-size: 1.35rem; /* ← MISMO tamaño que .descripcion */
-  color: #3a3a3a; /* ← MISMO color que .descripcion */
-  font-weight: 500; /* ← MISMO peso que .descripcion */
-  margin: 0 auto 1.5rem; /* ← Margen superior 0, inferior 1.5rem */
-  max-width: 700px; /* ← MISMO ancho máximo que .descripcion */
-  line-height: 1.6; /* ← MISMO interlineado que .descripcion */
-}
-
-/* Contenedor del botón - CENTRADO */
-.cta-acciones {
-  text-align: center; /* ← CENTRA el botón */
-  margin-top: 2rem; /* ← Espacio superior */
-}
-
-.cta-principal .btn-grande {
-  padding: 1rem 2.5rem; /* Más compacto */
-  font-size: 1.1rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), #c2185b);
-  box-shadow: 0 5px 20px rgba(223, 48, 103, 0.4);
-  border: none;
-}
-
-.cta-principal .btn-grande:hover {
-  transform: translateY(-3px); /* Menos movimiento */
-  box-shadow: 0 8px 25px rgba(223, 48, 103, 0.5);
-}
-
-/* ===========================================
-   TESTIMONIOS - IGUALADO A PRODUCTOS
-   =========================================== */
-
-.testimonials {
-  /* FONDO IDÉNTICO a productos */
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1),
-    rgba(243, 198, 42, 0.1)
-  );
-  border-radius: 18px; /* ← MISMO radio que productos */
-  margin: 3rem auto; /* ← MISMO margen que CTA (era: 4rem auto) */
-  padding: 3rem 2rem; /* ← MISMO padding que productos (era: 5rem 3rem) */
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ← MISMA sombra que productos */
-  position: relative;
-  overflow: hidden;
-  max-width: calc(100% - 3rem); /* ← MISMO ancho controlado que productos */
-}
-
-/* Línea decorativa superior - IDÉNTICA a productos */
-.testimonials::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px; /* ← MISMA altura que productos */
-  background: linear-gradient(90deg, var(--accent), var(--yellow)); /* ← MISMO gradiente que productos */
-  opacity: 0.8;
-}
-
-/* Título - MISMO SUBRAYADO que productos */
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 1rem; /* ← REDUCIDO (era: 4rem) */
-  position: relative;
-  padding-bottom: 0.8rem; /* ← PARA el subrayado */
-  margin-top: 0.5rem; /* ← Añadir margen superior si es necesario */ 
-}
-
-/* Subrayado del título - IDÉNTICO a productos */
-.testimonials h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px; /* ← MISMO ancho que productos */
-  height: 3px;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-/* Grid de testimonios */
-.testimonials .grid {
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Tarjetas de testimonios individuales */
-.testimonials blockquote {
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.05), 
-    rgba(243, 198, 42, 0.05)
-  );
-  border-radius: 18px;
-  padding: 1.8rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonials blockquote:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent);
-}
-
-.testimonials blockquote::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--yellow));
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 18px 18px 0 0;
-}
-
-.testimonials blockquote:hover::after {
-  opacity: 1;
-}
-
-/* Comillas decorativas */
-.testimonials blockquote::before {
-  content: '"';
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 3.5rem;
-  color: var(--accent);
-  opacity: 0.2;
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-/* Nombre del cliente */
-.testimonials strong {
-  display: block;
-  margin-top: 1.5rem;
-  font-style: normal;
-  text-align: right;
-  color: var(--primary);
-  font-weight: 700;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* ===========================================
-   NEWSLETTER - IGUALADO A PRODUCTOS Y TESTIMONIOS
-   =========================================== */
-
-.newsletter {
-  /* FONDO IDÉNTICO a productos y testimonios */
-  background: linear-gradient(135deg, 
-    rgba(223, 48, 103, 0.1),
-    rgba(243, 198, 42, 0.1)
-  );
-  border-radius: 18px; /* ← MISMO radio */
-  margin: 3rem auto; /* ← MISMO margen exterior */
-  padding: 3rem 2rem; /* ← MISMO padding interior */
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  position: relative;
-  overflow: hidden;
-  max-width: calc(100% - 3rem); /* ← MISMO ancho controlado */
-}
-
-/* Línea decorativa superior - IDÉNTICA a productos y testimonios */
-.newsletter::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px; /* ← MISMA altura */
-  background: linear-gradient(90deg, var(--accent), var(--yellow)); /* ← MISMO gradiente */
-  opacity: 0.8;
-}
-
-/* Contenido centrado */
-.newsletter .container {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* Título con subrayado - similar a productos */
-.newsletter h3 {
-  font-size: 2rem; /* Tamaño acorde a h3 */
-  margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.8rem;
-  color: var(--primary);
-}
-
-.newsletter h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px; /* Un poco más corto que h2 */
-  height: 3px;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-/* Texto descriptivo */
-.newsletter p {
-  max-width: 600px;
-  margin: 0 auto 2rem; /* Menos margen inferior */
-  color: #3a3a3a; /* ← MISMO color que .lead en productos */
-  font-size: 1.2rem; /* Tamaño similar al .lead */
-  line-height: 1.6;
-  font-weight: 500; /* MISMO peso que .lead */
-}
-
-/* Formulario */
-.newsletter form {
-  display: flex;
-  gap: 1.2rem;
-  max-width: 600px;
+.testimonials .container {
+  max-width: var(--maxw);
   margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
-.newsletter input {
-  flex: 1;
-  min-width: 300px;
-  padding: 1rem 1.8rem;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
-  font-size: 1.05rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.9);
+.testimonial-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.newsletter input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(223, 48, 103, 0.15);
-  background: white;
-}
-
-/* Botón del formulario */
-.newsletter .btn {
-  padding: 1rem 2.5rem;
-  font-weight: 700;
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 /* ===========================================
-   FOOTER - CONCORDANCIA CON MAIN-NAVIGATION
+   CTA / NEWSLETTER
    =========================================== */
-.footer-corner-logo {
-  position: absolute;  /* Lo saca del flujo normal y permite posicionarlo */
-  top: 10px;          /* Distancia desde el borde SUPERIOR del footer */
-  left: 15px;         /* Distancia desde el borde IZQUIERDO del footer */
-  height: 50px;       /* CONTROL PRINCIPAL: Altura del logo. ¡Ajústala! */
-  width: auto;        /* Mantiene la proporción del logo */
-  z-index: 2;         /* Se asegura de que esté por encima del fondo */
-  opacity: 0.9;       /* Ligera transparencia para integración visual */
-  pointer-events: none; /* Opcional: Evita que sea clickable/interfiera */
-}
 
-.site-footer {
-  /* MISMO FONDO que main-navigation: translúcido con blur */
-  background: rgba(127, 118, 111, 0.92); /* Ligeramente más opaco para mejor contraste */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
-  color: white;
-  padding: 2rem 0 1rem;
-  margin-top: 3rem;
-  
-  /* MISMA línea decorativa superior que main-navigation (pero arriba) */
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  
-  /* Se ELIMINA el ::before con gradiente de colores vivos */
-}
-
-/* Contenedor principal del logo y eslogan */
-.footer-brand {
-  text-align: center; /* Centra todo el contenido */
-  margin-bottom: 1.5rem; /* Espacio antes del grid de 2 columnas */
-}
-
-/* Título principal del footer - MÁS PEQUEÑO */
-.footer-brand .section-title {
-  font-size: 1.3rem; /* REDUCIDO: Era aprox. 1.8-2rem */
-  margin-bottom: 0.25rem; /* REDUCIDO */
-  padding-bottom: 0;     /* Sin espacio para línea aquí */ 
-}
-
-/* Estilo para el eslogan debajo del título */
-.footer-tagline {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-style: italic;
-}
-
-/* Contenido del footer */
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Títulos de las columnas - MÁS PEQUEÑOS */
-.footer-grid .section-title {
-  font-size: 1.1rem; /* REDUCIDO: Tamaño apropiado para footer */
-  margin-bottom: 0.75rem; /* REDUCIDO */
-  padding-bottom: 0.4rem; /* Poco espacio para la línea */
-}
-
-/* Subrayado de títulos - MÁS CORTO */
-.footer-grid .section-title::after {
-  width: 50px; /* REDUCIDO: Era 120px */
-  height: 2px; /* REDUCIDO: Era 3px */
-}
-
-/* Contenido general (párrafos, listas) */
-.site-footer p,
-.site-footer li {
-  font-size: 0.85rem;    /* Texto más pequeño */
-  line-height: 1.4;
-  margin-bottom: 0.4rem; /* Espaciado muy ajustado */
-}
-
-/* Botón del footer - AHORA con estilo de .btn normal */
-.site-footer .btn {
-  background: linear-gradient(135deg, var(--accent), var(--yellow)); /* Gradiente estándar */
-  color: white;
-  padding: 0.5rem 1rem; /* REDUCIDO: Era más grande */
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  box-shadow: 0 4px 15px rgba(223, 48, 103, 0.3);
-}
-
-.site-footer .btn:hover {
-  background: linear-gradient(135deg, var(--yellow), var(--accent)); /* Invertido al hover */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(223, 48, 103, 0.4);
-}
-
-.map-container {
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16/9; /* Proporción de vídeo / mapa */
-  overflow: hidden;
-  border-radius: 15px; /* O el estilo que uses */
-  box-shadow: 0 5px 25px rgba(0,0,0,0.12); /* Combina con tu diseño */
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* Copyright */
-.copyright {
+.cta-section {
+  background: linear-gradient(135deg, var(--accent), var(--yellow));
+  border-radius: 18px;
+  padding: 3rem 2rem;
   text-align: center;
-  padding-top: 0.75rem;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
-  position: relative; /* Necesario para posicionar el pseudo-elemento */
-  margin-top: 0.5rem; /* Espacio extra antes del borde, si se necesita */
+  color: white;
+  max-width: var(--maxw);
+  margin: 3rem auto;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-.copyright::before {
-  content: '';
-  position: absolute;
-  top: 0; /* Lo coloca en la parte superior del .copyright */
-  left: 50%; /* Lo centra horizontalmente */
-  transform: translateX(-50%); /* Ajuste fino para un centrado perfecto */
-  width: 60px; /* LARGO DEL BORDE. Ajústalo a tu gusto (ej: 60px, 100px) */
-  height: 1px; /* GROSOR DEL BORDE. Mantenlo fino. */
-  background: rgba(255, 255, 255, 0.15); /* Color del borde */
-  z-index: 1; /* Se asegura de estar por encima del fondo del footer */
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+
+footer {
+  background: var(--bg-wood-dark);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: var(--yellow);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
 }
 
 /* ===========================================
    WHATSAPP FLOTANTE
    =========================================== */
 
-#whatsapp-btn {
+.whatsapp-float {
   position: fixed;
-  bottom: 2.5rem;
-  right: 2.5rem;
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #25D366, #1da851);
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #25d366;
   color: white;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  text-decoration: none;
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1003;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#whatsapp-btn::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 70%
-  );
-  animation: whatsappShine 6s infinite linear;
-  opacity: 0.5;
-}
-
-@keyframes whatsappShine {
-  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
-
-#whatsapp-btn:hover {
-  transform: scale(1.15) rotate(10deg);
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
 }
 
 /* ===========================================
    RESPONSIVE
    =========================================== */
 
-@media (max-width: 1200px) {
-  .hero-content h1 {
-    font-size: 42px;
-  }
-  .hero-content p {
-    font-size: 18px;
-  }
-  .hero-content h1,
-  .hero-content p {
-    white-space: nowrap;
-  }
-  .container {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  .hero {
-    min-height: 100vh;
-    height: auto;
-  }
-}
-
 @media (max-width: 1024px) {
-  .main-navigation {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: 100%;
-    transition: right 0.3s ease;
-    z-index: 9999;
-    background: #fff; /* Mantener overlay */
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  }
-
-  .main-navigation.open {
-    right: 0;
-  }
-
-  /* Botón visible */
-  #btnMenu {
-    display: block;
-    z-index: 10000;
-  }
-}
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .hero {
-    height: 100vh;
-  }
-   
-  .hero-content {
-    padding: 3.5rem;
-  }
-
-  .hero-content h1,
-  .hero-content p {
-    white-space: normal;
-    word-wrap: break-word; /* Evita overflow horizontal */
-  }
-   
-  .hero-tagline {
-    font-size: 2.2rem; /* Ajuste para tablet */
-  }
-}
-
-@media (max-width: 992px) {
-  .hero {
-    padding: 40px 0;
-  }
-   
-  .hero-content h1 {
-    font-size: 36px;
-  }
-  .hero-content p {
-    font-size: 17px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr; /* Una columna por fila */
-    gap: 2rem;
-  }
-
-  .products {
-    margin: 2rem 1rem; /* Reducir márgenes laterales */
-    max-width: 100%;
-  } 
+  .hero-header h1 { font-size: 3rem; }
+  .hero-tagline { font-size: 2rem; }
+  .hero-content p { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
-  .topbar .container {
-    flex-direction: row;
-    gap: 0.5rem;
-    text-align: center;
-    padding: 0 1rem;
-    height: 40px; 
-  }
-  
-  .toplinks {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-
-  .toplinks a {
-    font-size: 0.85rem;
-  }
-   
-  .hero {
-    height: 100dvh; /* clave: ocupa solo el alto visible del dispositivo */
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centra verticalmente */
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-    background-position: top; 
-  }
-   
-  .hero-title {
-    font-size: clamp(1.8rem, 5vw, 2.2rem); /* evita que el título se salga */
-    line-height: 1.2;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    line-height: 1.4;
-    max-width: 420px; /* para que el texto no se haga demasiado ancho */
-    margin: 0 auto;
-  }
-   
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.8rem;
-  }
-
-  .hero-buttons a {
-    font-size: 1rem; /* botones legibles pero no exagerados */
-    padding: 0.9rem 1.2rem;
-  }
-   
-  .hero-header {
-    padding: 80px 20px;
-    text-align: center;
-  }
-      
-  .hero-content {
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-  
-  .hero-tagline {
-    font-size: 1.8rem;
-  }
-  
-  .hero-content p {
-    font-size: 16px;
-    margin-bottom: 2.5rem;
-  }
-     
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .hero-actions .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .menu-btn {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1101; /* Por encima del menú */ 
-  }
-  
-  .main-nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(127, 118, 111, 0.9);
-    backdrop-filter: blur(18px);
-    flex-direction: column;
-    padding: 5rem 2rem;
-    z-index: 1099;
-    justify-content: center;  /* Centrado vertical */
-    gap: 1.5rem;
-    overflow-y: auto;
-  }
-  
-  .main-nav.open {
-    display: flex;
-  }
-  
-  .main-nav a {
-    width: 100%;
-    text-align: center;
-    padding: 1.2rem 1rem; /* Un poco más de padding vertical */
-    font-family: var(--font-main); /* Coincide con resto del sitio */
-    font-size: 1.2rem;    /* Más grande para facilidad táctil */
-    font-weight: 700;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Mejora legibilidad */ 
-    text-decoration: none; 
-  }
-  /* Separadores opcionales */
-  .main-nav a:not(:last-child) {
-  margin-bottom: 1rem;
-}
-  .card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-   
-  .testimonials,
-  .cta-principal {
-    padding: 2.5rem 1.5rem;
-    margin: 2rem 1rem;
-    border-radius: 20px;
-  }
-  
-   .products {
-    max-width: 100%; /* En móvil ocupa casi todo */
-    margin: 2rem 1rem; /* Reducir márgenes laterales */
-   }
-   
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 2rem; /* Más espacio entre tarjetas */
-  }
-  
-  .testimonials .grid {
-    grid-template-columns: 1fr; /* Una columna por fila */
-    gap: 2rem;
-  }
-
-  .testimonials {
-    padding: 2rem 1.5rem;
-    margin: 2rem 1rem;
-    max-width: 100%;
-  }
-   
-  .newsletter {
-    padding: 2rem 1.5rem;
-    margin: 2rem 1rem;
-    border-radius: 15px;
-    max-width: 100%; /* En móvil ocupa casi todo */
-  }
-   
-  .newsletter h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-
-  .newsletter p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-   
-  .newsletter form {
-    flex-direction: column;
-  }
-
-  .newsletter .form-group {
-    display: flex;
-    flex-direction: column; /* De fila → columna */
-    gap: 1rem;
-    width: 100%;
-  }
-   
-  .newsletter input[type="email"],https://github.com/Bordadosbts/mi-web/blob/main/styles.css
-  .newsletter input {
-    width: 100%;
-    min-width: 100%;
-    padding: 0.9rem 1rem;
-    font-size: 1rem; 
-  }
-
-  .newsletter button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-   
-  #whatsapp-btn {
-    z-index: 10000 !important; /* Valor muy alto */
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-  }
-
-  .footer-corner-logo {
-    height: 24px;     /* Tamaño reducido para móvil */
-    left: 10px;
-  }
-   
-  .site-footer {
-    padding: 2rem 0 1rem;
-    margin-top: 3rem;
-  }
-  
-  .footer-brand {
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-brand .section-title {
-    font-size: 1.3rem;
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-grid .section-title {
-    font-size: 1.1rem;
-  }
-  
-  .map-container {
-    aspect-ratio: 4/3; /* Más alto en móvil para ver mejor la zona */
-    margin: 1.5rem 0;
-  }
-  .location-section {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .location-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .location-section p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .map-container iframe {
-  pointer-events: none;
-}
-
-.map-container:active iframe {
-  pointer-events: auto;
-}
-   
-  .copyright {
-    padding-top: 1rem;
-    font-size: 0.8rem;
-  }
+  .hero-header h1 { font-size: 2.5rem; }
+  .hero-tagline { font-size: 1.6rem; }
+  .hero-content p { font-size: 1.1rem; }
+  .main-nav { flex-direction: column; gap: 1rem; }
+  .menu-btn { display: block; }
+  .main-nav a { padding: 0.6rem 1rem; }
+  .products .container, .section-style { padding: 2rem 1rem; }
 }
 
 @media (max-width: 480px) {
-  .topbar {
-    font-size: 0.85rem;
-  }
-  
-  .container {
-    padding: 0 1rem;
-  }
-  
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.3rem; }
-  
-  .hero-header {
-    min-height: 70vh;
-  }
-      
-  .hero-content {
-    padding: 1.8rem 1rem;
-  }
-  
-  .hero-content h1 {
-      font-size: 28px; /* Más pequeño para móvil */
-      margin-bottom: 1rem;
-  }
-  
-  .hero-tagline {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 15px;
-    margin-bottom: 2rem;
-  }
-  
-  .btn {
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
-  }
-  
-  .cta-principal p,
-  .newsletter p {
-    font-size: 1.15rem;
-  }
-
-  .cta-principal h2 {
-    font-size: 1.8rem; /* ← IGUAL que productos en móvil */
-  }
-
-  .cta-principal .subtitulo {
-    font-size: 1.15rem; /* ← Tamaño proporcional para móvil */
-    font-weight: normal; /* ← Peso normal en móvil */
-  }
-   
-  .cta-principal .descripcion {
-    font-size: 1.15rem; /* ← Tamaño proporcional para móvil */
-    font-weight: normal; /* ← Peso normal en móvil */
-  }
-   
-  .products .lead {
-  font-size: 1.15rem; /* Tamaño proporcional para móvil */
-  font-weight: normal; /* Peso normal en móvil */
-  } 
-
-  .testimonials {
-    max-width: 100%; /* ← Como productos en móvil */
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 2rem 1.5rem; /* ← Padding reducido para móvil */
-  }
-  
-  .testimonials blockquote {
-    padding: 1.5rem; /* ← Más compacto en móvil */
-  }
-   
-  .testimonials .grid {
-    grid-template-columns: 1fr;
-  }
-      
-  .newsletter {
-    background-color: rgba(255, 255, 255, 0.9); /* Más claro para contraste */
-    backdrop-filter: blur(4px);
-  }
-   
-  .copyright {
-    font-size: 0.9rem;
-    padding-top: 2rem;
-  }
+  .hero-header h1 { font-size: 2rem; }
+  .hero-tagline { font-size: 1.3rem; }
+  .hero-content p { font-size: 1rem; }
+  .product-grid { gap: 1.2rem; }
+  .cta-section { padding: 2rem 1rem; }
+  .btn, .btn-grande { font-size: 1rem; padding: 0.8rem 2rem; }
+  .whatsapp-float { width: 50px; height: 50px; }
 }
-
-/* Corrección extra para móviles muy pequeños */
-@media (max-width: 380px) {
-  .hero-content h1 {
-    font-size: 1.9rem;
-    line-height: 1.3;
-  }
-  
-  .hero-tagline {
-    font-size: 1.4rem;
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-  }
-  
-  .hero-content {
-    padding: 1.8rem 1.2rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
